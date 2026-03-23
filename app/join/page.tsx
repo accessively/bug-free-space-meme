@@ -1,64 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
-type Leader = {
-  role: string;
-  name: string;
-  statement: string;
-  imageAlt: string;
-};
-
-const leaders: Leader[] = [
-  {
-    role: "Founder",
-    name: "Jake Manila",
-    statement:
-      "I founded this agency to bring Filipino talent to the world, with a focus on trust, quality, and long-term client success.",
-    imageAlt: "Jake Manila - Founder",
-  },
-  {
-    role: "Co-Founder",
-    name: "Joshua Dela Torre",
-    statement:
-      "As co-founder, I shape our service excellence and process efficiency so every project becomes a strategic win.",
-    imageAlt: "Joshua Dela Torre - Co-Founder",
-  },
-  {
-    role: "Co-Founder",
-    name: "Denver De Guzman",
-    statement:
-      "I lead team and operations to ensure we deliver fast, reliable results while keeping strong communication with clients.",
-    imageAlt: "Denver De Guzman - Co-Founder",
-  },
-];
-
-export default function Join() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const previous = () => setActiveIndex((prev) => (prev - 1 + leaders.length) % leaders.length);
-  const next = () => setActiveIndex((prev) => (prev + 1) % leaders.length);
-
-  function handleTouchEnd(event: TouchEvent<HTMLDivElement>): void {
-    throw new Error("Function not implemented.");
-  }
-
-  return (
-    <div className="flex flex-col flex-1">
-      <main className="flex-1">
-        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-lg mx-auto md:max-w-none md:grid md:grid-cols-2 md:gap-8">
-            <div>
-              <div className="mb-6">
-                <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Join Our Network</h2>
-              </div>
-              <p className="mt-3 text-lg text-gray-500">
-                Partner with us to expand your business opportunities through our outsourcing platform.
-              </p>
-            </div>
-
-"use client";
-
 import { useState, useEffect } from "react";
 
 type Leader = {
@@ -98,50 +39,31 @@ export default function Join() {
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
-  const previous = () => {
-    setActiveIndex((prev) => (prev - 1 + leaders.length) % leaders.length);
-  };
+  const previous = () => setActiveIndex((prev) => (prev - 1 + leaders.length) % leaders.length);
+  const next = () => setActiveIndex((prev) => (prev + 1) % leaders.length);
+  const goToSlide = (index: number) => setActiveIndex(index);
 
-  const next = () => {
-    setActiveIndex((prev) => (prev + 1) % leaders.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setActiveIndex(index);
-  };
-
-  // Touch handlers for swipe support
-  const handleTouchStart = (e: React.TouchEvent) => {
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
   };
 
-  const handleTouchMove = (e: React.TouchEvent) => {
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
     setTouchEnd(e.targetTouches[0].clientX);
   };
 
   const handleTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
-    const distance = touchStart - touchEnd;
-    const isLeftSwipe = distance > 50;
-    const isRightSwipe = distance < -50;
+    if (touchStart === null || touchEnd === null) return;
 
-    if (isLeftSwipe) {
-      next();
-    }
-    if (isRightSwipe) {
-      previous();
-    }
+    const distance = touchStart - touchEnd;
+    if (distance > 50) next();
+    else if (distance < -50) previous();
   };
 
-  // Auto-play functionality
   useEffect(() => {
     if (!isAutoPlaying) return;
 
-    const interval = setInterval(() => {
-      next();
-    }, 5000); // Change slide every 5 seconds
-
+    const interval = setInterval(next, 5000);
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
 
@@ -164,7 +86,6 @@ export default function Join() {
               <p className="mt-2 text-gray-600">Get to know the visionaries behind our success.</p>
 
               <div className="mt-6 relative">
-                {/* Main Carousel Container */}
                 <div
                   className="relative overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm"
                   onMouseEnter={() => setIsAutoPlaying(false)}
@@ -173,11 +94,7 @@ export default function Join() {
                   onTouchMove={handleTouchMove}
                   onTouchEnd={handleTouchEnd}
                 >
-                  {/* Carousel Slides */}
-                  <div
-                    className="flex transition-transform duration-500 ease-in-out"
-                    style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-                  >
+                  <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
                     {leaders.map((leader, index) => (
                       <div key={index} className="w-full flex-shrink-0 min-h-[300px] p-8 flex flex-col items-center justify-center text-center">
                         <div className="h-32 w-32 rounded-full bg-gradient-to-br from-blue-100 to-indigo-200 flex items-center justify-center text-gray-400 text-sm font-medium border-4 border-white shadow-lg">
@@ -190,7 +107,6 @@ export default function Join() {
                     ))}
                   </div>
 
-                  {/* Navigation Arrows */}
                   <button
                     type="button"
                     onClick={previous}
@@ -214,7 +130,6 @@ export default function Join() {
                   </button>
                 </div>
 
-                {/* Dot Indicators */}
                 <div className="mt-6 flex justify-center gap-3">
                   {leaders.map((_, idx) => (
                     <button
@@ -222,20 +137,17 @@ export default function Join() {
                       type="button"
                       onClick={() => goToSlide(idx)}
                       className={`h-3 w-3 rounded-full transition-all duration-300 ${
-                        idx === activeIndex
-                          ? "bg-blue-600 scale-125 shadow-lg"
-                          : "bg-gray-300 hover:bg-gray-400"
+                        idx === activeIndex ? "bg-blue-600 scale-125 shadow-lg" : "bg-gray-300 hover:bg-gray-400"
                       }`}
                       aria-label={`Show ${leaders[idx].name}`}
                     />
                   ))}
                 </div>
 
-                {/* Auto-play indicator */}
                 <div className="mt-4 flex justify-center">
                   <button
                     type="button"
-                    onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+                    onClick={() => setIsAutoPlaying((prev) => !prev)}
                     className="text-sm text-gray-500 hover:text-gray-700 flex items-center gap-2"
                   >
                     <div className={`h-2 w-2 rounded-full ${isAutoPlaying ? "bg-green-500" : "bg-gray-400"}`}></div>
