@@ -1,4 +1,12 @@
+"use client";
+
+import { useLanguage } from "@/app/contexts/LanguageContext";
+import { pageTexts } from "@/app/pageTexts";
+
 export default function Contact() {
+  const { language } = useLanguage();
+  const t = pageTexts[language].contactPage;
+
   return (
     <div className="flex flex-col flex-1">
       <main className="flex-1">
@@ -7,17 +15,17 @@ export default function Contact() {
             <div className="max-w-lg mx-auto md:max-w-none md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-                  Contact Us
+                  {t.title}
                 </h2>
                 <p className="mt-3 text-lg text-gray-500">
-                  Get in touch with us for your outsourcing needs.
+                  {t.subtitle}
                 </p>
               </div>
               <div className="mt-12 sm:mt-16 md:mt-0">
                 <form action="#" method="POST" className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                   <div>
                     <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
-                      First name
+                      {t.firstName}
                     </label>
                     <div className="mt-1">
                       <input
@@ -31,7 +39,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">
-                      Last name
+                      {t.lastName}
                     </label>
                     <div className="mt-1">
                       <input
@@ -45,7 +53,7 @@ export default function Contact() {
                   </div>
                   <div className="sm:col-span-2">
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                      Email
+                      {t.email}
                     </label>
                     <div className="mt-1">
                       <input
@@ -59,7 +67,7 @@ export default function Contact() {
                   </div>
                   <div className="sm:col-span-2">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                      Message
+                      {t.message}
                     </label>
                     <div className="mt-1">
                       <textarea
@@ -76,14 +84,14 @@ export default function Contact() {
                       type="submit"
                       className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                     >
-                      Send Message
+                      {t.submit}
                     </button>
                   </div>
                   <div className="sm:col-span-2 text-center">
                     <p className="text-sm text-gray-500">
-                      By submitting this form, you agree to our{' '}
+                      {t.policyPrefix}{' '}
                       <a href="/privacy-policy" className="text-blue-600 hover:text-blue-800 underline">
-                        Privacy Policy
+                        {t.privacyPolicy}
                       </a>
                     </p>
                   </div>

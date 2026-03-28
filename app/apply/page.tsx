@@ -1,4 +1,356 @@
+"use client";
+
+import { useLanguage } from "@/app/contexts/LanguageContext";
+
+const applyTexts = {
+  en: {
+    joinOur: "Join Our",
+    elite: "Elite",
+    team: "Team",
+    heroDesc: "Be part of a dynamic team dedicated to delivering exceptional virtual assistance and digital solutions. Join our growing family of innovators and make an impact in the future of business.",
+    whyWork: "Why Work With Accessively?",
+    benefit1Title: "Competitive compensation",
+    benefit1Desc: "Industry-leading salaries & bonuses",
+    benefit2Title: "Flexible work arrangements",
+    benefit2Desc: "Work from anywhere, anytime",
+    benefit3Title: "Professional development",
+    benefit3Desc: "Continuous learning & growth opportunities",
+    benefit4Title: "Supportive team environment",
+    benefit4Desc: "Collaborative culture & mentorship",
+    applyNow: "Apply Now",
+    learnMore: "Learn More",
+    submitTitle: "Submit Your Application",
+    submitDesc: "Fill out the form below to submit your application. We'll review your submission and get back to you soon.",
+    firstName: "First Name *",
+    firstNamePh: "Enter your first name",
+    lastName: "Last Name *",
+    lastNamePh: "Enter your last name",
+    email: "Email Address *",
+    emailPh: "your@email.com",
+    phone: "Phone Number",
+    phonePh: "+1 (555) 123-4567",
+    position: "Position Applied For *",
+    selectPosition: "Select a position",
+    positionVirtualAssistant: "Virtual Assistant",
+    positionSalesMarketing: "Sales & Marketing Specialist",
+    positionGraphicDesigner: "Graphic Designer",
+    positionWebDeveloper: "Web Developer",
+    positionCustomerService: "Customer Service Representative",
+    positionBusinessConsultant: "Business Consultant",
+    positionOther: "Other",
+    yearsExperience: "Years of Experience",
+    selectExperience: "Select experience level",
+    experienceEntry: "Entry Level (0-2 years)",
+    experienceIntermediate: "Intermediate (2-5 years)",
+    experienceExperienced: "Experienced (5-10 years)",
+    experienceExpert: "Expert (10+ years)",
+    skills: "Relevant Skills",
+    skillsPh: "List your relevant skills, certifications, and expertise...",
+    availability: "Availability",
+    selectAvailability: "Select availability",
+    availabilityFullTime: "Full-time",
+    availabilityPartTime: "Part-time",
+    availabilityContract: "Contract/Project-based",
+    availabilityFlexible: "Flexible",
+    coverLetter: "Cover Letter",
+    coverLetterPh: "Tell us why you're interested in this position and what makes you a great fit...",
+    resume: "Resume/CV *",
+    acceptedFormats: "Accepted formats: PDF, DOC, DOCX. Max file size: 5MB",
+    portfolio: "Portfolio/LinkedIn/GitHub (Optional)",
+    portfolioPh: "https://linkedin.com/in/yourprofile",
+    references: "References (Optional)",
+    referencesPh: "Please provide contact information for professional references...",
+    additionalInfo: "Additional Information",
+    additionalInfoPh: "Any additional information you'd like to share...",
+    submitApplication: "Submit Application",
+    policyNote: "By submitting this application, you agree to our privacy policy and terms of service.",
+    haveQuestions: "Have Questions?",
+    contactDesc: "We're here to help! Reach out to our HR team if you have any questions about the application process.",
+    contactHr: "Contact HR",
+    followUs: "Follow Us",
+    emailLabel: "Email",
+    phoneLabel: "Phone",
+  },
+  es: {
+    joinOur: "Únete a Nuestro",
+    elite: "Equipo",
+    team: "Élite",
+    heroDesc: "Sé parte de un equipo dinámico dedicado a brindar asistencia virtual y soluciones digitales excepcionales.",
+    whyWork: "¿Por qué trabajar con Accessively?",
+    benefit1Title: "Compensación competitiva",
+    benefit1Desc: "Salarios y bonos líderes en la industria",
+    benefit2Title: "Trabajo flexible",
+    benefit2Desc: "Trabaja desde cualquier lugar",
+    benefit3Title: "Desarrollo profesional",
+    benefit3Desc: "Aprendizaje y crecimiento continuo",
+    benefit4Title: "Ambiente de apoyo",
+    benefit4Desc: "Cultura colaborativa y mentoría",
+    applyNow: "Aplicar Ahora",
+    learnMore: "Saber Más",
+    submitTitle: "Envía Tu Solicitud",
+    submitDesc: "Completa el formulario para enviar tu solicitud.",
+    firstName: "Nombre *",
+    firstNamePh: "Ingresa tu nombre",
+    lastName: "Apellido *",
+    lastNamePh: "Ingresa tu apellido",
+    email: "Correo electrónico *",
+    emailPh: "tu@email.com",
+    phone: "Número de teléfono",
+    phonePh: "+34 600 123 456",
+    position: "Puesto solicitado *",
+    selectPosition: "Selecciona un puesto",
+    positionVirtualAssistant: "Asistente Virtual",
+    positionSalesMarketing: "Especialista en Ventas y Marketing",
+    positionGraphicDesigner: "Diseñador Gráfico",
+    positionWebDeveloper: "Desarrollador Web",
+    positionCustomerService: "Representante de Servicio al Cliente",
+    positionBusinessConsultant: "Consultor de Negocios",
+    positionOther: "Otro",
+    yearsExperience: "Años de experiencia",
+    selectExperience: "Selecciona nivel de experiencia",
+    experienceEntry: "Nivel inicial (0-2 años)",
+    experienceIntermediate: "Intermedio (2-5 años)",
+    experienceExperienced: "Con experiencia (5-10 años)",
+    experienceExpert: "Experto (10+ años)",
+    skills: "Habilidades relevantes",
+    skillsPh: "Enumera tus habilidades y certificaciones...",
+    availability: "Disponibilidad",
+    selectAvailability: "Selecciona disponibilidad",
+    availabilityFullTime: "Tiempo completo",
+    availabilityPartTime: "Medio tiempo",
+    availabilityContract: "Contrato/Por proyecto",
+    availabilityFlexible: "Flexible",
+    coverLetter: "Carta de presentación",
+    coverLetterPh: "Cuéntanos por qué te interesa este puesto...",
+    resume: "CV *",
+    acceptedFormats: "Formatos aceptados: PDF, DOC, DOCX. Tamaño máx: 5MB",
+    portfolio: "Portafolio/LinkedIn/GitHub (Opcional)",
+    portfolioPh: "https://linkedin.com/in/tuperfil",
+    references: "Referencias (Opcional)",
+    referencesPh: "Proporciona referencias profesionales...",
+    additionalInfo: "Información adicional",
+    additionalInfoPh: "Cualquier información adicional...",
+    submitApplication: "Enviar Solicitud",
+    policyNote: "Al enviar esta solicitud, aceptas nuestra política de privacidad y términos.",
+    haveQuestions: "¿Tienes preguntas?",
+    contactDesc: "¡Estamos aquí para ayudarte! Contacta a RR.HH. si tienes dudas sobre el proceso.",
+    contactHr: "Contactar RR.HH.",
+    followUs: "Síguenos",
+    emailLabel: "Correo",
+    phoneLabel: "Teléfono",
+  },
+  zh: {
+    joinOur: "加入我们的",
+    elite: "精英",
+    team: "团队",
+    heroDesc: "加入我们充满活力的团队，提供卓越的虚拟助理与数字解决方案。",
+    whyWork: "为什么加入 Accessively？",
+    benefit1Title: "有竞争力的薪酬",
+    benefit1Desc: "行业领先薪资与奖金",
+    benefit2Title: "灵活工作安排",
+    benefit2Desc: "随时随地工作",
+    benefit3Title: "职业发展",
+    benefit3Desc: "持续学习与成长",
+    benefit4Title: "支持型团队环境",
+    benefit4Desc: "协作文化与导师机制",
+    applyNow: "立即申请",
+    learnMore: "了解更多",
+    submitTitle: "提交你的申请",
+    submitDesc: "填写以下表单提交申请，我们会尽快回复。",
+    firstName: "名字 *",
+    firstNamePh: "请输入你的名字",
+    lastName: "姓氏 *",
+    lastNamePh: "请输入你的姓氏",
+    email: "邮箱地址 *",
+    emailPh: "your@email.com",
+    phone: "电话号码",
+    phonePh: "+86 138 0000 0000",
+    position: "申请职位 *",
+    selectPosition: "选择职位",
+    positionVirtualAssistant: "虚拟助理",
+    positionSalesMarketing: "销售与市场专员",
+    positionGraphicDesigner: "平面设计师",
+    positionWebDeveloper: "网页开发工程师",
+    positionCustomerService: "客户服务代表",
+    positionBusinessConsultant: "商业顾问",
+    positionOther: "其他",
+    yearsExperience: "工作年限",
+    selectExperience: "选择经验水平",
+    experienceEntry: "入门级（0-2年）",
+    experienceIntermediate: "中级（2-5年）",
+    experienceExperienced: "资深（5-10年）",
+    experienceExpert: "专家（10年以上）",
+    skills: "相关技能",
+    skillsPh: "列出你的技能、证书和专长...",
+    availability: "可工作时间",
+    selectAvailability: "选择可用时间",
+    availabilityFullTime: "全职",
+    availabilityPartTime: "兼职",
+    availabilityContract: "合同/项目制",
+    availabilityFlexible: "灵活",
+    coverLetter: "求职信",
+    coverLetterPh: "告诉我们你为什么适合这个职位...",
+    resume: "简历/CV *",
+    acceptedFormats: "支持格式：PDF、DOC、DOCX。最大 5MB",
+    portfolio: "作品集/LinkedIn/GitHub（可选）",
+    portfolioPh: "https://linkedin.com/in/yourprofile",
+    references: "推荐人（可选）",
+    referencesPh: "请提供职业推荐人联系方式...",
+    additionalInfo: "其他信息",
+    additionalInfoPh: "其他想补充的信息...",
+    submitApplication: "提交申请",
+    policyNote: "提交申请即表示你同意我们的隐私政策和服务条款。",
+    haveQuestions: "有问题吗？",
+    contactDesc: "我们随时提供帮助！如对申请流程有疑问，请联系 HR 团队。",
+    contactHr: "联系 HR",
+    followUs: "关注我们",
+    emailLabel: "邮箱",
+    phoneLabel: "电话",
+  },
+  tl: {
+    joinOur: "Sumali sa Aming",
+    elite: "Elite",
+    team: "Team",
+    heroDesc: "Maging bahagi ng dynamic na team na naghahatid ng de-kalidad na virtual assistance at digital solutions.",
+    whyWork: "Bakit Magtrabaho sa Accessively?",
+    benefit1Title: "Competitive compensation",
+    benefit1Desc: "Industry-leading salaries at bonuses",
+    benefit2Title: "Flexible work arrangements",
+    benefit2Desc: "Magtrabaho kahit saan",
+    benefit3Title: "Professional development",
+    benefit3Desc: "Patuloy na pag-aaral at growth",
+    benefit4Title: "Supportive team environment",
+    benefit4Desc: "Collaborative culture at mentorship",
+    applyNow: "Mag-Apply Ngayon",
+    learnMore: "Alamin Pa",
+    submitTitle: "I-submit ang Iyong Application",
+    submitDesc: "Punan ang form sa ibaba para mag-submit ng application.",
+    firstName: "Unang Pangalan *",
+    firstNamePh: "Ilagay ang unang pangalan",
+    lastName: "Apelyido *",
+    lastNamePh: "Ilagay ang apelyido",
+    email: "Email Address *",
+    emailPh: "your@email.com",
+    phone: "Phone Number",
+    phonePh: "+63 912 345 6789",
+    position: "Posisyong Inaaplayan *",
+    selectPosition: "Pumili ng posisyon",
+    positionVirtualAssistant: "Virtual Assistant",
+    positionSalesMarketing: "Sales at Marketing Specialist",
+    positionGraphicDesigner: "Graphic Designer",
+    positionWebDeveloper: "Web Developer",
+    positionCustomerService: "Customer Service Representative",
+    positionBusinessConsultant: "Business Consultant",
+    positionOther: "Iba pa",
+    yearsExperience: "Taon ng Karanasan",
+    selectExperience: "Pumili ng experience level",
+    experienceEntry: "Entry Level (0-2 taon)",
+    experienceIntermediate: "Intermediate (2-5 taon)",
+    experienceExperienced: "Experienced (5-10 taon)",
+    experienceExpert: "Expert (10+ taon)",
+    skills: "Mga Kaugnay na Kasanayan",
+    skillsPh: "Ilista ang iyong skills at certifications...",
+    availability: "Availability",
+    selectAvailability: "Pumili ng availability",
+    availabilityFullTime: "Full-time",
+    availabilityPartTime: "Part-time",
+    availabilityContract: "Contract/Project-based",
+    availabilityFlexible: "Flexible",
+    coverLetter: "Cover Letter",
+    coverLetterPh: "Sabihin kung bakit ka fit sa posisyon...",
+    resume: "Resume/CV *",
+    acceptedFormats: "Accepted formats: PDF, DOC, DOCX. Max file size: 5MB",
+    portfolio: "Portfolio/LinkedIn/GitHub (Optional)",
+    portfolioPh: "https://linkedin.com/in/iyongprofile",
+    references: "References (Optional)",
+    referencesPh: "Magbigay ng professional references...",
+    additionalInfo: "Karagdagang Impormasyon",
+    additionalInfoPh: "Anumang dagdag na impormasyon...",
+    submitApplication: "I-submit ang Application",
+    policyNote: "Sa pagsusumite ng application na ito, sumasang-ayon ka sa aming privacy policy at terms of service.",
+    haveQuestions: "May Tanong?",
+    contactDesc: "Narito kami para tumulong! Makipag-ugnayan sa HR team para sa mga tanong sa application process.",
+    contactHr: "Contact HR",
+    followUs: "Sundan Kami",
+    emailLabel: "Email",
+    phoneLabel: "Phone",
+  },
+  fr: {
+    joinOur: "Rejoignez Notre",
+    elite: "Équipe",
+    team: "Élite",
+    heroDesc: "Rejoignez une équipe dynamique dédiée à des solutions digitales et d'assistance virtuelle exceptionnelles.",
+    whyWork: "Pourquoi travailler avec Accessively ?",
+    benefit1Title: "Rémunération compétitive",
+    benefit1Desc: "Salaires et primes attractifs",
+    benefit2Title: "Organisation flexible",
+    benefit2Desc: "Travaillez de partout",
+    benefit3Title: "Développement professionnel",
+    benefit3Desc: "Apprentissage et progression continue",
+    benefit4Title: "Environnement d'équipe solidaire",
+    benefit4Desc: "Culture collaborative et mentorat",
+    applyNow: "Postuler",
+    learnMore: "En savoir plus",
+    submitTitle: "Soumettez Votre Candidature",
+    submitDesc: "Remplissez le formulaire ci-dessous pour envoyer votre candidature.",
+    firstName: "Prénom *",
+    firstNamePh: "Entrez votre prénom",
+    lastName: "Nom *",
+    lastNamePh: "Entrez votre nom",
+    email: "Adresse e-mail *",
+    emailPh: "your@email.com",
+    phone: "Numéro de téléphone",
+    phonePh: "+33 6 12 34 56 78",
+    position: "Poste demandé *",
+    selectPosition: "Sélectionnez un poste",
+    positionVirtualAssistant: "Assistant Virtuel",
+    positionSalesMarketing: "Spécialiste Ventes et Marketing",
+    positionGraphicDesigner: "Designer Graphique",
+    positionWebDeveloper: "Développeur Web",
+    positionCustomerService: "Représentant Service Client",
+    positionBusinessConsultant: "Consultant Business",
+    positionOther: "Autre",
+    yearsExperience: "Années d'expérience",
+    selectExperience: "Sélectionnez le niveau d'expérience",
+    experienceEntry: "Débutant (0-2 ans)",
+    experienceIntermediate: "Intermédiaire (2-5 ans)",
+    experienceExperienced: "Expérimenté (5-10 ans)",
+    experienceExpert: "Expert (10+ ans)",
+    skills: "Compétences pertinentes",
+    skillsPh: "Listez vos compétences et certifications...",
+    availability: "Disponibilité",
+    selectAvailability: "Sélectionnez la disponibilité",
+    availabilityFullTime: "Temps plein",
+    availabilityPartTime: "Temps partiel",
+    availabilityContract: "Contrat/Projet",
+    availabilityFlexible: "Flexible",
+    coverLetter: "Lettre de motivation",
+    coverLetterPh: "Expliquez pourquoi ce poste vous intéresse...",
+    resume: "CV *",
+    acceptedFormats: "Formats acceptés : PDF, DOC, DOCX. Taille max : 5MB",
+    portfolio: "Portfolio/LinkedIn/GitHub (Optionnel)",
+    portfolioPh: "https://linkedin.com/in/votreprofil",
+    references: "Références (Optionnel)",
+    referencesPh: "Veuillez fournir des références professionnelles...",
+    additionalInfo: "Informations supplémentaires",
+    additionalInfoPh: "Toute information supplémentaire...",
+    submitApplication: "Envoyer la candidature",
+    policyNote: "En soumettant cette candidature, vous acceptez notre politique de confidentialité et nos conditions.",
+    haveQuestions: "Des questions ?",
+    contactDesc: "Nous sommes là pour vous aider ! Contactez notre équipe RH pour toute question.",
+    contactHr: "Contacter RH",
+    followUs: "Suivez-nous",
+    emailLabel: "E-mail",
+    phoneLabel: "Téléphone",
+  },
+} as const;
+
+type ApplyLang = keyof typeof applyTexts;
+
 export default function Apply() {
+  const { language } = useLanguage();
+  const t = applyTexts[(language as ApplyLang) || "en"] || applyTexts.en;
+
   return (
     <div className="flex flex-col flex-1 bg-slate-950 min-h-screen">
       {/* Hero Section */}
@@ -16,26 +368,25 @@ export default function Apply() {
           <div className="mb-8">
             <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-400 bg-clip-text text-transparent animate-pulse">
-                Join Our
+                {t.joinOur}
               </span>
             </h1>
             <div className="w-32 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-8 rounded-full"></div>
           </div>
 
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
-            Elite
+            {t.elite}
             <span className="block bg-gradient-to-r from-indigo-300 via-purple-300 to-blue-300 bg-clip-text text-transparent">
-              Team
+              {t.team}
             </span>
           </h2>
 
           <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Be part of a dynamic team dedicated to delivering exceptional virtual assistance and digital solutions.
-            Join our growing family of innovators and make an impact in the future of business.
+            {t.heroDesc}
           </p>
 
           <div className="backdrop-blur-md bg-slate-900/40 rounded-3xl p-8 border border-slate-800/50 max-w-4xl mx-auto mb-12">
-            <h3 className="text-3xl font-bold text-white mb-8">Why Work With Accessively?</h3>
+            <h3 className="text-3xl font-bold text-white mb-8">{t.whyWork}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex items-center group">
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-indigo-500/25">
@@ -44,8 +395,8 @@ export default function Apply() {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-white font-semibold">Competitive compensation</div>
-                  <div className="text-slate-400 text-sm">Industry-leading salaries & bonuses</div>
+                  <div className="text-white font-semibold">{t.benefit1Title}</div>
+                  <div className="text-slate-400 text-sm">{t.benefit1Desc}</div>
                 </div>
               </div>
 
@@ -56,8 +407,8 @@ export default function Apply() {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-white font-semibold">Flexible work arrangements</div>
-                  <div className="text-slate-400 text-sm">Work from anywhere, anytime</div>
+                  <div className="text-white font-semibold">{t.benefit2Title}</div>
+                  <div className="text-slate-400 text-sm">{t.benefit2Desc}</div>
                 </div>
               </div>
 
@@ -68,8 +419,8 @@ export default function Apply() {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-white font-semibold">Professional development</div>
-                  <div className="text-slate-400 text-sm">Continuous learning & growth opportunities</div>
+                  <div className="text-white font-semibold">{t.benefit3Title}</div>
+                  <div className="text-slate-400 text-sm">{t.benefit3Desc}</div>
                 </div>
               </div>
 
@@ -80,8 +431,8 @@ export default function Apply() {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-white font-semibold">Supportive team environment</div>
-                  <div className="text-slate-400 text-sm">Collaborative culture & mentorship</div>
+                  <div className="text-white font-semibold">{t.benefit4Title}</div>
+                  <div className="text-slate-400 text-sm">{t.benefit4Desc}</div>
                 </div>
               </div>
             </div>
@@ -92,14 +443,14 @@ export default function Apply() {
               href="#application-form"
               className="group relative bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-indigo-500/25 hover:shadow-indigo-500/40 overflow-hidden"
             >
-              <span className="relative z-10">Apply Now</span>
+              <span className="relative z-10">{t.applyNow}</span>
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-purple-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </a>
             <a
               href="#contact"
               className="group relative border-2 border-slate-700 hover:border-indigo-400 text-slate-300 hover:text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-slate-900/50 hover:bg-slate-800/50"
             >
-              Learn More
+              {t.learnMore}
             </a>
           </div>
         </div>
@@ -112,10 +463,10 @@ export default function Apply() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">Submit Your Application</h2>
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">{t.submitTitle}</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-8 rounded-full"></div>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-              Fill out the form below to submit your application. We'll review your submission and get back to you soon.
+              {t.submitDesc}
             </p>
           </div>
 
@@ -124,130 +475,130 @@ export default function Apply() {
               {/* Personal Information */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-slate-300 mb-3">First Name *</label>
+                  <label htmlFor="firstName" className="block text-sm font-medium text-slate-300 mb-3">{t.firstName}</label>
                   <input
                     type="text"
                     id="firstName"
                     name="firstName"
                     required
                     className="w-full px-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-slate-400 transition-all duration-300 hover:border-indigo-400/50"
-                    placeholder="Enter your first name"
+                    placeholder={t.firstNamePh}
                   />
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-slate-300 mb-3">Last Name *</label>
+                  <label htmlFor="lastName" className="block text-sm font-medium text-slate-300 mb-3">{t.lastName}</label>
                   <input
                     type="text"
                     id="lastName"
                     name="lastName"
                     required
                     className="w-full px-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-slate-400 transition-all duration-300 hover:border-indigo-400/50"
-                    placeholder="Enter your last name"
+                    placeholder={t.lastNamePh}
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-3">Email Address *</label>
+                <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-3">{t.email}</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   required
                   className="w-full px-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-slate-400 transition-all duration-300 hover:border-indigo-400/50"
-                  placeholder="your@email.com"
+                  placeholder={t.emailPh}
                 />
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-slate-300 mb-3">Phone Number</label>
+                <label htmlFor="phone" className="block text-sm font-medium text-slate-300 mb-3">{t.phone}</label>
                 <input
                   type="tel"
                   id="phone"
                   name="phone"
                   className="w-full px-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-slate-400 transition-all duration-300 hover:border-indigo-400/50"
-                  placeholder="+1 (555) 123-4567"
+                  placeholder={t.phonePh}
                 />
               </div>
 
               {/* Position Information */}
               <div>
-                <label htmlFor="position" className="block text-sm font-medium text-slate-300 mb-3">Position Applied For *</label>
+                <label htmlFor="position" className="block text-sm font-medium text-slate-300 mb-3">{t.position}</label>
                 <select
                   id="position"
                   name="position"
                   required
                   className="w-full px-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white transition-all duration-300 hover:border-indigo-400/50"
                 >
-                  <option value="" className="bg-slate-800">Select a position</option>
-                  <option value="virtual-assistant" className="bg-slate-800">Virtual Assistant</option>
-                  <option value="sales-marketing-specialist" className="bg-slate-800">Sales & Marketing Specialist</option>
-                  <option value="graphic-designer" className="bg-slate-800">Graphic Designer</option>
-                  <option value="web-developer" className="bg-slate-800">Web Developer</option>
-                  <option value="customer-service-rep" className="bg-slate-800">Customer Service Representative</option>
-                  <option value="business-consultant" className="bg-slate-800">Business Consultant</option>
-                  <option value="other" className="bg-slate-800">Other</option>
+                  <option value="" className="bg-slate-800">{t.selectPosition}</option>
+                  <option value="virtual-assistant" className="bg-slate-800">{t.positionVirtualAssistant}</option>
+                  <option value="sales-marketing-specialist" className="bg-slate-800">{t.positionSalesMarketing}</option>
+                  <option value="graphic-designer" className="bg-slate-800">{t.positionGraphicDesigner}</option>
+                  <option value="web-developer" className="bg-slate-800">{t.positionWebDeveloper}</option>
+                  <option value="customer-service-rep" className="bg-slate-800">{t.positionCustomerService}</option>
+                  <option value="business-consultant" className="bg-slate-800">{t.positionBusinessConsultant}</option>
+                  <option value="other" className="bg-slate-800">{t.positionOther}</option>
                 </select>
               </div>
 
               {/* Experience & Skills */}
               <div>
-                <label htmlFor="experience" className="block text-sm font-medium text-slate-300 mb-3">Years of Experience</label>
+                <label htmlFor="experience" className="block text-sm font-medium text-slate-300 mb-3">{t.yearsExperience}</label>
                 <select
                   id="experience"
                   name="experience"
                   className="w-full px-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white transition-all duration-300 hover:border-indigo-400/50"
                 >
-                  <option value="" className="bg-slate-800">Select experience level</option>
-                  <option value="entry" className="bg-slate-800">Entry Level (0-2 years)</option>
-                  <option value="intermediate" className="bg-slate-800">Intermediate (2-5 years)</option>
-                  <option value="experienced" className="bg-slate-800">Experienced (5-10 years)</option>
-                  <option value="expert" className="bg-slate-800">Expert (10+ years)</option>
+                  <option value="" className="bg-slate-800">{t.selectExperience}</option>
+                  <option value="entry" className="bg-slate-800">{t.experienceEntry}</option>
+                  <option value="intermediate" className="bg-slate-800">{t.experienceIntermediate}</option>
+                  <option value="experienced" className="bg-slate-800">{t.experienceExperienced}</option>
+                  <option value="expert" className="bg-slate-800">{t.experienceExpert}</option>
                 </select>
               </div>
 
               <div>
-                <label htmlFor="skills" className="block text-sm font-medium text-slate-300 mb-3">Relevant Skills</label>
+                <label htmlFor="skills" className="block text-sm font-medium text-slate-300 mb-3">{t.skills}</label>
                 <textarea
                   id="skills"
                   name="skills"
                   rows={4}
                   className="w-full px-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-slate-400 transition-all duration-300 hover:border-indigo-400/50 resize-none"
-                  placeholder="List your relevant skills, certifications, and expertise..."
+                  placeholder={t.skillsPh}
                 ></textarea>
               </div>
 
               {/* Availability */}
               <div>
-                <label htmlFor="availability" className="block text-sm font-medium text-slate-300 mb-3">Availability</label>
+                <label htmlFor="availability" className="block text-sm font-medium text-slate-300 mb-3">{t.availability}</label>
                 <select
                   id="availability"
                   name="availability"
                   className="w-full px-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white transition-all duration-300 hover:border-indigo-400/50"
                 >
-                  <option value="" className="bg-slate-800">Select availability</option>
-                  <option value="full-time" className="bg-slate-800">Full-time</option>
-                  <option value="part-time" className="bg-slate-800">Part-time</option>
-                  <option value="contract" className="bg-slate-800">Contract/Project-based</option>
-                  <option value="flexible" className="bg-slate-800">Flexible</option>
+                  <option value="" className="bg-slate-800">{t.selectAvailability}</option>
+                  <option value="full-time" className="bg-slate-800">{t.availabilityFullTime}</option>
+                  <option value="part-time" className="bg-slate-800">{t.availabilityPartTime}</option>
+                  <option value="contract" className="bg-slate-800">{t.availabilityContract}</option>
+                  <option value="flexible" className="bg-slate-800">{t.availabilityFlexible}</option>
                 </select>
               </div>
 
               {/* Cover Letter */}
               <div>
-                <label htmlFor="coverLetter" className="block text-sm font-medium text-slate-300 mb-3">Cover Letter</label>
+                <label htmlFor="coverLetter" className="block text-sm font-medium text-slate-300 mb-3">{t.coverLetter}</label>
                 <textarea
                   id="coverLetter"
                   name="coverLetter"
                   rows={6}
                   className="w-full px-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-slate-400 transition-all duration-300 hover:border-indigo-400/50 resize-none"
-                  placeholder="Tell us why you're interested in this position and what makes you a great fit..."
+                  placeholder={t.coverLetterPh}
                 ></textarea>
               </div>
 
               {/* Resume Upload */}
               <div>
-                <label htmlFor="resume" className="block text-sm font-medium text-slate-300 mb-3">Resume/CV *</label>
+                <label htmlFor="resume" className="block text-sm font-medium text-slate-300 mb-3">{t.resume}</label>
                 <input
                   type="file"
                   id="resume"
@@ -256,42 +607,42 @@ export default function Apply() {
                   required
                   className="w-full px-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white file:mr-4 file:py-3 file:px-6 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-gradient-to-r file:from-indigo-600 file:to-purple-600 file:text-white hover:file:from-indigo-500 hover:file:to-purple-500 file:transition-all file:duration-300 transition-all duration-300 hover:border-indigo-400/50"
                 />
-                <p className="text-sm text-slate-400 mt-2">Accepted formats: PDF, DOC, DOCX. Max file size: 5MB</p>
+                <p className="text-sm text-slate-400 mt-2">{t.acceptedFormats}</p>
               </div>
 
               {/* Portfolio/Links */}
               <div>
-                <label htmlFor="portfolio" className="block text-sm font-medium text-slate-300 mb-3">Portfolio/LinkedIn/GitHub (Optional)</label>
+                <label htmlFor="portfolio" className="block text-sm font-medium text-slate-300 mb-3">{t.portfolio}</label>
                 <input
                   type="url"
                   id="portfolio"
                   name="portfolio"
                   className="w-full px-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-slate-400 transition-all duration-300 hover:border-indigo-400/50"
-                  placeholder="https://linkedin.com/in/yourprofile"
+                  placeholder={t.portfolioPh}
                 />
               </div>
 
               {/* References */}
               <div>
-                <label htmlFor="references" className="block text-sm font-medium text-slate-300 mb-3">References (Optional)</label>
+                <label htmlFor="references" className="block text-sm font-medium text-slate-300 mb-3">{t.references}</label>
                 <textarea
                   id="references"
                   name="references"
                   rows={4}
                   className="w-full px-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-slate-400 transition-all duration-300 hover:border-indigo-400/50 resize-none"
-                  placeholder="Please provide contact information for professional references..."
+                  placeholder={t.referencesPh}
                 ></textarea>
               </div>
 
               {/* Additional Information */}
               <div>
-                <label htmlFor="additionalInfo" className="block text-sm font-medium text-slate-300 mb-3">Additional Information</label>
+                <label htmlFor="additionalInfo" className="block text-sm font-medium text-slate-300 mb-3">{t.additionalInfo}</label>
                 <textarea
                   id="additionalInfo"
                   name="additionalInfo"
                   rows={4}
                   className="w-full px-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-slate-400 transition-all duration-300 hover:border-indigo-400/50 resize-none"
-                  placeholder="Any additional information you'd like to share..."
+                  placeholder={t.additionalInfoPh}
                 ></textarea>
               </div>
 
@@ -301,11 +652,11 @@ export default function Apply() {
                   type="submit"
                   className="group relative bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white px-12 py-5 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-indigo-500/25 hover:shadow-indigo-500/40 overflow-hidden"
                 >
-                  <span className="relative z-10">Submit Application</span>
+                  <span className="relative z-10">{t.submitApplication}</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-purple-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                 </button>
                 <p className="text-sm text-slate-400 mt-6">
-                  By submitting this application, you agree to our privacy policy and terms of service.
+                  {t.policyNote}
                 </p>
               </div>
             </form>
@@ -319,10 +670,10 @@ export default function Apply() {
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/5 via-transparent to-purple-900/5"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">Have Questions?</h2>
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">{t.haveQuestions}</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-8 rounded-full"></div>
           <p className="text-xl text-slate-300 mb-16 max-w-3xl mx-auto leading-relaxed">
-            We're here to help! Reach out to our HR team if you have any questions about the application process.
+            {t.contactDesc}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -332,7 +683,7 @@ export default function Apply() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 4h.01M16 20h.01M12 20h.01M8 20h.01M12 4h.01M8 4h.01" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-6">Contact HR</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">{t.contactHr}</h3>
               <div className="space-y-4">
                 <div className="flex items-center justify-center group">
                   <div className="w-10 h-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
@@ -341,8 +692,8 @@ export default function Apply() {
                     </svg>
                   </div>
                   <div className="text-left">
-                    <div className="text-white font-semibold">Email</div>
-                    <div className="text-slate-400">Careers@accessively.com</div>
+                    <div className="text-white font-semibold">{t.emailLabel}</div>
+                    <div className="text-slate-400">Careers@accessivelybpo.com</div>
                   </div>
                 </div>
                 <div className="flex items-center justify-center group">
@@ -352,7 +703,7 @@ export default function Apply() {
                     </svg>
                   </div>
                   <div className="text-left">
-                    <div className="text-white font-semibold">Phone</div>
+                    <div className="text-white font-semibold">{t.phoneLabel}</div>
                     <div className="text-slate-400">+1 (555) 123-4567</div>
                   </div>
                 </div>
@@ -365,7 +716,7 @@ export default function Apply() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-6">Follow Us</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">{t.followUs}</h3>
               <div className="flex justify-center space-x-6">
                 <a href="#" className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-indigo-600 transition-colors duration-300 group">
                   <svg className="w-6 h-6 text-slate-400 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">

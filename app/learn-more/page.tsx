@@ -1,4 +1,12 @@
+"use client";
+
+import { useLanguage } from "@/app/contexts/LanguageContext";
+import { pageTexts } from "@/app/pageTexts";
+
 export default function LearnMore() {
+  const { language } = useLanguage();
+  const t = pageTexts[language].learnMorePage;
+
   return (
     <div className="flex flex-col flex-1">
       <main className="flex-1">
@@ -6,10 +14,10 @@ export default function LearnMore() {
           <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
-                Learn More About Our Services
+                {t.title}
               </h1>
               <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-                Discover how our outsourcing agency can help your business thrive.
+                {t.subtitle}
               </p>
             </div>
             <div className="mt-16">
@@ -25,10 +33,10 @@ export default function LearnMore() {
                         </span>
                       </div>
                       <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                        Client Management
+                        {t.clientManagementTitle}
                       </h3>
                       <p className="mt-5 text-base text-gray-500">
-                        We handle all aspects of client relationships, from onboarding to ongoing support, ensuring your clients receive top-tier service.
+                        {t.clientManagementDesc}
                       </p>
                     </div>
                   </div>
@@ -44,10 +52,10 @@ export default function LearnMore() {
                         </span>
                       </div>
                       <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                        Project Tracking
+                        {t.projectTrackingTitle}
                       </h3>
                       <p className="mt-5 text-base text-gray-500">
-                        Our advanced project tracking systems keep you informed of progress, milestones, and deliverables in real-time.
+                        {t.projectTrackingDesc}
                       </p>
                     </div>
                   </div>
@@ -63,10 +71,10 @@ export default function LearnMore() {
                         </span>
                       </div>
                       <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                        Employee Management
+                        {t.employeeManagementTitle}
                       </h3>
                       <p className="mt-5 text-base text-gray-500">
-                        We provide skilled employees tailored to your project needs, managing recruitment, training, and performance.
+                        {t.employeeManagementDesc}
                       </p>
                     </div>
                   </div>
