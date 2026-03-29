@@ -2,6 +2,17 @@
 
 A Next.js website for an outsourcing company agency, built with TypeScript, Tailwind CSS, and ESLint.
 
+## Repository
+
+- GitHub: https://github.com/accessively/bug-free-space-meme
+
+Clone the repository:
+
+```bash
+git clone https://github.com/accessively/bug-free-space-meme.git
+cd bug-free-space-meme
+```
+
 ## Features
 
 - Home page with agency introduction

@@ -1,6 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { useLanguage } from "@/app/contexts/LanguageContext";
+import { translations } from "@/app/translations";
 
 const applyTexts = {
   en: {
@@ -350,9 +352,76 @@ type ApplyLang = keyof typeof applyTexts;
 export default function Apply() {
   const { language } = useLanguage();
   const t = applyTexts[(language as ApplyLang) || "en"] || applyTexts.en;
+  const siteTexts = translations[language];
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
+  const [submitError, setSubmitError] = useState(false);
+  const [privacyConsent, setPrivacyConsent] = useState(false);
+
+  const servicePositions = [
+    {
+      value: "information-technology-technical-support",
+      label: siteTexts.services.virtualAssistanceTitle,
+    },
+    {
+      value: "social-media-digital-marketing-content-strategy",
+      label: siteTexts.services.salesMarketingTitle,
+    },
+    {
+      value: "graphic-design-visual-media-creative-services",
+      label: siteTexts.services.graphicDesignTitle,
+    },
+    {
+      value: "video-editing-multimedia-production-content-creation",
+      label: siteTexts.services.webDevelopmentTitle,
+    },
+    {
+      value: "customer-support-technical-support-sales-client-services",
+      label: siteTexts.services.customerServiceTitle,
+    },
+  ];
+
+  const handleApplicationSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    formData.append("privacyConsent", privacyConsent ? "true" : "false");
+    formData.append("website", "");
+
+    try {
+      setIsSubmitting(true);
+      setSubmitError(false);
+      setSubmitMessage("");
+
+      const response = await fetch("/api/applications", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.ok) {
+        throw new Error(result.message || "Submission failed.");
+      }
+
+      setSubmitMessage(
+        result.emailed
+          ? "Application submitted successfully and sent to solutions@accessivelybpo.com."
+          : "Application submitted successfully and stored on the server. Configure SMTP to enable automatic email delivery."
+      );
+      event.currentTarget?.reset();
+      setPrivacyConsent(false);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Submission failed.";
+      setSubmitError(true);
+      setSubmitMessage(message);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
-    <div className="flex flex-col flex-1 bg-slate-950 min-h-screen">
+    <div className="flex min-h-screen flex-1 flex-col overflow-x-hidden bg-slate-950">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         {/* Background Effects */}
@@ -360,13 +429,13 @@ export default function Apply() {
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/20 via-purple-900/20 to-blue-900/20"></div>
 
         {/* Animated Background Orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-500/5 rounded-full blur-2xl animate-pulse delay-500"></div>
+        <div className="absolute left-0 top-1/4 h-48 w-48 rounded-full bg-indigo-500/10 blur-3xl animate-pulse sm:left-1/4 sm:h-80 sm:w-80 lg:h-96 lg:w-96"></div>
+        <div className="absolute bottom-1/4 right-0 h-48 w-48 rounded-full bg-purple-500/10 blur-3xl animate-pulse delay-1000 sm:right-1/4 sm:h-80 sm:w-80 lg:h-96 lg:w-96"></div>
+        <div className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-blue-500/5 blur-2xl animate-pulse delay-500 sm:h-56 sm:w-56 lg:h-64 lg:w-64"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
+            <h1 className="mb-6 text-4xl font-bold leading-tight sm:text-6xl md:text-8xl">
               <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-400 bg-clip-text text-transparent animate-pulse">
                 {t.joinOur}
               </span>
@@ -374,18 +443,18 @@ export default function Apply() {
             <div className="w-32 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-8 rounded-full"></div>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
+          <h2 className="mb-8 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-6xl">
             {t.elite}
             <span className="block bg-gradient-to-r from-indigo-300 via-purple-300 to-blue-300 bg-clip-text text-transparent">
               {t.team}
             </span>
           </h2>
 
-          <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="mx-auto mb-10 max-w-4xl text-base leading-relaxed text-slate-300 sm:mb-12 sm:text-xl md:text-2xl">
             {t.heroDesc}
           </p>
 
-          <div className="backdrop-blur-md bg-slate-900/40 rounded-3xl p-8 border border-slate-800/50 max-w-4xl mx-auto mb-12">
+          <div className="mx-auto mb-10 max-w-4xl rounded-3xl border border-slate-800/50 bg-slate-900/40 p-5 backdrop-blur-md sm:mb-12 sm:p-8">
             <h3 className="text-3xl font-bold text-white mb-8">{t.whyWork}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex items-center group">
@@ -441,14 +510,14 @@ export default function Apply() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
               href="#application-form"
-              className="group relative bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-indigo-500/25 hover:shadow-indigo-500/40 overflow-hidden"
+              className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 text-base font-bold text-white transition-all duration-300 hover:from-indigo-500 hover:to-purple-500 sm:px-10 sm:py-5 sm:text-lg sm:hover:scale-105"
             >
               <span className="relative z-10">{t.applyNow}</span>
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-purple-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </a>
             <a
               href="#contact"
-              className="group relative border-2 border-slate-700 hover:border-indigo-400 text-slate-300 hover:text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-slate-900/50 hover:bg-slate-800/50"
+              className="group relative rounded-2xl border-2 border-slate-700 bg-slate-900/50 px-8 py-4 text-base font-bold text-slate-300 backdrop-blur-sm transition-all duration-300 hover:border-indigo-400 hover:bg-slate-800/50 hover:text-white sm:px-10 sm:py-5 sm:text-lg sm:hover:scale-105"
             >
               {t.learnMore}
             </a>
@@ -463,15 +532,15 @@ export default function Apply() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">{t.submitTitle}</h2>
+            <h2 className="mb-6 text-3xl font-bold text-white sm:text-5xl md:text-6xl">{t.submitTitle}</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-8 rounded-full"></div>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
               {t.submitDesc}
             </p>
           </div>
 
-          <div className="backdrop-blur-md bg-slate-900/40 rounded-3xl p-8 border border-slate-800/50">
-            <form className="space-y-8">
+          <div className="rounded-3xl border border-slate-800/50 bg-slate-900/40 p-5 backdrop-blur-md sm:p-8">
+            <form onSubmit={handleApplicationSubmit} className="space-y-8">
               {/* Personal Information */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -531,14 +600,15 @@ export default function Apply() {
                   className="w-full px-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white transition-all duration-300 hover:border-indigo-400/50"
                 >
                   <option value="" className="bg-slate-800">{t.selectPosition}</option>
-                  <option value="virtual-assistant" className="bg-slate-800">{t.positionVirtualAssistant}</option>
-                  <option value="sales-marketing-specialist" className="bg-slate-800">{t.positionSalesMarketing}</option>
-                  <option value="graphic-designer" className="bg-slate-800">{t.positionGraphicDesigner}</option>
-                  <option value="web-developer" className="bg-slate-800">{t.positionWebDeveloper}</option>
-                  <option value="customer-service-rep" className="bg-slate-800">{t.positionCustomerService}</option>
-                  <option value="business-consultant" className="bg-slate-800">{t.positionBusinessConsultant}</option>
-                  <option value="other" className="bg-slate-800">{t.positionOther}</option>
+                  {servicePositions.map((servicePosition) => (
+                    <option key={servicePosition.value} value={servicePosition.value} className="bg-slate-800">
+                      {servicePosition.label}
+                    </option>
+                  ))}
                 </select>
+                <p className="mt-2 text-sm text-slate-400">
+                  Choose from the same service categories listed in our Services section.
+                </p>
               </div>
 
               {/* Experience & Skills */}
@@ -614,7 +684,7 @@ export default function Apply() {
               <div>
                 <label htmlFor="portfolio" className="block text-sm font-medium text-slate-300 mb-3">{t.portfolio}</label>
                 <input
-                  type="url"
+                  type="text"
                   id="portfolio"
                   name="portfolio"
                   className="w-full px-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-slate-400 transition-all duration-300 hover:border-indigo-400/50"
@@ -648,16 +718,38 @@ export default function Apply() {
 
               {/* Submit Button */}
               <div className="text-center pt-8">
+                <div className="mb-6 rounded-xl border border-slate-700 bg-slate-800/40 p-4 text-left">
+                  <label className="flex items-start gap-3 text-sm text-slate-200">
+                    <input
+                      type="checkbox"
+                      name="privacyConsent"
+                      checked={privacyConsent}
+                      onChange={(event) => setPrivacyConsent(event.target.checked)}
+                      required
+                      className="mt-1 h-4 w-4 rounded border-slate-500 bg-slate-900 text-indigo-500 focus:ring-indigo-500"
+                    />
+                    <span>
+                      I understand that my information will be used in accordance with applicable data privacy law and Accessively's Data Privacy Policy. Please review our <a href="/privacy-policy" className="underline text-indigo-300 hover:text-indigo-200">Privacy Policy</a> for additional information.
+                    </span>
+                  </label>
+                  <input type="text" name="website" autoComplete="off" tabIndex={-1} className="hidden" aria-hidden="true" />
+                </div>
                 <button
                   type="submit"
-                  className="group relative bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white px-12 py-5 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-indigo-500/25 hover:shadow-indigo-500/40 overflow-hidden"
+                  disabled={isSubmitting}
+                  className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 text-base font-bold text-white transition-all duration-300 hover:from-indigo-500 hover:to-purple-500 sm:px-12 sm:py-5 sm:text-lg sm:hover:scale-105"
                 >
-                  <span className="relative z-10">{t.submitApplication}</span>
+                  <span className="relative z-10">{isSubmitting ? "Submitting..." : t.submitApplication}</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-purple-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                 </button>
                 <p className="text-sm text-slate-400 mt-6">
                   {t.policyNote}
                 </p>
+                {submitMessage && (
+                  <p className={`mt-4 text-sm ${submitError ? "text-rose-300" : "text-emerald-300"}`}>
+                    {submitMessage}
+                  </p>
+                )}
               </div>
             </form>
           </div>
@@ -670,14 +762,14 @@ export default function Apply() {
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/5 via-transparent to-purple-900/5"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">{t.haveQuestions}</h2>
+          <h2 className="mb-6 text-3xl font-bold text-white sm:text-5xl md:text-6xl">{t.haveQuestions}</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-8 rounded-full"></div>
           <p className="text-xl text-slate-300 mb-16 max-w-3xl mx-auto leading-relaxed">
             {t.contactDesc}
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="backdrop-blur-md bg-slate-900/40 rounded-3xl p-8 border border-slate-800/50 hover:border-indigo-500/50 transition-all duration-500 group">
+          <div className="max-w-2xl mx-auto">
+            <div className="group rounded-3xl border border-slate-800/50 bg-slate-900/40 p-5 backdrop-blur-md transition-all duration-500 hover:border-indigo-500/50 sm:p-8">
               <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-indigo-500/25">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 4h.01M16 20h.01M12 20h.01M8 20h.01M12 4h.01M8 4h.01" />
@@ -693,7 +785,7 @@ export default function Apply() {
                   </div>
                   <div className="text-left">
                     <div className="text-white font-semibold">{t.emailLabel}</div>
-                    <div className="text-slate-400">Careers@accessivelybpo.com</div>
+                    <a href="mailto:solutions@accessivelybpo.com" className="text-slate-400 hover:text-white transition-colors">solutions@accessivelybpo.com</a>
                   </div>
                 </div>
                 <div className="flex items-center justify-center group">
@@ -704,35 +796,9 @@ export default function Apply() {
                   </div>
                   <div className="text-left">
                     <div className="text-white font-semibold">{t.phoneLabel}</div>
-                    <div className="text-slate-400">+1 (555) 123-4567</div>
+                    <a href="https://wa.me/639936790350" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">(+63) 993-679-0350</a>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="backdrop-blur-md bg-slate-900/40 rounded-3xl p-8 border border-slate-800/50 hover:border-purple-500/50 transition-all duration-500 group">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-500/25">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-6">{t.followUs}</h3>
-              <div className="flex justify-center space-x-6">
-                <a href="#" className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-indigo-600 transition-colors duration-300 group">
-                  <svg className="w-6 h-6 text-slate-400 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
-                  </svg>
-                </a>
-                <a href="#" className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-purple-600 transition-colors duration-300 group">
-                  <svg className="w-6 h-6 text-slate-400 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                  </svg>
-                </a>
-                <a href="#" className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-blue-600 transition-colors duration-300 group">
-                  <svg className="w-6 h-6 text-slate-400 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.749.097.118.112.221.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001.012.017z"/>
-                  </svg>
-                </a>
               </div>
             </div>
           </div>

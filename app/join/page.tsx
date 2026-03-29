@@ -245,7 +245,7 @@ export default function Join() {
             </div>
 
             <div className="mt-12 sm:mt-16 md:mt-0">
-              <form action="#" method="POST" className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+              <form action="mailto:solutions@accessivelybpo.com" method="POST" encType="text/plain" className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                 <div>
                   <label htmlFor="company-name" className="block text-sm font-medium text-gray-700">
                     {t.companyName}
@@ -299,6 +299,19 @@ export default function Join() {
                       placeholder={t.servicesPlaceholder}
                     />
                   </div>
+                </div>
+                <div className="sm:col-span-2">
+                  <label className="flex items-start gap-3 rounded-md border border-gray-300 bg-gray-50 p-4 text-sm text-gray-700">
+                    <input
+                      type="checkbox"
+                      name="privacyConsent"
+                      required
+                      className="mt-1 h-4 w-4"
+                    />
+                    <span>
+                      I understand that my information will be used in accordance with applicable data privacy law and Accessively's Data Privacy Policy. Please review our <a href="/privacy-policy" className="text-blue-600 hover:text-blue-800 underline">Privacy Policy</a> for additional information.
+                    </span>
+                  </label>
                 </div>
                 <div className="sm:col-span-2">
                   <button

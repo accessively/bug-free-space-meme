@@ -6,47 +6,72 @@ const privacyContent = {
   en: {
     title: "Privacy Policy",
     intro:
-      "Your privacy is important to us. It is Accessively's policy to respect your privacy regarding any information we may collect from you across our website, www.accessivelybpo.com, and other platforms we own and operate.",
+      "Accessively values your privacy and handles personal data with care, transparency, and security. This policy explains what information we collect through www.accessivelybpo.com, why we collect it, how we use it, and what choices you have.",
     sections: [
+      {
+        title: "Who We Are",
+        content:
+          "Accessively provides outsourcing, virtual assistance, digital support, recruitment, and customer engagement services. When you contact us, submit an application, request support, or send a business inquiry through this website, Accessively acts as the party responsible for handling that information.",
+      },
       {
         title: "Information We Collect",
         content:
-          "We only ask for personal information when it is necessary to provide our services to you. We collect information through fair and lawful means, with your knowledge and consent. We will also inform you why we are collecting it and how it will be used.",
+          "We may collect information you voluntarily provide, including your name, email address, phone number, company details, job application details, inquiry content, uploaded files such as resumes or images, and any other information you choose to submit through our forms.",
       },
       {
-        title: "Cookies and Tracking",
+        title: "How We Use Your Information",
         content:
-          "We use cookies and similar technologies to remember preferences, understand site traffic, and improve the browsing experience. You can accept or decline non-essential cookies through our cookie banner. Essential cookies may still be used to keep the website secure and functioning properly.",
+          "We use submitted information to respond to inquiries, review applications, provide consultations, contact sales leads, improve our services, manage support requests, maintain business records, and protect the website from abuse, spam, and fraudulent activity.",
+      },
+      {
+        title: "Uploaded Files and Attachments",
+        content:
+          "If you upload a resume, image, or other supported attachment, the file may be stored securely on our systems and may be forwarded by email to the appropriate Accessively team so your request can be reviewed and handled. Please avoid uploading unnecessary sensitive data.",
+      },
+      {
+        title: "Consent and Legal Basis",
+        content:
+          "Where required, we rely on your consent before processing form submissions. In other cases, we may process information when necessary to take steps requested by you, respond to your inquiry, evaluate employment interest, operate our business, or comply with legal obligations.",
+      },
+      {
+        title: "Cookies and Site Functionality",
+        content:
+          "We may use cookies and similar technologies to remember preferences, support website functionality, understand site usage, and improve performance. You can manage non-essential cookie preferences through our cookie banner, while essential cookies may still be used for site operation and security.",
+      },
+      {
+        title: "Spam Prevention and Security",
+        content:
+          "We use reasonable administrative and technical safeguards to protect personal information. These safeguards may include rate limiting, form validation, anti-spam checks, restricted access, and secure handling of submitted records and email notifications. No system is completely risk-free, but we take practical steps to reduce unauthorized access, misuse, or loss.",
+      },
+      {
+        title: "Sharing of Information",
+        content:
+          "We do not sell your personal information. We may share data with trusted service providers or tools only when reasonably necessary to operate the website, deliver requested communications, store submissions, or support our business operations. We may also disclose information when required by law or to protect legal rights and security.",
       },
       {
         title: "Data Retention",
         content:
-          "We only retain collected information for as long as necessary to deliver the requested services. The data we store is protected using commercially acceptable methods to prevent loss, theft, unauthorized access, disclosure, copying, use, or modification.",
+          "We retain submitted information only for as long as reasonably necessary for the purpose it was collected, including communications, recruitment review, client follow-up, legal compliance, dispute resolution, record keeping, and fraud prevention. Retention periods may vary based on the type of request and applicable legal requirements.",
       },
       {
-        title: "Information Sharing",
+        title: "Your Rights and Choices",
         content:
-          "We do not share any personally identifiable information publicly or with third parties, except when required by law or when necessary to deliver our services through trusted tools and platforms.",
+          "Subject to applicable law, you may request access to, correction of, or deletion of personal data we hold about you. You may also object to certain processing or withdraw consent where consent was the basis for processing. To make a request, contact us using the details below.",
       },
       {
-        title: "External Links",
+        title: "Third-Party Links",
         content:
-          "Our website may contain links to external websites that are not operated by us. Please be aware that we have no control over the content and practices of these websites, and we cannot accept responsibility or liability for their respective privacy policies.",
+          "Our website may link to third-party websites, platforms, or social media services. We do not control those third parties and are not responsible for their privacy practices. You should review their policies separately before sharing personal information with them.",
       },
       {
-        title: "Your Rights",
+        title: "Policy Updates",
         content:
-          "You are free to decline our request for personal information, with the understanding that we may not be able to provide some of our services without it.",
-      },
-      {
-        title: "Acceptance of Terms",
-        content:
-          "Your continued use of our website will be regarded as acceptance of our practices regarding privacy and personal information.",
+          "We may update this Privacy Policy from time to time to reflect website changes, service updates, legal requirements, or operational improvements. When we make material updates, we will revise the effective date on this page.",
       },
       {
         title: "Contact Us",
         content:
-          "If you have any questions about how we handle user data and personal information, you may contact us at:",
+          "If you have questions about this Privacy Policy or how Accessively handles personal information, contact us using the details below.",
       },
     ],
     email: "Email:",
@@ -160,7 +185,7 @@ export default function PrivacyPolicy() {
               <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-gray-900 font-medium">{c.email}</span>
-                  <span className="text-gray-600">Solutions@accessivelybpo.com</span>
+                  <span className="text-gray-600">solutions@accessivelybpo.com</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-gray-900 font-medium">{c.website}</span>
@@ -170,7 +195,7 @@ export default function PrivacyPolicy() {
 
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <p className="text-sm text-gray-500">
-                  <strong>{c.effectiveDate}</strong> March 23, 2026
+                  <strong>{c.effectiveDate}</strong> March 29, 2026
                 </p>
               </div>
             </div>

@@ -29,6 +29,17 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+dev.log
+
+# local archives and accidental key files
+*.zip
+ssh-keygen -t ed25519 -C *
+
+# runtime form data/uploads
+data/submissions/*.ndjson
+data/uploads/*
+!data/submissions/.gitkeep
+!data/uploads/.gitkeep
 
 # env files (can opt-in for committing if needed)
 .env*

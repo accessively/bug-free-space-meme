@@ -23,6 +23,15 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
 }
 
 @keyframes pulse {
@@ -64,4 +73,38 @@ body {
   background-position: 50% 50%;
   will-change: background-position;
   animation: bgPan 12s ease-in-out infinite;
+}
+
+.availability-picker {
+  color-scheme: dark;
+}
+
+.availability-picker::-webkit-datetime-edit,
+.availability-picker::-webkit-datetime-edit-fields-wrapper,
+.availability-picker::-webkit-datetime-edit-year-field,
+.availability-picker::-webkit-datetime-edit-month-field,
+.availability-picker::-webkit-datetime-edit-day-field,
+.availability-picker::-webkit-datetime-edit-hour-field,
+.availability-picker::-webkit-datetime-edit-minute-field,
+.availability-picker::-webkit-datetime-edit-ampm-field {
+  color: #ffffff;
+}
+
+.availability-picker::-webkit-datetime-edit-text {
+  color: #cbd5e1;
+}
+
+.availability-picker::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+}
+
+input[type="date"].availability-picker::-webkit-calendar-picker-indicator,
+input[type="time"].availability-picker::-webkit-calendar-picker-indicator {
+  opacity: 0 !important;
+}
+
+.availability-picker::-webkit-clear-button,
+.availability-picker::-webkit-inner-spin-button {
+  filter: invert(1) brightness(1.5);
 }

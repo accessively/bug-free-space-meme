@@ -1,9 +1,19 @@
 "use client";
 
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import { translations } from "@/app/translations";
 import OfficesModal from "./OfficesModal";
+
+const OfficesMap = dynamic(() => import("./OfficesMap"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full rounded-xl border border-slate-700 bg-slate-800 flex items-center justify-center" style={{ height: "420px" }}>
+      <p className="text-slate-400 text-sm">Loading map...</p>
+    </div>
+  ),
+});
 
 const officesExtra = {
   en: {
@@ -158,6 +168,11 @@ const OfficesSection = () => {
               </div>
             </button>
           ))}
+        </div>
+
+        {/* Map */}
+        <div className="mb-12">
+          <OfficesMap />
         </div>
 
         {/* CTA Section */}

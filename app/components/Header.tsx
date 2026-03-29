@@ -23,6 +23,11 @@ const languageDisplayNames: { [key: string]: string } = {
 
 const searchUi = {
   en: {
+    askAi: 'Ask AI',
+    askAiPlaceholder: 'Ask anything about Accessively... (services, contacts, certifications, offices)',
+    aiAnswerLabel: 'AI answer',
+    aiNoAnswer: 'I could not find a precise answer on this page. Try asking about services, certifications, offices, or contact options.',
+    relatedAnswers: 'Related answers',
     quickAnswers: 'Quick answers',
     sections: 'Sections',
     foundersQuestion: 'Who are the founders?',
@@ -30,7 +35,11 @@ const searchUi = {
     servicesQuestion: 'What services do you offer?',
     servicesAnswer: 'We offer virtual assistance, sales and marketing, graphic design, web development, customer service, and business consulting.',
     contactQuestion: 'How can I contact Accessively?',
-    contactAnswer: 'You can contact us at Solutions@accessivelybpo.com.',
+    contactAnswer: 'You can contact Accessively via https://solutions.accessivelybpo.com and Viber/WhatsApp at (+63) 993-679-0350.',
+    socialQuestion: 'What are your social media links?',
+    socialAnswer: 'Official platforms: TikTok https://www.tiktok.com/@accessively.ph, Instagram https://www.instagram.com/accessivelyofficial/, Threads https://www.threads.com/@accessivelyofficial, X/Twitter https://x.com/AOffical73700, and Facebook https://facebook.com/Accessivelyofficial.',
+    certificationsQuestion: 'How many certifications do you show?',
+    certificationsAnswer: 'The page shows 7 certifications in the Certifications and Expertise section.',
     supportQuestion: 'What are your support hours?',
     supportAnswer: 'Our team is available 24/7 for support.',
     officesQuestion: 'Where are your offices located?',
@@ -40,6 +49,11 @@ const searchUi = {
     openSection: 'Open section',
   },
   es: {
+    askAi: 'Preguntar a IA',
+    askAiPlaceholder: 'Pregunta algo sobre Accessively...',
+    aiAnswerLabel: 'Respuesta de IA',
+    aiNoAnswer: 'No encontré una respuesta precisa en esta página. Intenta preguntar sobre servicios, certificaciones, oficinas o contacto.',
+    relatedAnswers: 'Respuestas relacionadas',
     quickAnswers: 'Respuestas rápidas',
     sections: 'Secciones',
     foundersQuestion: '¿Quiénes son los fundadores?',
@@ -47,7 +61,11 @@ const searchUi = {
     servicesQuestion: '¿Qué servicios ofrecen?',
     servicesAnswer: 'Ofrecemos asistencia virtual, ventas y marketing, diseño gráfico, desarrollo web, servicio al cliente y consultoría empresarial.',
     contactQuestion: '¿Cómo puedo contactar a Accessively?',
-    contactAnswer: 'Puedes contactarnos en Solutions@accessivelybpo.com.',
+    contactAnswer: 'Puedes contactarnos por https://solutions.accessivelybpo.com y Viber/WhatsApp al (+63) 993-679-0350.',
+    socialQuestion: '¿Cuáles son sus redes sociales?',
+    socialAnswer: 'Plataformas oficiales: TikTok, Instagram, Threads, X/Twitter y Facebook.',
+    certificationsQuestion: '¿Cuántas certificaciones muestran?',
+    certificationsAnswer: 'La página muestra 7 certificaciones en la sección de Certificaciones y Experiencia.',
     supportQuestion: '¿Cuál es su horario de soporte?',
     supportAnswer: 'Nuestro equipo está disponible 24/7 para soporte.',
     officesQuestion: '¿Dónde están ubicadas sus oficinas?',
@@ -57,6 +75,11 @@ const searchUi = {
     openSection: 'Abrir sección',
   },
   zh: {
+    askAi: '询问 AI',
+    askAiPlaceholder: '询问有关 Accessively 的问题...',
+    aiAnswerLabel: 'AI 回答',
+    aiNoAnswer: '我在此页面中未找到精确答案。请尝试咨询服务、认证、办公室或联系方式。',
+    relatedAnswers: '相关回答',
     quickAnswers: '快速回答',
     sections: '版块',
     foundersQuestion: '创始人是谁？',
@@ -64,7 +87,11 @@ const searchUi = {
     servicesQuestion: '你们提供哪些服务？',
     servicesAnswer: '我们提供虚拟助理、销售与营销、平面设计、网站开发、客户服务和商业咨询。',
     contactQuestion: '如何联系 Accessively？',
-    contactAnswer: '您可以通过 Solutions@accessivelybpo.com 联系我们。',
+    contactAnswer: '您可以通过 https://solutions.accessivelybpo.com 和 Viber/WhatsApp（+63）993-679-0350 联系我们。',
+    socialQuestion: '你们的社交媒体链接是什么？',
+    socialAnswer: '官方平台：TikTok、Instagram、Threads、X/Twitter 和 Facebook。',
+    certificationsQuestion: '页面展示了多少项认证？',
+    certificationsAnswer: '认证与专业能力部分展示了 7 项认证。',
     supportQuestion: '你们的支持时间是什么？',
     supportAnswer: '我们的团队 24/7 提供支持。',
     officesQuestion: '你们的办公室在哪里？',
@@ -74,6 +101,11 @@ const searchUi = {
     openSection: '打开版块',
   },
   tl: {
+    askAi: 'Magtanong sa AI',
+    askAiPlaceholder: 'Magtanong tungkol sa Accessively...',
+    aiAnswerLabel: 'Sagot ng AI',
+    aiNoAnswer: 'Walang eksaktong sagot na nakita sa page na ito. Subukang magtanong tungkol sa services, certifications, offices, o contact.',
+    relatedAnswers: 'Kaugnay na mga sagot',
     quickAnswers: 'Mabilis na sagot',
     sections: 'Mga seksyon',
     foundersQuestion: 'Sino ang mga founder?',
@@ -81,7 +113,11 @@ const searchUi = {
     servicesQuestion: 'Anong mga serbisyo ang inaalok ninyo?',
     servicesAnswer: 'Nag-aalok kami ng virtual assistance, sales and marketing, graphic design, web development, customer service, at business consulting.',
     contactQuestion: 'Paano ko makokontak ang Accessively?',
-    contactAnswer: 'Maaari kaming kontakin sa Solutions@accessivelybpo.com.',
+    contactAnswer: 'Maaari kaming kontakin sa https://solutions.accessivelybpo.com at sa Viber/WhatsApp: (+63) 993-679-0350.',
+    socialQuestion: 'Ano ang social media links ninyo?',
+    socialAnswer: 'Official platforms: TikTok, Instagram, Threads, X/Twitter, at Facebook.',
+    certificationsQuestion: 'Ilan ang certifications sa page?',
+    certificationsAnswer: 'May 7 certifications sa Certifications and Expertise section.',
     supportQuestion: 'Ano ang support hours ninyo?',
     supportAnswer: 'Available ang aming team 24/7 para sa support.',
     officesQuestion: 'Saan matatagpuan ang inyong mga opisina?',
@@ -91,6 +127,11 @@ const searchUi = {
     openSection: 'Buksan ang seksyon',
   },
   fr: {
+    askAi: 'Demander à l’IA',
+    askAiPlaceholder: 'Posez une question sur Accessively...',
+    aiAnswerLabel: 'Réponse IA',
+    aiNoAnswer: 'Je n’ai pas trouvé de réponse précise sur cette page. Essayez de demander les services, certifications, bureaux ou contacts.',
+    relatedAnswers: 'Réponses associées',
     quickAnswers: 'Réponses rapides',
     sections: 'Sections',
     foundersQuestion: 'Qui sont les fondateurs ?',
@@ -98,7 +139,11 @@ const searchUi = {
     servicesQuestion: 'Quels services proposez-vous ?',
     servicesAnswer: 'Nous proposons l’assistance virtuelle, les ventes et le marketing, le design graphique, le développement web, le service client et le conseil en entreprise.',
     contactQuestion: 'Comment contacter Accessively ?',
-    contactAnswer: 'Vous pouvez nous contacter à Solutions@accessivelybpo.com.',
+    contactAnswer: 'Vous pouvez contacter Accessively via https://solutions.accessivelybpo.com et Viber/WhatsApp au (+63) 993-679-0350.',
+    socialQuestion: 'Quels sont vos liens de réseaux sociaux ?',
+    socialAnswer: 'Plateformes officielles : TikTok, Instagram, Threads, X/Twitter et Facebook.',
+    certificationsQuestion: 'Combien de certifications affichez-vous ?',
+    certificationsAnswer: 'La page affiche 7 certifications dans la section Certifications et Expertise.',
     supportQuestion: 'Quels sont vos horaires de support ?',
     supportAnswer: 'Notre équipe est disponible 24h/24 et 7j/7.',
     officesQuestion: 'Où sont situés vos bureaux ?',
@@ -140,10 +185,37 @@ const matchesSearch = (query: string, values: string[]) => {
   return queryTokens.every((token) => haystack.includes(token));
 };
 
+const scoreSearchMatch = (query: string, values: string[]) => {
+  const queryTokens = tokenizeText(query);
+  const normalizedValues = values.map((value) => normalizeText(value));
+  const haystack = normalizedValues.join(' ');
+  const normalizedQuery = normalizeText(query);
+
+  if (!normalizedQuery) {
+    return 0;
+  }
+
+  let score = 0;
+
+  if (haystack.includes(normalizedQuery)) {
+    score += 6;
+  }
+
+  for (const token of queryTokens) {
+    if (haystack.includes(token)) {
+      score += 2;
+    }
+  }
+
+  return score;
+};
+
 export default function Header() {
+  const [showAboutMenu, setShowAboutMenu] = useState(false);
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showSearchMenu, setShowSearchMenu] = useState(false);
+  const [showServicesMenu, setShowServicesMenu] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const { language, setLanguage } = useLanguage();
   const [selectedLanguage, setSelectedLanguage] = useState(languageDisplayNames[language] || 'English');
@@ -160,11 +232,38 @@ export default function Header() {
   };
 
   const mobileNavItems = [
-    { href: '#about', label: t.header.about },
-    { href: '#services', label: t.header.services },
-    { href: '#contact', label: t.header.contact },
+    { href: '/#services', label: t.header.services },
     { href: '/help-center', label: t.footer.helpCenter || 'Help Center' },
     { href: '/apply', label: t.header.joinUs },
+  ];
+
+  const aboutNavItems = [
+    { href: '/#about', label: t.about.title, description: t.about.subtitle },
+    { href: '/#founders', label: t.founders.title, description: t.founders.subtitle },
+    { href: '/#why-choose-us', label: t.whyChooseUs.title, description: t.whyChooseUs.subtitle },
+    {
+      href: '/#certifications',
+      label: (t as any).certifications?.title || 'Certifications and Expertise',
+      description:
+        (t as any).certifications?.subtitle ||
+        'Professional certifications and domain expertise that support reliable delivery.',
+    },
+    {
+      href: '/#offices',
+      label: t.offices?.title || 'Our Offices & Locations',
+      description:
+        t.offices?.subtitle ||
+        'Strategically located to serve clients globally with efficiency and reliability.',
+    },
+    { href: '/#testimonials', label: t.testimonials.title, description: t.testimonials.subtitle },
+  ];
+
+  const serviceNavItems = [
+    { href: '/#service-virtual-assistance', label: t.services.virtualAssistanceTitle },
+    { href: '/#service-sales-marketing', label: t.services.salesMarketingTitle },
+    { href: '/#service-graphic-design', label: t.services.graphicDesignTitle },
+    { href: '/#service-web-development', label: t.services.webDevelopmentTitle },
+    { href: '/#service-customer-service', label: t.services.customerServiceTitle },
   ];
 
   const searchableSections = [
@@ -225,7 +324,21 @@ export default function Header() {
       title: searchText.contactQuestion,
       answer: searchText.contactAnswer,
       href: '/#contact',
-      keywords: ['contact', 'email', 'reach', 'message', t.contact.title, t.contact.emailAddress],
+      keywords: ['contact', 'email', 'reach', 'message', 'whatsapp', 'viber', 'solutions.accessivelybpo.com', t.contact.title, t.contact.emailAddress],
+    },
+    {
+      id: 'social-answer',
+      title: searchText.socialQuestion,
+      answer: searchText.socialAnswer,
+      href: '/#contact',
+      keywords: ['social', 'social media', 'tiktok', 'instagram', 'threads', 'x', 'twitter', 'facebook', 'links', '@accessively.ph', '@accessivelyofficial'],
+    },
+    {
+      id: 'certifications-answer',
+      title: searchText.certificationsQuestion,
+      answer: searchText.certificationsAnswer,
+      href: '/#certifications',
+      keywords: ['certification', 'certifications', 'expertise', '7 certifications', 'cert1', 'cert2', 'cert3', 'cert4', 'cert5', 'cert6', 'cert7'],
     },
     {
       id: 'support-answer',
@@ -251,11 +364,18 @@ export default function Header() {
   ];
 
   const normalizedSearch = searchQuery.trim().toLowerCase();
-  const filteredAnswers = normalizedSearch
-    ? quickAnswers.filter((answer) =>
-        matchesSearch(searchQuery, [answer.title, answer.answer, ...answer.keywords])
-      )
+  const rankedAnswers = normalizedSearch
+    ? quickAnswers
+        .map((answer) => ({
+          ...answer,
+          score: scoreSearchMatch(searchQuery, [answer.title, answer.answer, ...answer.keywords]),
+        }))
+        .filter((answer) => answer.score > 0)
+        .sort((a, b) => b.score - a.score)
     : [];
+  const bestAnswer = rankedAnswers[0] || null;
+  const relatedAnswers = rankedAnswers.slice(1, 4);
+
   const filteredSections = normalizedSearch
     ? searchableSections.filter((section) =>
         matchesSearch(searchQuery, [section.label, section.description])
@@ -277,7 +397,7 @@ export default function Header() {
         <div className="flex justify-between h-16 items-center">
           <div className="flex min-w-0">
             <div className="flex-shrink-0 flex items-center min-w-0">
-              <Link href="/" className="flex items-center gap-2">
+              <Link href="/#top" className="flex items-center gap-2">
                 <img
                   src="/logo.png"
                   alt="Accessively logo"
@@ -288,20 +408,77 @@ export default function Header() {
                 </span>
               </Link>
             </div>
-            <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-              <Link href="#about" className="border-transparent text-white hover:text-indigo-200 hover:border-indigo-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25">
-                {t.header.about}
-              </Link>
-              <Link href="#services" className="border-transparent text-white hover:text-indigo-200 hover:border-indigo-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25">
-                {t.header.services}
-              </Link>
-              <Link href="#contact" className="border-transparent text-white hover:text-indigo-200 hover:border-indigo-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25">
-                {t.header.contact}
-              </Link>
-              <Link href="/help-center" className="border-transparent text-white hover:text-indigo-200 hover:border-indigo-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25">
+            <div className="hidden sm:ml-8 sm:flex sm:items-center sm:gap-6">
+              <div
+                className="relative"
+                onMouseEnter={() => setShowAboutMenu(true)}
+                onMouseLeave={() => setShowAboutMenu(false)}
+              >
+                <button
+                  onClick={() => setShowAboutMenu((prev) => !prev)}
+                  className="border-transparent text-white hover:text-indigo-200 hover:border-indigo-300 inline-flex h-16 items-center px-1 border-b-2 text-sm font-medium transition-all duration-300"
+                >
+                  {t.header.about}
+                  <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {showAboutMenu && (
+                  <div className="absolute left-0 mt-2 w-[420px] rounded-xl border border-indigo-700 bg-slate-950/95 p-2 shadow-xl z-50">
+                    {aboutNavItems.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setShowAboutMenu(false)}
+                        className="block rounded-lg px-3 py-2 hover:bg-slate-900"
+                      >
+                        <div className="text-sm font-semibold text-slate-100">{item.label}</div>
+                        <div className="mt-1 text-xs text-slate-400">{item.description}</div>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+              <div
+                className="relative"
+                onMouseEnter={() => setShowServicesMenu(true)}
+                onMouseLeave={() => setShowServicesMenu(false)}
+              >
+                <button
+                  onClick={() => setShowServicesMenu((prev) => !prev)}
+                  className="border-transparent text-white hover:text-indigo-200 hover:border-indigo-300 inline-flex h-16 items-center px-1 border-b-2 text-sm font-medium transition-all duration-300"
+                >
+                  {t.header.services}
+                  <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {showServicesMenu && (
+                  <div className="absolute left-0 mt-2 w-[320px] rounded-xl border border-indigo-700 bg-slate-950/95 p-2 shadow-xl z-50">
+                    <Link
+                      href="/#services"
+                      onClick={() => setShowServicesMenu(false)}
+                      className="block rounded-lg px-3 py-2 text-sm font-semibold text-indigo-300 hover:bg-slate-900"
+                    >
+                      {t.services.title}
+                    </Link>
+                    {serviceNavItems.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setShowServicesMenu(false)}
+                        className="block rounded-lg px-3 py-2 text-sm text-slate-200 hover:bg-slate-900"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+              <Link href="/help-center" className="border-transparent text-white hover:text-indigo-200 hover:border-indigo-300 inline-flex h-16 items-center px-1 border-b-2 text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25">
                 {t.footer.helpCenter || "Help Center"}
               </Link>
-              <Link href="/apply" className="border-transparent text-white hover:text-indigo-200 hover:border-indigo-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25">
+              <Link href="/apply" className="border-transparent text-white hover:text-indigo-200 hover:border-indigo-300 inline-flex h-16 items-center px-1 border-b-2 text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25">
                 {t.header.joinUs}
               </Link>
             </div>
@@ -313,12 +490,12 @@ export default function Header() {
                 setShowLanguageMenu(false);
               }}
               className="inline-flex items-center justify-center gap-2 h-10 px-3 sm:px-4 rounded-full border border-indigo-600 hover:bg-indigo-900 transition-all duration-300"
-              aria-label={t.header.search || 'Search sections'}
+              aria-label={searchText.askAi}
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m21 21-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z" />
               </svg>
-              <span className="hidden sm:inline text-sm font-medium">{t.header.search || 'Search'}</span>
+              <span className="hidden sm:inline text-sm font-medium">{searchText.askAi}</span>
             </button>
 
             <div className="relative hidden sm:block">
@@ -411,7 +588,7 @@ export default function Header() {
                   type="search"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder={t.header.searchPlaceholder || 'Search sections...'}
+                  placeholder={searchText.askAiPlaceholder}
                   className="w-full rounded-xl border border-indigo-700 bg-slate-950/70 px-4 py-3 pr-10 text-sm text-white placeholder:text-slate-400 focus:border-indigo-400 focus:outline-none"
                 />
                 <svg className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -420,12 +597,36 @@ export default function Header() {
               </div>
 
               <div className="max-h-72 overflow-y-auto space-y-2">
-                {filteredAnswers.length > 0 && (
+                {normalizedSearch && (
+                  <div className="rounded-xl border border-indigo-700/60 bg-slate-950/70 px-4 py-3">
+                    <div className="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-300">{searchText.aiAnswerLabel}</div>
+                    {bestAnswer ? (
+                      <>
+                        <div className="mt-2 text-sm font-semibold text-white">{bestAnswer.title}</div>
+                        <div className="mt-1 text-sm text-slate-300">{bestAnswer.answer}</div>
+                        <Link
+                          href={bestAnswer.href}
+                          onClick={() => {
+                            closeSearchMenu();
+                            setShowMobileMenu(false);
+                          }}
+                          className="mt-3 inline-flex text-xs font-semibold text-indigo-300 hover:text-indigo-200"
+                        >
+                          {searchText.openSection}
+                        </Link>
+                      </>
+                    ) : (
+                      <div className="mt-2 text-sm text-slate-300">{searchText.aiNoAnswer}</div>
+                    )}
+                  </div>
+                )}
+
+                {relatedAnswers.length > 0 && (
                   <div className="space-y-2">
                     <div className="px-1 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-300">
-                      {searchText.quickAnswers}
+                      {searchText.relatedAnswers}
                     </div>
-                    {filteredAnswers.map((answer) => (
+                    {relatedAnswers.map((answer) => (
                       <div
                         key={answer.id}
                         className="rounded-xl border border-indigo-700/60 bg-slate-950/70 px-4 py-3"
@@ -470,7 +671,7 @@ export default function Header() {
                     ))}
                   </div>
                 ) : (
-                  filteredAnswers.length === 0 && (
+                  !bestAnswer && (
                     <div className="rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3 text-sm text-slate-400">
                       {t.header.noSearchResults || 'No matching sections found.'}
                     </div>
@@ -494,6 +695,32 @@ export default function Header() {
                   {item.label}
                 </Link>
               ))}
+              <div className="mt-2 border-t border-indigo-800/70 pt-2">
+                <p className="px-3 py-1 text-xs uppercase tracking-[0.2em] text-indigo-300">{t.header.about}</p>
+                {aboutNavItems.map((item) => (
+                  <Link
+                    key={`mobile-about-${item.href}`}
+                    href={item.href}
+                    onClick={() => setShowMobileMenu(false)}
+                    className="block rounded-lg px-3 py-2 hover:bg-indigo-900 transition-colors"
+                  >
+                    <div className="text-sm font-medium text-white">{item.label}</div>
+                    <div className="mt-1 text-xs text-slate-400">{item.description}</div>
+                  </Link>
+                ))}
+              </div>
+              <div className="mt-2 border-t border-indigo-800/70 pt-2">
+                {serviceNavItems.map((item) => (
+                  <Link
+                    key={`mobile-${item.href}`}
+                    href={item.href}
+                    onClick={() => setShowMobileMenu(false)}
+                    className="block px-3 py-2 rounded-lg text-sm text-slate-200 hover:bg-indigo-900 transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
               <a
                 href="#contact"
                 onClick={() => setShowMobileMenu(false)}
