@@ -47,22 +47,22 @@ export const translations = {
     services: {
       title: "Our Services",
       description:
-        "Focused creative and support services tailored to help brands scale with consistency and quality.",
-      virtualAssistanceTitle: "Information Technology & Technical Support Services",
+        "We provide a range of services to help your business grow, stay organized, and connect better with your audience.",
+      virtualAssistanceTitle: "Website & Technical Support",
       virtualAssistanceDesc:
-        "Custom, responsive website design tailored to your brand, audience, and conversion goals.",
-      salesMarketingTitle: "Social Media Management, Digital Marketing & Content Strategy",
+        "We help create and maintain websites that are easy to use, reliable, and aligned with your brand.",
+      salesMarketingTitle: "Social Media & Marketing",
       salesMarketingDesc:
-        "Platform-specific planning, posting, and community management to grow reach and engagement.",
-      graphicDesignTitle: "Graphic Design, Visual Media & Creative Services",
+        "We manage your social media and help promote your brand so you can reach more people and build stronger engagement.",
+      graphicDesignTitle: "Design & Creative Services",
       graphicDesignDesc:
-        "Brand-aligned visuals for campaigns, social assets, and marketing materials that stand out.",
-      webDevelopmentTitle: "Video Editing, Multimedia Production & Content Creation",
+        "We create visuals and designs that represent your brand and make your content more appealing.",
+      webDevelopmentTitle: "Video & Content Creation",
       webDevelopmentDesc:
-        "Professional editing for short-form and long-form content with polished pacing, visuals, and audio.",
-      customerServiceTitle: "Customer Support, Technical Support, Sales & Client Services",
+        "We edit and produce videos and content that are clear, engaging, and professional.",
+      customerServiceTitle: "Customer & Client Support",
       customerServiceDesc:
-        "Reliable customer support through chat, email, and voice with fast, professional responses.",
+        "We handle customer inquiries and support through chat, email, or calls, making sure your clients are taken care of.",
       businessConsultingTitle: "Business Consulting",
       businessConsultingDesc:
         "Strategic business advice powered by data analytics and AI insights for sustainable growth.",
@@ -96,19 +96,19 @@ export const translations = {
     serviceModal: {
       getStartedWith: "Get Started with",
       close: "Close",
-      virtualAssistanceTitle: "Information Technology & Technical Support Services",
+      virtualAssistanceTitle: "Website & Technical Support",
       virtualAssistanceContent:
         "Our Information Technology and Technical Support services are built to help businesses create reliable digital experiences and maintain stable daily operations. This area covers web planning, interface design, front-end execution, and ongoing system support to keep websites fast, secure, and user-friendly. We focus on both delivery and maintenance, ensuring your digital platforms stay updated, functional, and aligned with your growth goals as technology and customer expectations evolve.\n\n- Web Developer\n- Web Designer\n- UI/UX Designer\n- Front-End Developer\n- WordPress Developer\n- IT Support Specialist\n- Technical Support Specialist\n- Help Desk Technician\n- System Support Assistant\n- Website Maintenance Specialist\n- Digital Systems Support",
-      salesMarketingTitle: "Social Media Management, Digital Marketing & Content Strategy",
+      salesMarketingTitle: "Social Media & Marketing",
       salesMarketingContent:
         "Our social media and digital marketing services are designed to build strong brand presence, improve audience trust, and drive measurable business outcomes. We combine strategic planning, creative content direction, community engagement, and campaign coordination to ensure your brand remains consistent across platforms. From day-to-day publishing support to deeper performance insights and growth strategy, this service helps you communicate clearly, attract the right audience, and convert attention into long-term value.\n\n- Social Media Manager\n- Social Media Specialist\n- Social Media Coordinator\n- Content Creator\n- Content Strategist\n- Social Media Strategist\n- Community Manager\n- Digital Marketing Assistant\n- Social Media Content Manager\n- Social Media Analyst\n- Engagement Specialist\n- Online Community Specialist\n- Influencer Outreach Specialist\n- Brand Marketing Assistant\n- Digital Campaign Coordinator",
-      graphicDesignTitle: "Graphic Design, Visual Media & Creative Services",
+      graphicDesignTitle: "Design & Creative Services",
       graphicDesignContent:
         "Our Graphic Design and Visual Media services help businesses communicate with clarity, consistency, and creative impact across every customer touchpoint. We develop brand-aligned assets for digital campaigns, print materials, social media, and promotional content, ensuring that every visual supports your positioning and message. By combining creative direction with production-ready execution, this service helps your business stand out in competitive markets while strengthening recognition and trust over time.\n\n- Graphic Designer\n- Visual Designer\n- Brand Identity Designer\n- Logo Designer\n- Creative Designer\n- Marketing Designer\n- Multimedia Designer\n- Layout Artist\n- Print & Digital Designer\n- Social Media Graphics Designer\n- Advertising Designer\n- Content Visual Designer",
-      webDevelopmentTitle: "Video Editing, Multimedia Production & Content Creation",
+      webDevelopmentTitle: "Video & Content Creation",
       webDevelopmentContent:
         "Our Video Editing and Multimedia Production services transform raw footage into high-quality content tailored for modern content platforms and campaign goals. We support both short-form and long-form workflows, with attention to pacing, narrative flow, visual polish, and platform-specific optimization. Whether for marketing, education, social media, or brand storytelling, this service ensures your videos are engaging, professionally finished, and aligned with your content strategy from concept to final output.\n\n- Video Editor\n- Multimedia Editor\n- Content Video Editor\n- Post-Production Editor\n- YouTube Video Editor\n- Social Media Video Editor\n- Video Production Specialist\n- Video Content Creator\n- Short-Form Video Editor (Reels, TikTok, Shorts)\n- Long-Form Video Editor (YouTube, Courses, Podcasts)\n- Motion Graphics Editor\n- Visual Effects (VFX) Editor\n- Audio & Video Editor",
-      customerServiceTitle: "Customer Support, Technical Support, Sales & Client Services",
+      customerServiceTitle: "Customer & Client Support",
       customerServiceContent:
         "Our Customer and Client Service solutions are focused on delivering excellent customer experiences while supporting retention, revenue, and long-term brand loyalty. This service combines responsive support operations with sales and relationship-focused roles that help businesses handle inquiries efficiently, resolve issues faster, and maintain strong communication throughout the customer journey. From technical troubleshooting to lead outreach and account care, we provide the people and structure needed to scale support quality without losing consistency.\n\n- Customer Support Representative\n- Customer Service Specialist\n- Live Chat Support Agent\n- Email Support Specialist\n- Call Center Agent\n- Help Desk Specialist\n- Technical Support Specialist\n- IT Support Specialist\n- Service Desk Analyst\n- Client Support Specialist\n- Customer Care Associate\n- Customer Success Associate\n- Client Relations Specialist\n- Cold Caller\n- Telemarketer\n- Outbound Sales Representative\n- Inbound Sales Agent\n- Lead Generation Specialist",
       businessConsultingTitle: "Business Consulting",

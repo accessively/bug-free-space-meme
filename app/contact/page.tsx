@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useState } from "react";
+import { Suspense, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import { pageTexts } from "@/app/pageTexts";
@@ -17,6 +17,17 @@ function ContactContent() {
   const [privacyConsent, setPrivacyConsent] = useState(false);
   const [businessType, setBusinessType] = useState("");
   const [customBusinessType, setCustomBusinessType] = useState("");
+  const availabilityDateRef = useRef<HTMLInputElement>(null);
+  const availabilityTimeRef = useRef<HTMLInputElement>(null);
+
+  const openNativePicker = (ref: React.RefObject<HTMLInputElement | null>) => {
+    const input = ref.current;
+    if (!input) return;
+    const withPicker = input as HTMLInputElement & { showPicker?: () => void };
+    if (typeof withPicker.showPicker === "function") {
+      withPicker.showPicker();
+    }
+  };
 
   const handleContactSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -44,7 +55,7 @@ function ContactContent() {
       setSubmitMessage(
         result.emailed
           ? "Your message has been sent successfully to solutions@accessivelybpo.com."
-          : "Your message has been submitted successfully. Configure SMTP to enable automatic email delivery."
+          : "Your message has been submitted successfully. Our team will review it shortly."
       );
       event.currentTarget?.reset();
       setPrivacyConsent(false);
@@ -204,11 +215,14 @@ function ContactContent() {
                           </label>
                           <div className="mt-1">
                             <input
+                              ref={availabilityDateRef}
                               id="availabilityDate"
                               name="availabilityDate"
                               type="date"
                               required
                               className="availability-picker block w-full rounded-lg border border-slate-700 bg-slate-800/60 px-4 py-3 text-white shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                              onClick={() => openNativePicker(availabilityDateRef)}
+                              onFocus={() => openNativePicker(availabilityDateRef)}
                             />
                           </div>
                         </div>
@@ -218,11 +232,14 @@ function ContactContent() {
                           </label>
                           <div className="mt-1">
                             <input
+                              ref={availabilityTimeRef}
                               id="availabilityTime"
                               name="availabilityTime"
                               type="time"
                               required
                               className="availability-picker block w-full rounded-lg border border-slate-700 bg-slate-800/60 px-4 py-3 text-white shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                              onClick={() => openNativePicker(availabilityTimeRef)}
+                              onFocus={() => openNativePicker(availabilityTimeRef)}
                             />
                           </div>
                         </div>

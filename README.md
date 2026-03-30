@@ -48,6 +48,27 @@ To build the project for production:
 npm run build
 ```
 
+## Email Delivery Setup (Required for Contact/Apply Forms)
+
+Form submissions are always saved to the server, but automatic email delivery requires SMTP variables in your deployed environment.
+
+1. Copy `.env.local.example` to `.env.local` for local development.
+2. Set the following values:
+
+```bash
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your_sender_email
+SMTP_PASS=your_smtp_password_or_app_password
+SMTP_FROM=your_sender_email
+FORM_RECEIVER_EMAIL=where_you_want_to_receive_forms
+```
+
+3. In production (for example Vercel, Render, or Netlify), add the same variables in the platform's environment settings.
+4. Redeploy the site after saving environment variables.
+
+If you use Gmail, create an App Password and use that for `SMTP_PASS`.
+
 ## Technologies Used
 
 - Next.js 16

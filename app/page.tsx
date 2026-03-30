@@ -7,254 +7,234 @@ import OfficesSection from "./components/OfficesSection";
 
 const benefitsComparisonItems = [
   {
-    title: "Expert Talent Pool",
-    accessively: "Accessively recruits highly specialized professionals.",
-    others: "Other agencies often hire generalists.",
+    title: "Expert Talent",
+    accessively: "Recruits highly specialized professionals for every task.",
+    others: "Often hire generalists.",
   },
   {
-    title: "Cost Efficiency",
-    accessively: "Accessively delivers maximum ROI with competitive pricing.",
-    others: "Others may charge more for similar results.",
+    title: "Cost-Effective Solutions",
+    accessively: "Delivers maximum ROI with competitive pricing.",
+    others: "May charge more for similar results.",
   },
   {
-    title: "Customized Solutions",
-    accessively: "Accessively tailors services to each client.",
-    others: "Others use a one-size-fits-all model.",
+    title: "Tailored Services",
+    accessively: "Customizes solutions for each client.",
+    others: "Uses a one-size-fits-all approach.",
   },
   {
-    title: "24/7 Availability",
-    accessively: "Accessively provides round-the-clock service.",
-    others: "Many agencies work limited hours.",
+    title: "Availability",
+    accessively: "24/7 support for your business.",
+    others: "Limited hours.",
   },
   {
     title: "Multi-Industry Experience",
-    accessively: "Accessively serves diverse sectors.",
-    others: "Competitors may have narrow focus.",
+    accessively: "Serves diverse sectors with insight.",
+    others: "Narrow focus on few industries.",
   },
   {
     title: "Advanced Technology",
-    accessively: "Accessively integrates AI, automation, and analytics.",
-    others: "Other agencies rely on outdated systems.",
+    accessively: "AI, automation, and analytics integrated.",
+    others: "Relies on outdated systems.",
   },
   {
     title: "Scalable Teams",
-    accessively: "Accessively allows seamless expansion.",
-    others: "Others struggle with rapid scaling.",
+    accessively: "Teams expand seamlessly with your growth.",
+    others: "Struggle with rapid scaling.",
   },
   {
-    title: "High-Quality Standards",
-    accessively: "Accessively maintains strict QA.",
-    others: "Competitors often have inconsistent service quality.",
+    title: "High Standards",
+    accessively: "Maintains strict QA for consistent quality.",
+    others: "Service can be inconsistent.",
   },
   {
     title: "Data Security & Compliance",
-    accessively: "Accessively follows top security protocols.",
-    others: "Other agencies may have weaker safeguards.",
+    accessively: "Follows top security protocols.",
+    others: "Weaker safeguards.",
   },
   {
-    title: "Multilingual Support",
-    accessively: "Accessively provides global communication capabilities.",
-    others: "Others often lack language diversity.",
+    title: "Global Communication",
+    accessively: "Multilingual support for worldwide clients.",
+    others: "Lacks language diversity.",
   },
   {
     title: "Fast Onboarding",
-    accessively: "Accessively gets teams ready quickly.",
-    others: "Others have slower setup processes.",
+    accessively: "Teams ready quickly.",
+    others: "Slower setup process.",
   },
   {
     title: "Transparent Reporting",
-    accessively: "Accessively offers real-time updates.",
-    others: "Others provide limited visibility.",
+    accessively: "Real-time updates keep you in the loop.",
+    others: "Limited visibility.",
   },
   {
     title: "Flexible Engagement Models",
-    accessively: "Accessively supports hourly, project-based, and dedicated teams.",
-    others: "Other agencies limit options.",
+    accessively: "Hourly, project-based, or dedicated teams.",
+    others: "Restricted options.",
   },
   {
     title: "Innovation-Driven",
-    accessively: "Accessively continuously adopts new technologies.",
-    others: "Others often stick to traditional methods.",
+    accessively: "Continuously adopts new technologies.",
+    others: "Stick to traditional methods.",
   },
   {
-    title: "Client-Centric Approach",
-    accessively: "Accessively prioritizes satisfaction.",
-    others: "Competitors may focus on completing tasks only.",
+    title: "Client-Focused Approach",
+    accessively: "Prioritizes satisfaction and growth.",
+    others: "Focuses mainly on completing tasks.",
   },
   {
     title: "Streamlined Communication",
-    accessively: "Accessively ensures clarity and responsiveness.",
-    others: "Others can have delayed or unclear communication.",
+    accessively: "Clear, responsive, and proactive.",
+    others: "Communication can be slow or unclear.",
   },
   {
     title: "Performance Tracking",
-    accessively: "Accessively tracks KPIs rigorously.",
-    others: "Others provide minimal metrics.",
+    accessively: "Monitors KPIs for measurable results.",
+    others: "Minimal metrics provided.",
   },
   {
     title: "Proactive Problem Solving",
-    accessively: "Accessively anticipates challenges.",
-    others: "Others react slowly.",
+    accessively: "Anticipates challenges before they arise.",
+    others: "Often reactive.",
   },
   {
     title: "Certified Professionals",
-    accessively: "Accessively ensures verified expertise.",
-    others: "Other agencies may not verify qualifications.",
+    accessively: "Ensures verified expertise.",
+    others: "May skip qualification checks.",
   },
   {
     title: "Experienced Leadership",
-    accessively: "Accessively’s managers have BPO industry experience.",
-    others: "Others may lack hands-on leadership.",
+    accessively: "Managers with hands-on BPO experience.",
+    others: "May lack strong leadership.",
   },
   {
     title: "Time Zone Flexibility",
-    accessively: "Accessively works across global time zones.",
-    others: "Others may be limited regionally.",
+    accessively: "Works across global time zones.",
+    others: "Regionally limited.",
   },
   {
-    title: "Modern CRM Systems",
-    accessively: "Accessively uses advanced tools.",
-    others: "Competitors rely on outdated or manual systems.",
+    title: "Modern Tools",
+    accessively: "Advanced CRM and infrastructure.",
+    others: "Manual or outdated systems.",
   },
   {
-    title: "Employee Retention",
-    accessively: "Accessively maintains a stable workforce.",
-    others: "High turnover is common elsewhere.",
-  },
-  {
-    title: "Continuous Training",
-    accessively: "Accessively invests in upskilling.",
-    others: "Other agencies may not provide regular training.",
+    title: "Employee Retention & Training",
+    accessively: "Stable, continuously upskilled workforce.",
+    others: "High turnover, less training.",
   },
   {
     title: "Proven Track Record",
-    accessively: "Accessively has satisfied global clients.",
-    others: "Many agencies lack extensive references.",
+    accessively: "Satisfied global clients.",
+    others: "Limited references.",
   },
   {
-    title: "Agile Project Management",
-    accessively: "Accessively adapts to changing needs.",
-    others: "Others follow rigid workflows.",
+    title: "Agile & Efficient",
+    accessively: "Adapts quickly to changing needs.",
+    others: "Follows rigid workflows.",
   },
   {
-    title: "Operational Efficiency",
-    accessively: "Accessively maximizes productivity.",
-    others: "Competitors often waste resources.",
-  },
-  {
-    title: "Strict Compliance",
-    accessively: "Accessively follows industry regulations.",
-    others: "Other agencies may have gaps in compliance.",
+    title: "Compliance & Security",
+    accessively: "Strict regulatory adherence.",
+    others: "Gaps in compliance.",
   },
   {
     title: "Cultural Understanding",
-    accessively: "Accessively trains teams to align with client cultures.",
-    others: "Others may overlook this.",
+    accessively: "Teams align with client culture.",
+    others: "Often overlooked.",
   },
   {
     title: "Seamless Integration",
-    accessively: "Accessively works smoothly with existing systems.",
-    others: "Others may disrupt operations.",
+    accessively: "Works smoothly with your systems.",
+    others: "Can disrupt operations.",
   },
   {
     title: "AI-Enhanced Services",
-    accessively: "Accessively automates repetitive tasks.",
-    others: "Competitors rely mostly on manual labor.",
+    accessively: "Automates repetitive tasks.",
+    others: "Mostly manual labor.",
   },
   {
     title: "Transparent Pricing",
-    accessively: "Accessively ensures no hidden fees.",
-    others: "Others can have unpredictable costs.",
+    accessively: "No hidden fees.",
+    others: "Unpredictable costs.",
   },
   {
-    title: "Dedicated Account Managers",
-    accessively: "Accessively provides personalized attention.",
-    others: "Others give generic support.",
+    title: "Dedicated Support",
+    accessively: "Personalized account managers.",
+    others: "Generic support.",
   },
   {
     title: "Reliable Infrastructure",
-    accessively: "Accessively invests in modern hardware and software.",
-    others: "Other agencies may have weaker setups.",
+    accessively: "Modern hardware/software ensures consistency.",
+    others: "Weaker setups.",
   },
   {
     title: "Flexible Contracts",
-    accessively: "Accessively allows adaptable agreements.",
-    others: "Competitors often have rigid terms.",
+    accessively: "Adaptable agreements to your needs.",
+    others: "Rigid terms.",
   },
   {
     title: "Focus on Core Business",
-    accessively: "Accessively frees clients to focus on growth.",
-    others: "Others require more management involvement.",
+    accessively: "Frees clients to focus on core business.",
+    others: "Requires more management involvement.",
   },
   {
-    title: "Business Continuity Plans",
-    accessively: "Accessively ensures uninterrupted service.",
-    others: "Other agencies may lack backups.",
+    title: "Business Continuity",
+    accessively: "Backup plans ensure uninterrupted service.",
+    others: "Limited continuity planning.",
   },
   {
-    title: "Client Experience Priority",
-    accessively: "Accessively emphasizes satisfaction.",
-    others: "Competitors focus on completing work only.",
+    title: "Client Experience First",
+    accessively: "Satisfaction drives every decision.",
+    others: "Task completion is priority.",
   },
   {
     title: "Rapid Issue Resolution",
-    accessively: "Accessively addresses problems quickly.",
-    others: "Others respond slower.",
+    accessively: "Problems addressed quickly.",
+    others: "Slower responses.",
   },
   {
-    title: "Global Client Reach",
-    accessively: "Accessively serves worldwide clients.",
-    others: "Many agencies have limited geographic scope.",
+    title: "Global Reach",
+    accessively: "Serves clients worldwide.",
+    others: "Limited geographic scope.",
   },
   {
     title: "Proven ROI",
-    accessively: "Accessively delivers measurable results.",
-    others: "Competitors’ ROI can be inconsistent.",
+    accessively: "Measurable results and impact.",
+    others: "ROI inconsistent.",
   },
   {
-    title: "Ethical Business Practices",
-    accessively: "Accessively operates transparently.",
-    others: "Some agencies cut corners.",
+    title: "Ethical Practices",
+    accessively: "Transparent and responsible operations.",
+    others: "Some cut corners.",
   },
   {
-    title: "Creative Problem Solving",
-    accessively: "Accessively provides innovative solutions.",
-    others: "Others stick to standard approaches.",
-  },
-  {
-    title: "Specialized Support Teams",
-    accessively: "Accessively assigns experts per function.",
-    others: "Competitors often use generalists.",
+    title: "Creative & Specialized Support",
+    accessively: "Innovative solutions and expert assignments.",
+    others: "Stick to standard approaches.",
   },
   {
     title: "Long-Term Partnerships",
-    accessively: "Accessively builds enduring relationships.",
-    others: "Others prioritize short-term contracts.",
+    accessively: "Builds enduring client relationships.",
+    others: "Focus on short-term contracts.",
   },
   {
-    title: "Employee Engagement",
-    accessively: "Accessively motivates staff for better results.",
-    others: "Other agencies may have disengaged employees.",
+    title: "Engaged & Motivated Teams",
+    accessively: "Staff driven for better results.",
+    others: "Employees may be disengaged.",
   },
   {
-    title: "Continuous Feedback Loops",
-    accessively: "Accessively improves via client feedback.",
-    others: "Competitors rarely optimize continuously.",
+    title: "Continuous Improvement",
+    accessively: "Feedback loops and analytics optimize services.",
+    others: "Rarely optimizes continuously.",
   },
   {
-    title: "Data-Driven Insights",
-    accessively: "Accessively provides analytics for growth.",
-    others: "Others operate with minimal insight.",
-  },
-  {
-    title: "Adaptability to Change",
-    accessively: "Accessively quickly adjusts to trends or emergencies.",
-    others: "Competitors may be slow to pivot.",
+    title: "Adaptable & Future-Ready",
+    accessively: "Quickly adjusts to trends or emergencies.",
+    others: "Slow to pivot.",
   },
   {
     title: "Your Growth Partner",
-    accessively: "Accessively goes beyond outsourcing to actively support business success.",
-    others: "Other agencies only execute tasks.",
+    accessively: "Goes beyond outsourcing to actively support success.",
+    others: "Only executes tasks.",
   },
 ] as const;
 
@@ -277,14 +257,14 @@ const performanceMetricData = {
   },
   retention: {
     label: "Client retention rate",
-    values: [25, 45, 65, 76, 70, 84],
+    values: [58, 63, 68, 72, 76, 81],
     lineStart: "#2563eb",
     lineEnd: "#14b8a6",
     dotColor: "#93c5fd",
   },
   delivery: {
     label: "Project delivery success rate",
-    values: [67, 76, 72, 84, 87, 97],
+    values: [74, 78, 80, 84, 88, 91],
     lineStart: "#8b5cf6",
     lineEnd: "#ec4899",
     dotColor: "#ddd6fe",
@@ -303,6 +283,7 @@ export default function Home() {
   const [selectedService, setSelectedService] = useState<string | null>(null);
   const [showOriginStory, setShowOriginStory] = useState(false);
   const [expandedCertification, setExpandedCertification] = useState<string | null>(null);
+  const [activeCertGroup, setActiveCertGroup] = useState<"certifications" | "completedSkills" | "expertise">("certifications");
   const [showBenefitsComparison, setShowBenefitsComparison] = useState(false);
   const [selectedPerformanceMetrics, setSelectedPerformanceMetrics] = useState<PerformanceMetricKey[]>(["members", "retention", "delivery"]);
   const { language } = useLanguage();
@@ -354,17 +335,17 @@ export default function Home() {
         "Smart Solutions, Accessible Results. Elevating businesses through AI-powered virtual assistance and digital transformation.",
       founders: [
         {
-          role: "Founder & CEO (Chief Executive Officer)",
+          role: "Founder",
           statement:
             "I founded this agency to bring Filipino talent to the world, with a focus on trust, quality, and long-term client success.",
         },
         {
-          role: "Co-Founder & COO (Chief Operating Officer)",
+          role: "Co-Founder",
           statement:
             "Leads the team at the highest level, serving as the backbone and visionary behind our strategy, systems, and overall success.",
         },
         {
-          role: "Co-Founder & Head of Operations",
+          role: "Co-Founder",
           statement:
             "Manages operations and team execution to ensure consistent, high-quality delivery and clear client alignment.",
         },
@@ -387,6 +368,9 @@ export default function Home() {
         issuedBy: "Issued By",
         why: "Why We Earned This:",
         details: "Details:",
+        groupCertifications: "Certifications",
+        groupCompletedSkills: "Completed Skills",
+        groupExpertise: "Expertise",
       },
       benefitsComparison: {
         title: "Benefits of Accessively",
@@ -440,6 +424,9 @@ export default function Home() {
         issuedBy: "Emitido Por",
         why: "Por qué obtuvimos esto:",
         details: "Detalles:",
+        groupCertifications: "Certificaciones",
+        groupCompletedSkills: "Habilidades Completadas",
+        groupExpertise: "Experiencia",
       },
       benefitsComparison: {
         title: "Beneficios de Accessively",
@@ -493,6 +480,9 @@ export default function Home() {
         issuedBy: "颁发机构",
         why: "我们为何获得此认证：",
         details: "详细信息：",
+        groupCertifications: "认证",
+        groupCompletedSkills: "已完成技能",
+        groupExpertise: "专业能力",
       },
       benefitsComparison: {
         title: "Accessively 的优势",
@@ -546,6 +536,9 @@ export default function Home() {
         issuedBy: "Inisyu Ng",
         why: "Bakit namin ito nakuha:",
         details: "Mga Detalye:",
+        groupCertifications: "Mga Sertipikasyon",
+        groupCompletedSkills: "Mga Natapos na Kasanayan",
+        groupExpertise: "Kadalubhasaan",
       },
       benefitsComparison: {
         title: "Mga Benepisyo ng Accessively",
@@ -599,6 +592,9 @@ export default function Home() {
         issuedBy: "Délivré Par",
         why: "Pourquoi nous l'avons obtenue :",
         details: "Détails :",
+        groupCertifications: "Certifications",
+        groupCompletedSkills: "Compétences Acquises",
+        groupExpertise: "Expertise",
       },
       benefitsComparison: {
         title: "Les Avantages d’Accessively",
@@ -641,16 +637,14 @@ export default function Home() {
   type CertificationCardKey =
     | "ai"
     | "marketing"
-    | "customer"
     | "fullstack"
     | "leadership"
-    | "security"
-    | "analytics";
+    | "security";
 
   const certificationCardsByLanguage: Record<string, Record<CertificationCardKey, CertificationCard>> = {
     en: {
       ai: {
-        title: "Certification of Excellence Video Editing Services",
+        title: "Certification of Excellence | Video Editing Services",
         yearReceived: "2025",
         date: "October 23, 2025",
         issuedBy: "Academy Leaders",
@@ -659,7 +653,7 @@ export default function Home() {
           "This certificate is proudly awarded in recognition of outstanding video editing services rendered for the Accessibility Program held on October 23, 2025. Presented by Academy Leaders, this acknowledgment highlights the creativity, technical skill, and dedication demonstrated in producing high-quality visual content that effectively supported the program's mission of inclusivity and engagement. Your contribution played a vital role in enhancing the overall impact of the event, ensuring that the message of accessibility reached a wider audience in a clear and compelling manner. Your professionalism and commitment to excellence are truly commendable. Awarded this 23rd day of October, 2025.",
       },
       marketing: {
-        title: "Certification of Excellence Graphic Design Services",
+        title: "Certification of Excellence | Graphic Design Services",
         yearReceived: "2025",
         date: "September 9, 2025",
         issuedBy: "Apponix Academy",
@@ -667,17 +661,8 @@ export default function Home() {
         details:
           "This certificate is proudly awarded in recognition of exceptional Graphic Design Services rendered on September 9, 2025. Presented by Apponix Academy, this acknowledgment highlights the creativity, innovation, and attention to detail demonstrated in delivering high-quality visual designs. Your work has significantly contributed to enhancing visual communication and effectively representing ideas through compelling and professional design. Your dedication and artistic excellence are truly commendable. Awarded this 9th day of September, 2025.",
       },
-      customer: {
-        title: "HIPAA Compliance Training",
-        yearReceived: "2026",
-        date: "March 28, 2026",
-        issuedBy: "Training.us / Carl B. Johnson (for Accessively)",
-        why: "Recognition of successful HIPAA Compliance Training completion.",
-        details:
-          "This certificate is proudly awarded in recognition of the successful completion of HIPAA Compliance Training provided by Training.us. This certification confirms that the recipient has demonstrated a clear understanding of the standards and requirements for protecting sensitive health information in accordance with HIPAA regulations. Conducted on March 28, 2026, and presented by Carl B. Johnson for Accessively, this training reflects a commitment to maintaining confidentiality, integrity, and security in handling protected health information. Certificate ID: HIPAA-0049547. Awarded this 28th day of March, 2026.",
-      },
       fullstack: {
-        title: "IT Web Designing and Support",
+        title: "Certifyx | IT Web Designing and Support",
         yearReceived: "2026",
         date: "November 19, 2026",
         issuedBy: "CertifyX",
@@ -686,31 +671,22 @@ export default function Home() {
           "This certificate is proudly awarded to Accessively in recognition of successfully mastering IT Web Designing and Support. This achievement includes proficiency in website creation, UI/UX fundamentals, and technical troubleshooting. Certified by CertifyX, this distinction reflects readiness to build, optimize, and support modern digital platforms with efficiency and innovation. The recipient has demonstrated strong technical knowledge and the ability to deliver effective digital solutions. Certificate ID: CTFX-2762391-28163. Awarded this 19th day of November, 2026.",
       },
       leadership: {
-        title: "Cybersecurity Awareness (Cybersecurity Terminology & Information Security Awareness)",
-        yearReceived: "Not specified",
-        date: "Not specified",
+        title: "LinkedIn | Cybersecurity Awareness",
+        yearReceived: "2026",
+        date: "March 28, 2026",
         issuedBy: "LinkedIn Learning",
         why: "Recognition of successful completion of Cybersecurity Awareness training.",
         details:
           "This certificate is proudly awarded in recognition of the successful completion of Cybersecurity Awareness training, including Cybersecurity Terminology and Information Security Awareness, provided by LinkedIn Learning. This certification demonstrates a strong understanding of essential cybersecurity concepts, key terminology, and best practices for maintaining information security in today's digital environment. The recipient has shown commitment to protecting data and supporting secure systems. Certificate ID: 8dfladlc|35bled52/71462c167d38e8029275549a3f09462ebe6c4c395c93d5. Awarded upon completion.",
       },
       security: {
-        title: "Customer Service (Managing Customer Feedback & Feedback Management)",
-        yearReceived: "Not specified",
-        date: "Not specified",
+        title: "LinkedIn | Customer Service",
+        yearReceived: "2026",
+        date: "March 28, 2026",
         issuedBy: "LinkedIn Learning",
         why: "Recognition of successful completion of Customer Service training.",
         details:
           "This certificate is proudly awarded in recognition of the successful completion of Customer Service training, including Customer Service: Managing Customer Feedback and Feedback Management, provided by LinkedIn Learning. This certification demonstrates a strong understanding of effective communication, customer engagement, and strategies for managing and responding to customer feedback. The recipient has shown the ability to enhance customer satisfaction and contribute to positive service experiences. Certificate ID: 8dffadlcf35bled5271462c167d388029275549a3f09462ebe6c4c395c93d5. Awarded upon completion.",
-      },
-      analytics: {
-        title: "Medical Virtual Assistant Online Masterclass",
-        yearReceived: "2025",
-        date: "June 20, 2025",
-        issuedBy: "Sync2VA Training",
-        why: "Recognition of successful completion of the Medical Virtual Assistant Online Masterclass.",
-        details:
-          "Certificate of Completion. This certificate is proudly presented to Jake Manila as proof of successfully completing the Medical Virtual Assistant Online Masterclass provided by Sync2VA Training. This intensive program consisted of 40 hours of training over a 4-week period, equipping the participant with essential knowledge and skills required for medical virtual assistance. This achievement reflects dedication, competence, and readiness to perform in a professional healthcare support environment. Given this 20th day of June, 2025.",
       },
     },
     es: {
@@ -727,13 +703,6 @@ export default function Home() {
         issuedBy: "Programa Avanzado de Certificación en Marketing Digital",
         why: "Para ofrecer campañas de alto rendimiento y crecimiento medible para nuestros clientes.",
         details: "Refuerza nuestra experiencia en generación de leads, optimización de conversión y posicionamiento de marca con estrategias modernas y escalables.",
-      },
-      customer: {
-        title: "Experiencia del Cliente",
-        date: "Febrero 2026",
-        issuedBy: "Programa de Excelencia en Experiencia y Servicio al Cliente",
-        why: "Para asegurar interacciones consistentes y de alta calidad con cada cliente.",
-        details: "Demuestra nuestro compromiso con un soporte profesional, empático y orientado a soluciones que mejora retención y lealtad.",
       },
       fullstack: {
         title: "Desarrollo Full-Stack",
@@ -756,13 +725,6 @@ export default function Home() {
         why: "Para proteger la información del cliente, reducir riesgos operativos y mantener flujos de trabajo digitales seguros.",
         details: "Esta certificación refuerza nuestros estándares de seguridad en control de acceso, manejo de datos y prevención de amenazas.",
       },
-      analytics: {
-        title: "Analítica e Inteligencia de Negocio",
-        date: "Mayo 2026",
-        issuedBy: "Programa de Certificación en Analítica e Inteligencia de Negocio",
-        why: "Para tomar decisiones basadas en evidencia y generar mejoras de rendimiento medibles para los clientes.",
-        details: "Fortalece nuestra capacidad para crear dashboards KPI, interpretar tendencias y convertir datos operativos en estrategias de crecimiento.",
-      },
     },
     zh: {
       ai: {
@@ -778,13 +740,6 @@ export default function Home() {
         issuedBy: "高级数字营销认证项目",
         why: "为了为客户提供可衡量增长和高绩效营销活动。",
         details: "强化了我们在线索获取、转化优化和品牌定位方面的专业能力，支持可扩展增长。",
-      },
-      customer: {
-        title: "客户体验",
-        date: "2026年2月",
-        issuedBy: "客户体验与服务卓越项目",
-        why: "为了确保每位客户都获得稳定且高质量的服务体验。",
-        details: "体现我们在专业、同理心和解决方案导向支持方面的承诺，提升留存与忠诚度。",
       },
       fullstack: {
         title: "全栈开发",
@@ -807,13 +762,6 @@ export default function Home() {
         why: "为了保护客户信息、降低运营风险，并保持安全的数字化工作流程。",
         details: "该认证强化了我们在访问控制、数据处理和威胁防护方面的安全标准，支持客户放心扩展业务。",
       },
-      analytics: {
-        title: "商业分析与智能",
-        date: "2026年5月",
-        issuedBy: "商业分析与智能认证项目",
-        why: "为了实现更精准的数据驱动决策，并为客户带来可衡量的绩效提升。",
-        details: "该培训提升了我们构建 KPI 仪表板、解读趋势并将运营数据转化为增长策略的能力。",
-      },
     },
     tl: {
       ai: {
@@ -829,13 +777,6 @@ export default function Home() {
         issuedBy: "Advanced Digital Marketing Certification Program",
         why: "Para makapaghatid ng measurable growth at high-performing campaigns.",
         details: "Pinahusay nito ang aming lead generation, conversion optimization, at brand positioning para sa scalable results.",
-      },
-      customer: {
-        title: "Customer Experience",
-        date: "Pebrero 2026",
-        issuedBy: "Customer Experience & Service Excellence Program",
-        why: "Para masiguro ang consistent at mataas na kalidad na customer interactions.",
-        details: "Ipinapakita nito ang commitment namin sa professional, empathetic, at solution-focused na suporta para sa long-term loyalty.",
       },
       fullstack: {
         title: "Full-Stack Development",
@@ -858,13 +799,6 @@ export default function Home() {
         why: "Para maprotektahan ang client information, mabawasan ang risk, at mapanatiling secure ang digital workflows.",
         details: "Pinapatibay nito ang aming security standards sa access control, data handling, at threat prevention para sa mas ligtas na operations.",
       },
-      analytics: {
-        title: "Business Analytics at Intelligence",
-        date: "Mayo 2026",
-        issuedBy: "Business Analytics and Intelligence Certification Program",
-        why: "Para makagawa ng mas eksaktong data-driven decisions at makapaghatid ng measurable performance improvements.",
-        details: "Pinapalakas nito ang kakayahan naming gumawa ng KPI dashboards, mag-interpret ng trends, at gawing practical growth strategy ang data.",
-      },
     },
     fr: {
       ai: {
@@ -880,13 +814,6 @@ export default function Home() {
         issuedBy: "Programme avancé de certification en marketing digital",
         why: "Pour fournir des campagnes performantes et une croissance mesurable.",
         details: "Elle améliore nos compétences en génération de leads, optimisation de conversion et positionnement de marque.",
-      },
-      customer: {
-        title: "Expérience Client",
-        date: "Février 2026",
-        issuedBy: "Programme d'excellence en expérience et service client",
-        why: "Pour garantir des interactions client cohérentes et de haute qualité.",
-        details: "Elle confirme notre engagement envers un support professionnel, empathique et orienté solutions pour renforcer la fidélité.",
       },
       fullstack: {
         title: "Développement Full-Stack",
@@ -906,15 +833,8 @@ export default function Home() {
         title: "Cybersécurité et Protection des Données",
         date: "Avril 2026",
         issuedBy: "Programme de certification en cybersécurité et protection des données",
-        why: "Pour protéger les informations clients, réduire les risques opérationnels et maintenir des workflows digitaux sécurisés.",
+        why: "Pour protéger les informations clients, réduire les risques opérationnels et maintenir des workflows digitals sécurisés.",
         details: "Cette certification renforce nos standards de sécurité en contrôle d'accès, gestion des données et prévention des menaces.",
-      },
-      analytics: {
-        title: "Analytique et Intelligence d'Affaires",
-        date: "Mai 2026",
-        issuedBy: "Programme de certification en analytique et intelligence d'affaires",
-        why: "Pour prendre des décisions plus précises fondées sur les données et livrer des améliorations mesurables.",
-        details: "Elle améliore notre capacité à créer des tableaux KPI, interpréter les tendances et transformer les données en stratégies de croissance.",
       },
     },
   };
@@ -924,12 +844,24 @@ export default function Home() {
   const certificationPreviewImages = {
     ai: "/cert1.png",
     marketing: "/cert2.png",
-    customer: "/cert3.png",
     fullstack: "/cert4.png",
     leadership: "/cert5.png",
     security: "/cert6.png",
-    analytics: "/cert7.png",
   };
+
+  const certificationGroupLabels = {
+    certifications: locale.certifications.groupCertifications ?? "Certifications",
+    completedSkills: locale.certifications.groupCompletedSkills ?? "Completed Skills",
+    expertise: locale.certifications.groupExpertise ?? "Expertise",
+  };
+
+  const certificationGroups: Array<{
+    id: "certifications" | "completedSkills";
+    items: CertificationCardKey[];
+  }> = [
+    { id: "certifications", items: ["ai", "marketing"] },
+    { id: "completedSkills", items: ["fullstack", "leadership", "security"] },
+  ];
 
   // Testimonials Carousel Component
   const TestimonialsCarousel = () => {
@@ -1285,6 +1217,10 @@ export default function Home() {
     ) as Record<PerformanceMetricKey, Array<{ period: string; score: number; x: number; y: number }>>;
 
     const yTicks = [0, 20, 40, 60, 80, 100];
+    const xStep = performanceTimeline.length > 1 ? plotWidth / (performanceTimeline.length - 1) : plotWidth;
+    const barGroupWidth = Math.min(56, xStep * 0.72);
+    const barGap = 4;
+    const singleBarWidth = Math.max(8, (barGroupWidth - barGap * (activeMetricKeys.length - 1)) / Math.max(activeMetricKeys.length, 1));
     const metricEntries = Object.entries(performanceMetricData) as Array<[
       PerformanceMetricKey,
       (typeof performanceMetricData)[PerformanceMetricKey]
@@ -1375,6 +1311,36 @@ export default function Home() {
 
             <line x1={padding.left} y1={padding.top + plotHeight} x2={padding.left + plotWidth} y2={padding.top + plotHeight} stroke="#64748b" strokeWidth="1.4" />
             <line x1={padding.left} y1={padding.top} x2={padding.left} y2={padding.top + plotHeight} stroke="#64748b" strokeWidth="1.4" />
+
+            {activeMetricKeys.map((metricKey, metricIndex) => {
+              const metricConfig = performanceMetricData[metricKey];
+              const metricPoints = pointsByMetric[metricKey];
+
+              return (
+                <g key={`${metricKey}-bars`}>
+                  {metricPoints.map((point) => {
+                    const barX = point.x - barGroupWidth / 2 + metricIndex * (singleBarWidth + barGap);
+                    const barY = point.y;
+                    const barHeight = padding.top + plotHeight - point.y;
+
+                    return (
+                      <rect
+                        key={`${metricKey}-${point.period}-bar`}
+                        x={barX}
+                        y={barY}
+                        width={singleBarWidth}
+                        height={Math.max(2, barHeight)}
+                        rx="3"
+                        fill={metricConfig.lineStart}
+                        fillOpacity="0.28"
+                        className="cursor-pointer"
+                        onClick={() => focusPerformanceMetric(metricKey)}
+                      />
+                    );
+                  })}
+                </g>
+              );
+            })}
 
             {activeMetricKeys.map((metricKey) => {
               const metricConfig = performanceMetricData[metricKey];
@@ -1496,7 +1462,7 @@ export default function Home() {
                 onClick={onClose}
                 className="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white px-6 py-3 rounded-xl font-semibold text-center transition-all duration-300 transform hover:scale-105 shadow-lg shadow-indigo-500/25"
               >
-                {t.serviceModal.getStartedWith} {details.title}
+                {t.hero.getStarted}
               </a>
               <button
                 onClick={onClose}
@@ -1703,7 +1669,10 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="rounded-3xl border border-indigo-500/20 bg-gradient-to-br from-indigo-500/10 via-slate-900/50 to-purple-500/10 p-8 backdrop-blur-md">
+            </div>
+
+            <div className="relative">
+              <div className="mb-6 rounded-3xl border border-indigo-500/20 bg-gradient-to-br from-indigo-500/10 via-slate-900/50 to-purple-500/10 p-8 backdrop-blur-md">
                 <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300">{locale.homeUi.originStoryEyebrow}</p>
                 <h3 className="mb-4 text-2xl font-bold text-white">{locale.homeUi.originStoryTitle}</h3>
                 <p className="mb-6 leading-relaxed text-slate-300">
@@ -1716,26 +1685,27 @@ export default function Home() {
                   {locale.homeUi.originStoryTitle}
                 </button>
               </div>
-            </div>
 
-            <div className="relative">
               <div className="backdrop-blur-md bg-gradient-to-br from-slate-900/60 to-slate-800/60 rounded-3xl p-8 border border-slate-700/50">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center">
-                    <div className="text-4xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent mb-2">2025</div>
-                      <div className="text-slate-400 text-sm">{locale.aboutStats.founded}</div>
+                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                  <div className="rounded-2xl border border-slate-700/70 bg-slate-900/55 p-6 text-center">
+                    <div className="mb-2 text-4xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">2025</div>
+                    <div className="text-sm text-slate-400">{locale.aboutStats.founded}</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2">20+</div>
-                      <div className="text-slate-400 text-sm">{locale.aboutStats.teamMembers}</div>
+
+                  <div className="rounded-2xl border border-slate-700/70 bg-slate-900/55 p-6 text-center">
+                    <div className="mb-2 text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">20+</div>
+                    <div className="text-sm text-slate-400">{locale.aboutStats.teamMembers}</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent mb-2">50+</div>
-                      <div className="text-slate-400 text-sm">{locale.aboutStats.projects}</div>
+
+                  <div className="rounded-2xl border border-slate-700/70 bg-slate-900/55 p-6 text-center">
+                    <div className="mb-2 text-4xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">50+</div>
+                    <div className="text-sm text-slate-400">{locale.aboutStats.projects}</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-4xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent mb-2">97%+</div>
-                      <div className="text-slate-400 text-sm">{locale.aboutStats.satisfaction}</div>
+
+                  <div className="rounded-2xl border border-slate-700/70 bg-slate-900/55 p-6 text-center">
+                    <div className="mb-2 text-4xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">3</div>
+                    <div className="text-sm text-slate-400">Offices</div>
                   </div>
                 </div>
               </div>
@@ -1864,7 +1834,7 @@ export default function Home() {
               <p className="text-slate-300 leading-relaxed mb-6">
                 {t.services.salesMarketingDesc}
               </p>
-              <div className="flex items-center text-purple-400 group-hover:text-purple-300 transition-colors">
+              <div className="flex items-center text-indigo-400 group-hover:text-indigo-300 transition-colors">
                 <span className="text-sm font-semibold">{t.services.learnMore}</span>
                 <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -1886,7 +1856,7 @@ export default function Home() {
               <p className="text-slate-300 leading-relaxed mb-6">
                 {t.services.graphicDesignDesc}
               </p>
-              <div className="flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
+              <div className="flex items-center text-indigo-400 group-hover:text-indigo-300 transition-colors">
                 <span className="text-sm font-semibold">{t.services.learnMore}</span>
                 <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -1930,7 +1900,7 @@ export default function Home() {
               <p className="text-slate-300 leading-relaxed mb-6">
                 {t.services.customerServiceDesc}
               </p>
-              <div className="flex items-center text-purple-400 group-hover:text-purple-300 transition-colors">
+              <div className="flex items-center text-indigo-400 group-hover:text-indigo-300 transition-colors">
                 <span className="text-sm font-semibold">{t.services.learnMore}</span>
                 <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -1962,74 +1932,44 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="group text-center backdrop-blur-md bg-slate-900/30 rounded-3xl p-8 border border-slate-800/50 hover:border-indigo-500/50 transition-all duration-500 hover:transform hover:scale-105">
-              <div className="w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-indigo-500/25">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">{t.whyChooseUs.aiPowered}</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">AI-Enhanced Team</h3>
               <p className="text-slate-300 leading-relaxed">
-                {t.whyChooseUs.aiPoweredDesc}
+                A skilled team backed by smart AI tools, helping us work faster, think sharper, and deliver better results every time.
               </p>
             </div>
 
             <div className="group text-center backdrop-blur-md bg-slate-900/30 rounded-3xl p-8 border border-slate-800/50 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105">
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-500/25">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">{t.whyChooseUs.premiumQuality}</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Top-Tier Quality</h3>
               <p className="text-slate-300 leading-relaxed">
-                {t.whyChooseUs.premiumQualityDesc}
+                We don't cut corners. Every project goes through careful review to make sure it meets high standards from start to finish.
               </p>
             </div>
 
             <div className="group text-center backdrop-blur-md bg-slate-900/30 rounded-3xl p-8 border border-slate-800/50 hover:border-blue-500/50 transition-all duration-500 hover:transform hover:scale-105">
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-500/25">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">{t.whyChooseUs.lightningFast}</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Fast, Not Rushed</h3>
               <p className="text-slate-300 leading-relaxed">
-                {t.whyChooseUs.lightningFastDesc}
+                Quick turnaround times without sacrificing the details that matter. Speed and quality go hand in hand.
               </p>
             </div>
 
             <div className="group text-center backdrop-blur-md bg-slate-900/30 rounded-3xl p-8 border border-slate-800/50 hover:border-indigo-500/50 transition-all duration-500 hover:transform hover:scale-105">
-              <div className="w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-indigo-500/25">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">{t.whyChooseUs.clientCentric}</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Built Around You</h3>
               <p className="text-slate-300 leading-relaxed">
-                {t.whyChooseUs.clientCentricDesc}
+                We take time to understand your goals and tailor everything to fit your needs, because no two clients are the same.
               </p>
             </div>
 
             <div className="group text-center backdrop-blur-md bg-slate-900/30 rounded-3xl p-8 border border-slate-800/50 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105">
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-500/25">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">{t.whyChooseUs.scalable}</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Grows With You</h3>
               <p className="text-slate-300 leading-relaxed">
-                {t.whyChooseUs.scalableDesc}
+                Our services are flexible and scalable, so whether you're just starting or expanding fast, we adapt with you.
               </p>
             </div>
 
             <div className="group text-center backdrop-blur-md bg-slate-900/30 rounded-3xl p-8 border border-slate-800/50 hover:border-blue-500/50 transition-all duration-500 hover:transform hover:scale-105">
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-500/25">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">{t.whyChooseUs.futureReady}</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Always Evolving</h3>
               <p className="text-slate-300 leading-relaxed">
-                {t.whyChooseUs.futureReadyDesc}
+                We stay ahead by using the latest tools and ideas, so you're never left behind in a fast-changing digital world.
               </p>
             </div>
           </div>
@@ -2146,349 +2086,90 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="space-y-6 max-w-4xl mx-auto">
-            {/* AI & Machine Learning Card */}
-            <div 
-              onClick={() => setExpandedCertification(expandedCertification === 'ai' ? null : 'ai')}
-              className="group backdrop-blur-md bg-slate-900/40 rounded-3xl p-8 border border-slate-800/50 hover:border-indigo-500/50 transition-all duration-500 cursor-pointer hover:transform hover:scale-[1.02]"
-            >
-              <div className="flex items-start justify-between">
-                <div className="flex items-start gap-6 flex-1">
-                  <div className="w-32 h-24 rounded-2xl overflow-hidden border border-indigo-500/30 bg-white flex-shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-lg shadow-indigo-500/20 p-1">
-                    <img
-                      src={certificationPreviewImages.ai}
-                      alt={`${certificationCards.ai.title} preview`}
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-2">{certificationCards.ai.title}</h3>
-                    <p className="text-sm text-slate-400 mb-1">{locale.certifications.yearReceived}: {certificationCards.ai.yearReceived ?? "Not specified"} • {locale.certifications.date}: {certificationCards.ai.date}</p>
-                    <p className="text-sm text-slate-400">{locale.certifications.issuedBy}: {certificationCards.ai.issuedBy}</p>
-                  </div>
-                </div>
-                <svg className={`w-6 h-6 text-indigo-500 flex-shrink-0 transition-transform duration-300 ${expandedCertification === 'ai' ? 'transform rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-              </div>
-              {expandedCertification === 'ai' && (
-                <div className="mt-6 pt-6 border-t border-slate-700">
-                  <div className="mb-6 rounded-2xl border border-slate-700/80 bg-slate-950/70 p-4">
-                    <img
-                      src={certificationPreviewImages.ai}
-                      alt={`${certificationCards.ai.title} full certificate`}
-                      className="w-full h-[360px] object-contain bg-white rounded-xl"
-                    />
-                  </div>
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">{locale.certifications.why}</h4>
-                    <p className="text-slate-300 leading-relaxed">
-                      {certificationCards.ai.why}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">{locale.certifications.details}</h4>
-                    <p className="text-slate-300 leading-relaxed">
-                      {certificationCards.ai.details}
-                    </p>
-                  </div>
-                </div>
-              )}
-            </div>
+          {/* Tab buttons */}
+          <div className="flex flex-wrap justify-center gap-3 mb-10 max-w-5xl mx-auto">
+            {certificationGroups.map((group) => (
+              <button
+                key={group.id}
+                type="button"
+                onClick={() => {
+                  setActiveCertGroup(group.id);
+                  setExpandedCertification(null);
+                }}
+                className={`rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 border ${
+                  activeCertGroup === group.id
+                    ? "bg-gradient-to-r from-indigo-600 to-purple-600 border-transparent text-white shadow-lg shadow-indigo-500/30"
+                    : "border-slate-700 bg-slate-900/50 text-slate-300 hover:border-indigo-500/60 hover:text-white"
+                }`}
+              >
+                {certificationGroupLabels[group.id]}
+              </button>
+            ))}
+          </div>
 
-            {/* Digital Marketing Card */}
-            <div 
-              onClick={() => setExpandedCertification(expandedCertification === 'marketing' ? null : 'marketing')}
-              className="group backdrop-blur-md bg-slate-900/40 rounded-3xl p-8 border border-slate-800/50 hover:border-indigo-500/50 transition-all duration-500 cursor-pointer hover:transform hover:scale-[1.02]"
-            >
-              <div className="flex items-start justify-between">
-                <div className="flex items-start gap-6 flex-1">
-                  <div className="w-32 h-24 rounded-2xl overflow-hidden border border-indigo-500/30 bg-white flex-shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-lg shadow-indigo-500/20 p-1">
-                    <img
-                      src={certificationPreviewImages.marketing}
-                      alt={`${certificationCards.marketing.title} preview`}
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-2">{certificationCards.marketing.title}</h3>
-                    <p className="text-sm text-slate-400 mb-1">{locale.certifications.yearReceived}: {certificationCards.marketing.yearReceived ?? "Not specified"} • {locale.certifications.date}: {certificationCards.marketing.date}</p>
-                    <p className="text-sm text-slate-400">{locale.certifications.issuedBy}: {certificationCards.marketing.issuedBy}</p>
-                  </div>
-                </div>
-                <svg className={`w-6 h-6 text-indigo-500 flex-shrink-0 transition-transform duration-300 ${expandedCertification === 'marketing' ? 'transform rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-              </div>
-              {expandedCertification === 'marketing' && (
-                <div className="mt-6 pt-6 border-t border-slate-700">
-                  <div className="mb-6 rounded-2xl border border-slate-700/80 bg-slate-950/70 p-4">
-                    <img
-                      src={certificationPreviewImages.marketing}
-                      alt={`${certificationCards.marketing.title} full certificate`}
-                      className="w-full h-[360px] object-contain bg-white rounded-xl"
-                    />
-                  </div>
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">{locale.certifications.why}</h4>
-                    <p className="text-slate-300 leading-relaxed">
-                      {certificationCards.marketing.why}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">{locale.certifications.details}</h4>
-                    <p className="text-slate-300 leading-relaxed">
-                      {certificationCards.marketing.details}
-                    </p>
-                  </div>
-                </div>
-              )}
-            </div>
+          {/* Active group content */}
+          <div className="space-y-6 max-w-5xl mx-auto">
+            {certificationGroups
+              .filter((group) => group.id === activeCertGroup)
+              .flatMap((group) => group.items)
+              .map((key) => {
+                const card = certificationCards[key];
+                return (
+                  <div
+                    key={key}
+                    onClick={() => setExpandedCertification(expandedCertification === key ? null : key)}
+                    className="group rounded-3xl border border-slate-800/50 bg-slate-900/40 p-8 backdrop-blur-md transition-all duration-500 hover:scale-[1.02] hover:border-indigo-500/50 cursor-pointer"
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex flex-1 items-start gap-6">
+                        <div className="h-24 w-32 flex-shrink-0 overflow-hidden rounded-2xl border border-indigo-500/30 bg-white p-1 shadow-lg shadow-indigo-500/20 transition-transform duration-300 group-hover:scale-105">
+                          <img
+                            src={certificationPreviewImages[key]}
+                            alt={`${card.title} preview`}
+                            className="h-full w-full object-contain"
+                          />
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="mb-2 text-2xl font-bold text-white">{card.title}</h4>
+                          <p className="mb-1 text-sm text-slate-400">
+                            {locale.certifications.yearReceived}: {card.yearReceived ?? "Not specified"} • {locale.certifications.date}: {card.date}
+                          </p>
+                          <p className="text-sm text-slate-400">{locale.certifications.issuedBy}: {card.issuedBy}</p>
+                        </div>
+                      </div>
 
-            {/* Customer Experience Card */}
-            <div 
-              onClick={() => setExpandedCertification(expandedCertification === 'customer' ? null : 'customer')}
-              className="group backdrop-blur-md bg-slate-900/40 rounded-3xl p-8 border border-slate-800/50 hover:border-indigo-500/50 transition-all duration-500 cursor-pointer hover:transform hover:scale-[1.02]"
-            >
-              <div className="flex items-start justify-between">
-                <div className="flex items-start gap-6 flex-1">
-                  <div className="w-32 h-24 rounded-2xl overflow-hidden border border-indigo-500/30 bg-white flex-shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-lg shadow-indigo-500/20 p-1">
-                    <img
-                      src={certificationPreviewImages.customer}
-                      alt={`${certificationCards.customer.title} preview`}
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-2">{certificationCards.customer.title}</h3>
-                    <p className="text-sm text-slate-400 mb-1">{locale.certifications.yearReceived}: {certificationCards.customer.yearReceived ?? "Not specified"} • {locale.certifications.date}: {certificationCards.customer.date}</p>
-                    <p className="text-sm text-slate-400">{locale.certifications.issuedBy}: {certificationCards.customer.issuedBy}</p>
-                  </div>
-                </div>
-                <svg className={`w-6 h-6 text-indigo-500 flex-shrink-0 transition-transform duration-300 ${expandedCertification === 'customer' ? 'transform rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-              </div>
-              {expandedCertification === 'customer' && (
-                <div className="mt-6 pt-6 border-t border-slate-700">
-                  <div className="mb-6 rounded-2xl border border-slate-700/80 bg-slate-950/70 p-4">
-                    <img
-                      src={certificationPreviewImages.customer}
-                      alt={`${certificationCards.customer.title} full certificate`}
-                      className="w-full h-[360px] object-contain bg-white rounded-xl"
-                    />
-                  </div>
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">{locale.certifications.why}</h4>
-                    <p className="text-slate-300 leading-relaxed">
-                      {certificationCards.customer.why}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">{locale.certifications.details}</h4>
-                    <p className="text-slate-300 leading-relaxed">
-                      {certificationCards.customer.details}
-                    </p>
-                  </div>
-                </div>
-              )}
-            </div>
+                      <svg
+                        className={`h-6 w-6 flex-shrink-0 text-indigo-500 transition-transform duration-300 ${expandedCertification === key ? "rotate-180" : ""}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                      </svg>
+                    </div>
 
-            {/* Full-Stack Development Card */}
-            <div 
-              onClick={() => setExpandedCertification(expandedCertification === 'fullstack' ? null : 'fullstack')}
-              className="group backdrop-blur-md bg-slate-900/40 rounded-3xl p-8 border border-slate-800/50 hover:border-indigo-500/50 transition-all duration-500 cursor-pointer hover:transform hover:scale-[1.02]"
-            >
-              <div className="flex items-start justify-between">
-                <div className="flex items-start gap-6 flex-1">
-                  <div className="w-32 h-24 rounded-2xl overflow-hidden border border-indigo-500/30 bg-white flex-shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-lg shadow-indigo-500/20 p-1">
-                    <img
-                      src={certificationPreviewImages.fullstack}
-                      alt={`${certificationCards.fullstack.title} preview`}
-                      className="w-full h-full object-contain"
-                    />
+                    {expandedCertification === key && (
+                      <div className="mt-6 border-t border-slate-700 pt-6">
+                        <div className="mb-6 rounded-2xl border border-slate-700/80 bg-slate-950/70 p-4">
+                          <img
+                            src={certificationPreviewImages[key]}
+                            alt={`${card.title} full certificate`}
+                            className="h-[360px] w-full rounded-xl bg-white object-contain"
+                          />
+                        </div>
+                        <div className="mb-6">
+                          <h5 className="mb-3 text-lg font-semibold text-white">{locale.certifications.why}</h5>
+                          <p className="leading-relaxed text-slate-300">{card.why}</p>
+                        </div>
+                        <div>
+                          <h5 className="mb-3 text-lg font-semibold text-white">{locale.certifications.details}</h5>
+                          <p className="leading-relaxed text-slate-300">{card.details}</p>
+                        </div>
+                      </div>
+                    )}
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-2">{certificationCards.fullstack.title}</h3>
-                    <p className="text-sm text-slate-400 mb-1">{locale.certifications.yearReceived}: {certificationCards.fullstack.yearReceived ?? "Not specified"} • {locale.certifications.date}: {certificationCards.fullstack.date}</p>
-                    <p className="text-sm text-slate-400">{locale.certifications.issuedBy}: {certificationCards.fullstack.issuedBy}</p>
-                  </div>
-                </div>
-                <svg className={`w-6 h-6 text-indigo-500 flex-shrink-0 transition-transform duration-300 ${expandedCertification === 'fullstack' ? 'transform rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-              </div>
-              {expandedCertification === 'fullstack' && (
-                <div className="mt-6 pt-6 border-t border-slate-700">
-                  <div className="mb-6 rounded-2xl border border-slate-700/80 bg-slate-950/70 p-4">
-                    <img
-                      src={certificationPreviewImages.fullstack}
-                      alt={`${certificationCards.fullstack.title} full certificate`}
-                      className="w-full h-[360px] object-contain bg-white rounded-xl"
-                    />
-                  </div>
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">{locale.certifications.why}</h4>
-                    <p className="text-slate-300 leading-relaxed">
-                      {certificationCards.fullstack.why}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">{locale.certifications.details}</h4>
-                    <p className="text-slate-300 leading-relaxed">
-                      {certificationCards.fullstack.details}
-                    </p>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Leadership & Operations Card */}
-            <div
-              onClick={() => setExpandedCertification(expandedCertification === 'leadership' ? null : 'leadership')}
-              className="group backdrop-blur-md bg-slate-900/40 rounded-3xl p-8 border border-slate-800/50 hover:border-indigo-500/50 transition-all duration-500 cursor-pointer hover:transform hover:scale-[1.02]"
-            >
-              <div className="flex items-start justify-between">
-                <div className="flex items-start gap-6 flex-1">
-                  <div className="w-32 h-24 rounded-2xl overflow-hidden border border-indigo-500/30 bg-white flex-shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-lg shadow-indigo-500/20 p-1">
-                    <img
-                      src={certificationPreviewImages.leadership}
-                      alt={`${certificationCards.leadership.title} preview`}
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-2">{certificationCards.leadership.title}</h3>
-                    <p className="text-sm text-slate-400 mb-1">{locale.certifications.yearReceived}: {certificationCards.leadership.yearReceived ?? "Not specified"} • {locale.certifications.date}: {certificationCards.leadership.date}</p>
-                    <p className="text-sm text-slate-400">{locale.certifications.issuedBy}: {certificationCards.leadership.issuedBy}</p>
-                  </div>
-                </div>
-                <svg className={`w-6 h-6 text-indigo-500 flex-shrink-0 transition-transform duration-300 ${expandedCertification === 'leadership' ? 'transform rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-              </div>
-              {expandedCertification === 'leadership' && (
-                <div className="mt-6 pt-6 border-t border-slate-700">
-                  <div className="mb-6 rounded-2xl border border-slate-700/80 bg-slate-950/70 p-4">
-                    <img
-                      src={certificationPreviewImages.leadership}
-                      alt={`${certificationCards.leadership.title} full certificate`}
-                      className="w-full h-[360px] object-contain bg-white rounded-xl"
-                    />
-                  </div>
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">{locale.certifications.why}</h4>
-                    <p className="text-slate-300 leading-relaxed">
-                      {certificationCards.leadership.why}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">{locale.certifications.details}</h4>
-                    <p className="text-slate-300 leading-relaxed">
-                      {certificationCards.leadership.details}
-                    </p>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Cybersecurity & Data Protection Card */}
-            <div
-              onClick={() => setExpandedCertification(expandedCertification === 'security' ? null : 'security')}
-              className="group backdrop-blur-md bg-slate-900/40 rounded-3xl p-8 border border-slate-800/50 hover:border-indigo-500/50 transition-all duration-500 cursor-pointer hover:transform hover:scale-[1.02]"
-            >
-              <div className="flex items-start justify-between">
-                <div className="flex items-start gap-6 flex-1">
-                  <div className="w-32 h-24 rounded-2xl overflow-hidden border border-indigo-500/30 bg-white flex-shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-lg shadow-indigo-500/20 p-1">
-                    <img
-                      src={certificationPreviewImages.security}
-                      alt={`${certificationCards.security.title} preview`}
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-2">{certificationCards.security.title}</h3>
-                    <p className="text-sm text-slate-400 mb-1">{locale.certifications.yearReceived}: {certificationCards.security.yearReceived ?? "Not specified"} • {locale.certifications.date}: {certificationCards.security.date}</p>
-                    <p className="text-sm text-slate-400">{locale.certifications.issuedBy}: {certificationCards.security.issuedBy}</p>
-                  </div>
-                </div>
-                <svg className={`w-6 h-6 text-indigo-500 flex-shrink-0 transition-transform duration-300 ${expandedCertification === 'security' ? 'transform rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-              </div>
-              {expandedCertification === 'security' && (
-                <div className="mt-6 pt-6 border-t border-slate-700">
-                  <div className="mb-6 rounded-2xl border border-slate-700/80 bg-slate-950/70 p-4">
-                    <img
-                      src={certificationPreviewImages.security}
-                      alt={`${certificationCards.security.title} full certificate`}
-                      className="w-full h-[360px] object-contain bg-white rounded-xl"
-                    />
-                  </div>
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">{locale.certifications.why}</h4>
-                    <p className="text-slate-300 leading-relaxed">
-                      {certificationCards.security.why}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">{locale.certifications.details}</h4>
-                    <p className="text-slate-300 leading-relaxed">
-                      {certificationCards.security.details}
-                    </p>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Business Analytics & Intelligence Card */}
-            <div
-              onClick={() => setExpandedCertification(expandedCertification === 'analytics' ? null : 'analytics')}
-              className="group backdrop-blur-md bg-slate-900/40 rounded-3xl p-8 border border-slate-800/50 hover:border-indigo-500/50 transition-all duration-500 cursor-pointer hover:transform hover:scale-[1.02]"
-            >
-              <div className="flex items-start justify-between">
-                <div className="flex items-start gap-6 flex-1">
-                  <div className="w-32 h-24 rounded-2xl overflow-hidden border border-indigo-500/30 bg-white flex-shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-lg shadow-indigo-500/20 p-1">
-                    <img
-                      src={certificationPreviewImages.analytics}
-                      alt={`${certificationCards.analytics.title} preview`}
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-2">{certificationCards.analytics.title}</h3>
-                    <p className="text-sm text-slate-400 mb-1">{locale.certifications.yearReceived}: {certificationCards.analytics.yearReceived ?? "Not specified"} • {locale.certifications.date}: {certificationCards.analytics.date}</p>
-                    <p className="text-sm text-slate-400">{locale.certifications.issuedBy}: {certificationCards.analytics.issuedBy}</p>
-                  </div>
-                </div>
-                <svg className={`w-6 h-6 text-indigo-500 flex-shrink-0 transition-transform duration-300 ${expandedCertification === 'analytics' ? 'transform rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-              </div>
-              {expandedCertification === 'analytics' && (
-                <div className="mt-6 pt-6 border-t border-slate-700">
-                  <div className="mb-6 rounded-2xl border border-slate-700/80 bg-slate-950/70 p-4">
-                    <img
-                      src={certificationPreviewImages.analytics}
-                      alt={`${certificationCards.analytics.title} full certificate`}
-                      className="w-full h-[360px] object-contain bg-white rounded-xl"
-                    />
-                  </div>
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">{locale.certifications.why}</h4>
-                    <p className="text-slate-300 leading-relaxed">
-                      {certificationCards.analytics.why}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">{locale.certifications.details}</h4>
-                    <p className="text-slate-300 leading-relaxed">
-                      {certificationCards.analytics.details}
-                    </p>
-                  </div>
-                </div>
-              )}
-            </div>
+                );
+              })}
           </div>
         </div>
       </section>
@@ -2517,6 +2198,11 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-950"></div>
+        <div
+          className="absolute inset-0 bg-center bg-cover opacity-[0.07]"
+          style={{ backgroundImage: "url('/malecs.png')" }}
+          aria-hidden="true"
+        ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/5 via-transparent to-purple-900/5"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2611,35 +2297,6 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="rounded-2xl border border-slate-800/60 bg-slate-900/45 p-5 backdrop-blur-sm sm:p-6">
-                  <h4 className="text-xl font-bold text-white mb-4">{t.contact.whyChooseUs}</h4>
-                  <div className="space-y-3">
-                    <div className="flex items-center">
-                      <div className="w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mr-4">
-                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <span className="text-slate-300">{t.contact.support24}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
-                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <span className="text-slate-300">{t.contact.aiPowered}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mr-4">
-                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <span className="text-slate-300">{t.contact.security}</span>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -2721,6 +2378,7 @@ export default function Home() {
                 { name: "Threads", href: "https://www.threads.com/@accessivelyofficial" },
                 { name: "X/Twitter", href: "https://x.com/AOffical73700" },
                 { name: "Facebook", href: "https://facebook.com/Accessivelyofficial" },
+                { name: "LinkedIn", href: "https://www.linkedin.com/in/admin-accessively-95339a3bb/" },
               ].map((platform) => (
                 <a
                   key={platform.name}

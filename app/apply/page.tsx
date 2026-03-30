@@ -407,7 +407,7 @@ export default function Apply() {
       setSubmitMessage(
         result.emailed
           ? "Application submitted successfully and sent to solutions@accessivelybpo.com."
-          : "Application submitted successfully and stored on the server. Configure SMTP to enable automatic email delivery."
+          : "Application submitted successfully. Our team will review your details shortly."
       );
       event.currentTarget?.reset();
       setPrivacyConsent(false);

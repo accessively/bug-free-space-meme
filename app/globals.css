@@ -77,34 +77,38 @@ iframe {
 
 .availability-picker {
   color-scheme: dark;
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
 }
 
-.availability-picker::-webkit-datetime-edit,
-.availability-picker::-webkit-datetime-edit-fields-wrapper,
-.availability-picker::-webkit-datetime-edit-year-field,
-.availability-picker::-webkit-datetime-edit-month-field,
-.availability-picker::-webkit-datetime-edit-day-field,
-.availability-picker::-webkit-datetime-edit-hour-field,
-.availability-picker::-webkit-datetime-edit-minute-field,
-.availability-picker::-webkit-datetime-edit-ampm-field {
+input[type="date"].availability-picker,
+input[type="time"].availability-picker {
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+}
+
+input[type="date"].availability-picker::-webkit-datetime-edit,
+input[type="time"].availability-picker::-webkit-datetime-edit,
+input[type="date"].availability-picker::-webkit-datetime-edit-fields-wrapper,
+input[type="time"].availability-picker::-webkit-datetime-edit-fields-wrapper,
+input[type="date"].availability-picker::-webkit-datetime-edit-text,
+input[type="time"].availability-picker::-webkit-datetime-edit-text,
+input[type="date"].availability-picker::-webkit-datetime-edit-year-field,
+input[type="time"].availability-picker::-webkit-datetime-edit-hour-field,
+input[type="date"].availability-picker::-webkit-datetime-edit-month-field,
+input[type="time"].availability-picker::-webkit-datetime-edit-minute-field,
+input[type="date"].availability-picker::-webkit-datetime-edit-day-field,
+input[type="time"].availability-picker::-webkit-datetime-edit-ampm-field {
   color: #ffffff;
 }
 
-.availability-picker::-webkit-datetime-edit-text {
-  color: #cbd5e1;
-}
-
 .availability-picker::-webkit-calendar-picker-indicator {
-  opacity: 0;
+  opacity: 0.95;
   cursor: pointer;
+  filter: none;
 }
 
 input[type="date"].availability-picker::-webkit-calendar-picker-indicator,
 input[type="time"].availability-picker::-webkit-calendar-picker-indicator {
-  opacity: 0 !important;
-}
-
-.availability-picker::-webkit-clear-button,
-.availability-picker::-webkit-inner-spin-button {
-  filter: invert(1) brightness(1.5);
+  opacity: 0.95 !important;
 }

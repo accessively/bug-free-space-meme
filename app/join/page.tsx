@@ -182,9 +182,6 @@ export default function Join() {
             </div>
 
             <div className="sm:col-span-2 mt-10">
-              <h3 className="text-2xl font-bold text-gray-900">{t.meetFounders}</h3>
-              <p className="mt-2 text-gray-600">{t.meetFoundersDesc}</p>
-
               <div className="mt-6 relative">
                 <div
                   className="relative overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm"
