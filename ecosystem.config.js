@@ -8,7 +8,7 @@ module.exports = {
         SMTP_HOST: "smtp.gmail.com",
         SMTP_PORT: "587",
         SMTP_USER: "websitesaccessively@gmail.com",
-        SMTP_PASS: "your-app-password-here",
+        SMTP_PASS: "neqy xqjp thbo dtib",
         SMTP_FROM: "websitesaccessively@gmail.com",
         FORM_RECEIVER_EMAIL: "solutions@accessivelybpo.com"
       }
