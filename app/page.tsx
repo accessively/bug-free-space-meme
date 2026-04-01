@@ -663,12 +663,12 @@ export default function Home() {
       },
       fullstack: {
         title: "Certifyx | IT Web Designing and Support",
-        yearReceived: "2026",
-        date: "November 19, 2026",
+        yearReceived: "2025",
+        date: "November 19, 2025",
         issuedBy: "CertifyX",
         why: "Recognition of successfully mastering IT Web Designing and Support.",
         details:
-          "This certificate is proudly awarded to Accessively in recognition of successfully mastering IT Web Designing and Support. This achievement includes proficiency in website creation, UI/UX fundamentals, and technical troubleshooting. Certified by CertifyX, this distinction reflects readiness to build, optimize, and support modern digital platforms with efficiency and innovation. The recipient has demonstrated strong technical knowledge and the ability to deliver effective digital solutions. Certificate ID: CTFX-2762391-28163. Awarded this 19th day of November, 2026.",
+          "This certificate is proudly awarded to Accessively in recognition of successfully mastering IT Web Designing and Support. This achievement includes proficiency in website creation, UI/UX fundamentals, and technical troubleshooting. Certified by CertifyX, this distinction reflects readiness to build, optimize, and support modern digital platforms with efficiency and innovation. The recipient has demonstrated strong technical knowledge and the ability to deliver effective digital solutions. Certificate ID: CTFX-2762391-28163. Awarded this 19th day of November, 2025.",
       },
       leadership: {
         title: "LinkedIn | Cybersecurity Awareness",
