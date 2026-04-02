@@ -31,7 +31,13 @@ const optional = (value: string) => (value ? value : "Not provided");
 const formatContactType = (value: string) => {
   if (value === "sales") return "Contact Sales";
   if (value === "consultation") return "Book a Consultation";
+  if (value === "outsourcing") return "Interested in Outsourcing";
   return value ? value : "General Inquiry";
+};
+
+const getContactFormTitle = (contactType: string) => {
+  if (contactType === "outsourcing") return "Interested in Outsourcing";
+  return "Talk to an Expert";
 };
 
 const buildEmailText = (contact: ContactRecord) => {
@@ -93,7 +99,7 @@ const sendContactEmail = async (contact: ContactRecord) => {
   await transporter.sendMail({
     from: sender,
     to: recipient,
-    subject: `[${formatContactType(contact.contactType)}] Contact Form - ${contact.firstName} ${contact.lastName}`.trim(),
+    subject: `${getContactFormTitle(contact.contactType)} - ${contact.firstName} ${contact.lastName}`.trim(),
     text: buildEmailText(contact),
     attachments,
   });
@@ -120,11 +126,23 @@ export async function POST(request: Request) {
     const contactType = toText(formData.get("contactType"));
     const message = toText(formData.get("message"));
 
-    if (!firstName || !lastName || !email || !phone || !availabilityDate || !availabilityTime || !availabilityTimeZone || !message) {
-      return NextResponse.json(
-        { ok: false, message: "Missing required fields." },
-        { status: 400 }
-      );
+    // Different validation based on form type
+    if (contactType === "outsourcing") {
+      // Outsourcing form requires: firstName, lastName, email
+      if (!firstName || !lastName || !email) {
+        return NextResponse.json(
+          { ok: false, message: "Missing required fields." },
+          { status: 400 }
+        );
+      }
+    } else {
+      // Talk to an Expert form requires: firstName, lastName, email, phone, date, time, timezone, message
+      if (!firstName || !lastName || !email || !phone || !availabilityDate || !availabilityTime || !availabilityTimeZone || !message) {
+        return NextResponse.json(
+          { ok: false, message: "Missing required fields." },
+          { status: 400 }
+        );
+      }
     }
 
     const id = `contact-${Date.now()}`;

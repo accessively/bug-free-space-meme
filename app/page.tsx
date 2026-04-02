@@ -337,17 +337,17 @@ export default function Home() {
         {
           role: "Founder",
           statement:
-            "I founded this agency to bring Filipino talent to the world, with a focus on trust, quality, and long-term client success.",
+            "I’ve always believed people have something special inside them. Sometimes they just need a chance to show it. For me, it’s never been about titles or success on paper. It’s about trust, helping others grow, and making something that really matters.",
         },
         {
           role: "Co-Founder",
           statement:
-            "Leads the team at the highest level, serving as the backbone and visionary behind our strategy, systems, and overall success.",
+            "I’ve learned that vision isn’t just about the future. It’s about seeing what’s possible right now and having the courage to try. What matters most is growth, not just numbers or achievements, but people, ideas, and the way we make each other better along the way.",
         },
         {
           role: "Co-Founder",
           statement:
-            "Manages operations and team execution to ensure consistent, high-quality delivery and clear client alignment.",
+            "To me, doing things well isn’t about being perfect. It’s about care, focus, and making sure people feel supported. Life works best when things line up, the effort, the people, and the intention. When that happens, what we create really matters.",
         },
       ],
       testimonialQuotes: [
@@ -1143,7 +1143,6 @@ export default function Home() {
                     className="h-full w-full object-cover object-top"
                   />
                 </div>
-                <p className="text-sm font-semibold text-indigo-300 uppercase tracking-wider mb-4">{leader.role}</p>
                 <h4 className="text-4xl font-bold text-white mb-6">{leader.name}</h4>
                 <p className="text-lg text-slate-300 max-w-3xl leading-relaxed">{leader.statement}</p>
               </div>
@@ -2252,7 +2251,7 @@ export default function Home() {
                     <div>
                       <div className="text-white font-semibold">{t.contact.socialMedia}</div>
                       <div className="flex flex-wrap items-center gap-3 text-sm">
-                        <a href="https://www.tiktok.com/@accessively.ph" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">TikTok</a>
+                        <a href="https://www.tiktok.com/@accessively.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">TikTok</a>
                         <a href="https://www.instagram.com/accessivelyofficial/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">Instagram</a>
                         <a href="https://www.threads.com/@accessivelyofficial" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">Threads</a>
                         <a href="https://x.com/AOffical73700" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">X/Twitter</a>
@@ -2279,22 +2278,16 @@ export default function Home() {
 
             <div className="flex items-start lg:justify-end">
               <div className="w-full max-w-xl space-y-4">
-                <div className="rounded-2xl border border-slate-800/60 bg-slate-900/45 p-6 backdrop-blur-sm sm:p-7">
-                  <h3 className="mb-4 text-2xl font-bold text-white sm:text-3xl">{t.contact.startJourney}</h3>
-                  <div className="flex flex-col gap-3 sm:flex-row">
-                    <a
-                      href="/contact?type=consultation"
-                      className="inline-flex w-full items-center justify-center rounded-xl bg-indigo-600 px-5 py-3 font-semibold text-white transition-all duration-300 hover:bg-indigo-500 sm:w-auto"
-                    >
-                      Book a Consultation
-                    </a>
-                    <a
-                      href="/contact?type=sales"
-                      className="inline-flex w-full items-center justify-center rounded-xl bg-purple-600 px-5 py-3 font-semibold text-white transition-all duration-300 hover:bg-purple-500 sm:w-auto"
-                    >
-                      Contact Sales
-                    </a>
-                  </div>
+                <div className="group rounded-3xl border border-indigo-500/20 bg-gradient-to-br from-slate-900/60 to-purple-900/20 p-8 backdrop-blur-md hover:border-indigo-500/40 transition-all duration-300 shadow-lg shadow-indigo-500/10">
+                  <h3 className="mb-6 text-3xl font-bold text-white sm:text-4xl">{t.contact.startJourney}</h3>
+                  <p className="mb-8 text-slate-300 text-lg">Get in touch with our team and let's explore how we can help your business thrive.</p>
+                  <a
+                    href="/join"
+                    className="group/btn relative inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 font-bold text-white transition-all duration-300 hover:from-indigo-500 hover:to-purple-500 hover:shadow-lg hover:shadow-indigo-500/40 hover:scale-105"
+                  >
+                    <span className="relative z-10">Contact Us</span>
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-indigo-400 to-purple-400 opacity-0 group-hover/btn:opacity-20 transition-opacity duration-300"></div>
+                  </a>
                 </div>
 
               </div>
@@ -2317,7 +2310,7 @@ export default function Home() {
                 {locale.footerTagline}
               </p>
               <div className="flex space-x-4">
-                <a href="https://www.tiktok.com/@accessively.ph" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-pink-600 transition-colors duration-300 group">
+                <a href="https://www.tiktok.com/@accessively.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-pink-600 transition-colors duration-300 group">
                   <svg className="w-5 h-5 text-slate-400 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
                   </svg>
@@ -2373,7 +2366,7 @@ export default function Home() {
             <h4 className="text-lg font-bold text-white mb-5 text-center">{t.footer.followUs}</h4>
             <div className="flex flex-wrap items-center justify-center gap-4">
               {[
-                { name: "TikTok", href: "https://www.tiktok.com/@accessively.ph" },
+                { name: "TikTok", href: "https://www.tiktok.com/@accessively.com" },
                 { name: "Instagram", href: "https://www.instagram.com/accessivelyofficial/" },
                 { name: "Threads", href: "https://www.threads.com/@accessivelyofficial" },
                 { name: "X/Twitter", href: "https://x.com/AOffical73700" },

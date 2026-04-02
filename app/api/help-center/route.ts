@@ -72,7 +72,7 @@ const sendHelpCenterEmail = async (submission: HelpCenterSubmission) => {
   await transporter.sendMail({
     from: sender,
     to: recipient,
-    subject: `Help Center Message - ${optional(submission.subject)} - ${submission.name}`.trim(),
+    subject: `General Inquiry - ${optional(submission.subject)} - ${submission.name}`.trim(),
     text: buildEmailText(submission),
     attachments,
   });

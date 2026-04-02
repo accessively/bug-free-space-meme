@@ -23,15 +23,15 @@ const applyTexts = {
     learnMore: "Learn More",
     submitTitle: "Submit Your Application",
     submitDesc: "Fill out the form below to submit your application. We'll review your submission and get back to you soon.",
-    firstName: "First Name *",
+    firstName: "First Name",
     firstNamePh: "Enter your first name",
-    lastName: "Last Name *",
+    lastName: "Last Name",
     lastNamePh: "Enter your last name",
-    email: "Email Address *",
+    email: "Email Address",
     emailPh: "your@email.com",
     phone: "Phone Number",
     phonePh: "+1 (555) 123-4567",
-    position: "Position Applied For *",
+    position: "Position Applied For",
     selectPosition: "Select a position",
     positionVirtualAssistant: "Virtual Assistant",
     positionSalesMarketing: "Sales & Marketing Specialist",
@@ -56,7 +56,7 @@ const applyTexts = {
     availabilityFlexible: "Flexible",
     coverLetter: "Cover Letter",
     coverLetterPh: "Tell us why you're interested in this position and what makes you a great fit...",
-    resume: "Resume/CV *",
+    resume: "Resume/CV",
     acceptedFormats: "Accepted formats: PDF, DOC, DOCX. Max file size: 5MB",
     portfolio: "Portfolio/LinkedIn/GitHub (Optional)",
     portfolioPh: "https://linkedin.com/in/yourprofile",
@@ -91,15 +91,15 @@ const applyTexts = {
     learnMore: "Saber Más",
     submitTitle: "Envía Tu Solicitud",
     submitDesc: "Completa el formulario para enviar tu solicitud.",
-    firstName: "Nombre *",
+    firstName: "Nombre",
     firstNamePh: "Ingresa tu nombre",
-    lastName: "Apellido *",
+    lastName: "Apellido",
     lastNamePh: "Ingresa tu apellido",
-    email: "Correo electrónico *",
+    email: "Correo electrónico",
     emailPh: "tu@email.com",
     phone: "Número de teléfono",
     phonePh: "+34 600 123 456",
-    position: "Puesto solicitado *",
+    position: "Puesto solicitado",
     selectPosition: "Selecciona un puesto",
     positionVirtualAssistant: "Asistente Virtual",
     positionSalesMarketing: "Especialista en Ventas y Marketing",
@@ -124,7 +124,7 @@ const applyTexts = {
     availabilityFlexible: "Flexible",
     coverLetter: "Carta de presentación",
     coverLetterPh: "Cuéntanos por qué te interesa este puesto...",
-    resume: "CV *",
+    resume: "CV",
     acceptedFormats: "Formatos aceptados: PDF, DOC, DOCX. Tamaño máx: 5MB",
     portfolio: "Portafolio/LinkedIn/GitHub (Opcional)",
     portfolioPh: "https://linkedin.com/in/tuperfil",
@@ -159,15 +159,15 @@ const applyTexts = {
     learnMore: "了解更多",
     submitTitle: "提交你的申请",
     submitDesc: "填写以下表单提交申请，我们会尽快回复。",
-    firstName: "名字 *",
+    firstName: "名字",
     firstNamePh: "请输入你的名字",
-    lastName: "姓氏 *",
+    lastName: "姓氏",
     lastNamePh: "请输入你的姓氏",
-    email: "邮箱地址 *",
+    email: "邮箱地址",
     emailPh: "your@email.com",
     phone: "电话号码",
     phonePh: "+86 138 0000 0000",
-    position: "申请职位 *",
+    position: "申请职位",
     selectPosition: "选择职位",
     positionVirtualAssistant: "虚拟助理",
     positionSalesMarketing: "销售与市场专员",
@@ -192,7 +192,7 @@ const applyTexts = {
     availabilityFlexible: "灵活",
     coverLetter: "求职信",
     coverLetterPh: "告诉我们你为什么适合这个职位...",
-    resume: "简历/CV *",
+    resume: "简历/CV",
     acceptedFormats: "支持格式：PDF、DOC、DOCX。最大 5MB",
     portfolio: "作品集/LinkedIn/GitHub（可选）",
     portfolioPh: "https://linkedin.com/in/yourprofile",
@@ -227,15 +227,15 @@ const applyTexts = {
     learnMore: "Alamin Pa",
     submitTitle: "I-submit ang Iyong Application",
     submitDesc: "Punan ang form sa ibaba para mag-submit ng application.",
-    firstName: "Unang Pangalan *",
+    firstName: "Unang Pangalan",
     firstNamePh: "Ilagay ang unang pangalan",
-    lastName: "Apelyido *",
+    lastName: "Apelyido",
     lastNamePh: "Ilagay ang apelyido",
-    email: "Email Address *",
+    email: "Email Address",
     emailPh: "your@email.com",
     phone: "Phone Number",
     phonePh: "+63 912 345 6789",
-    position: "Posisyong Inaaplayan *",
+    position: "Posisyong Inaaplayan",
     selectPosition: "Pumili ng posisyon",
     positionVirtualAssistant: "Virtual Assistant",
     positionSalesMarketing: "Sales at Marketing Specialist",
@@ -260,7 +260,7 @@ const applyTexts = {
     availabilityFlexible: "Flexible",
     coverLetter: "Cover Letter",
     coverLetterPh: "Sabihin kung bakit ka fit sa posisyon...",
-    resume: "Resume/CV *",
+    resume: "Resume/CV",
     acceptedFormats: "Accepted formats: PDF, DOC, DOCX. Max file size: 5MB",
     portfolio: "Portfolio/LinkedIn/GitHub (Optional)",
     portfolioPh: "https://linkedin.com/in/iyongprofile",
@@ -295,15 +295,15 @@ const applyTexts = {
     learnMore: "En savoir plus",
     submitTitle: "Soumettez Votre Candidature",
     submitDesc: "Remplissez le formulaire ci-dessous pour envoyer votre candidature.",
-    firstName: "Prénom *",
+    firstName: "Prénom",
     firstNamePh: "Entrez votre prénom",
-    lastName: "Nom *",
+    lastName: "Nom",
     lastNamePh: "Entrez votre nom",
-    email: "Adresse e-mail *",
+    email: "Adresse e-mail",
     emailPh: "your@email.com",
     phone: "Numéro de téléphone",
     phonePh: "+33 6 12 34 56 78",
-    position: "Poste demandé *",
+    position: "Poste demandé",
     selectPosition: "Sélectionnez un poste",
     positionVirtualAssistant: "Assistant Virtuel",
     positionSalesMarketing: "Spécialiste Ventes et Marketing",
@@ -328,7 +328,7 @@ const applyTexts = {
     availabilityFlexible: "Flexible",
     coverLetter: "Lettre de motivation",
     coverLetterPh: "Expliquez pourquoi ce poste vous intéresse...",
-    resume: "CV *",
+    resume: "CV",
     acceptedFormats: "Formats acceptés : PDF, DOC, DOCX. Taille max : 5MB",
     portfolio: "Portfolio/LinkedIn/GitHub (Optionnel)",
     portfolioPh: "https://linkedin.com/in/votreprofil",
@@ -378,6 +378,10 @@ export default function Apply() {
     {
       value: "customer-support-technical-support-sales-client-services",
       label: siteTexts.services.customerServiceTitle,
+    },
+    {
+      value: "virtual-assistant-administrative-support",
+      label: t.positionVirtualAssistant,
     },
   ];
 
@@ -457,52 +461,24 @@ export default function Apply() {
           <div className="mx-auto mb-10 max-w-4xl rounded-3xl border border-slate-800/50 bg-slate-900/40 p-5 backdrop-blur-md sm:mb-12 sm:p-8">
             <h3 className="text-3xl font-bold text-white mb-8">{t.whyWork}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex items-center group">
-                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-indigo-500/25">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="text-white font-semibold">{t.benefit1Title}</div>
-                  <div className="text-slate-400 text-sm">{t.benefit1Desc}</div>
-                </div>
+              <div>
+                <div className="text-white font-semibold">{t.benefit1Title}</div>
+                <div className="text-slate-400 text-sm">{t.benefit1Desc}</div>
               </div>
 
-              <div className="flex items-center group">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-500/25">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="text-white font-semibold">{t.benefit2Title}</div>
-                  <div className="text-slate-400 text-sm">{t.benefit2Desc}</div>
-                </div>
+              <div>
+                <div className="text-white font-semibold">{t.benefit2Title}</div>
+                <div className="text-slate-400 text-sm">{t.benefit2Desc}</div>
               </div>
 
-              <div className="flex items-center group">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-500/25">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="text-white font-semibold">{t.benefit3Title}</div>
-                  <div className="text-slate-400 text-sm">{t.benefit3Desc}</div>
-                </div>
+              <div>
+                <div className="text-white font-semibold">{t.benefit3Title}</div>
+                <div className="text-slate-400 text-sm">{t.benefit3Desc}</div>
               </div>
 
-              <div className="flex items-center group">
-                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-indigo-500/25">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="text-white font-semibold">{t.benefit4Title}</div>
-                  <div className="text-slate-400 text-sm">{t.benefit4Desc}</div>
-                </div>
+              <div>
+                <div className="text-white font-semibold">{t.benefit4Title}</div>
+                <div className="text-slate-400 text-sm">{t.benefit4Desc}</div>
               </div>
             </div>
           </div>
@@ -770,11 +746,6 @@ export default function Apply() {
 
           <div className="max-w-2xl mx-auto">
             <div className="group rounded-3xl border border-slate-800/50 bg-slate-900/40 p-5 backdrop-blur-md transition-all duration-500 hover:border-indigo-500/50 sm:p-8">
-              <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-indigo-500/25">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 4h.01M16 20h.01M12 20h.01M8 20h.01M12 4h.01M8 4h.01" />
-                </svg>
-              </div>
               <h3 className="text-2xl font-bold text-white mb-6">{t.contactHr}</h3>
               <div className="space-y-4">
                 <div className="flex items-center justify-center group">

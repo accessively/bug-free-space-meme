@@ -20,6 +20,7 @@ function HelpCenterContent() {
 
   const [selectedType, setSelectedType] = useState(initialType);
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -72,14 +73,48 @@ function HelpCenterContent() {
       question: t.helpCenter.faq6Question,
       answer: t.helpCenter.faq6Answer,
     },
+    {
+      id: "7",
+      category: "general",
+      question: "Do you offer one-time projects or only long-term support?",
+      answer:
+        "We support both one-time projects and long-term engagements. We can recommend the best setup after reviewing your goals, timeline, and budget.",
+    },
+    {
+      id: "8",
+      category: "services",
+      question: "Can your team work with our existing tools and workflow?",
+      answer:
+        "Yes. We adapt to your current stack such as project management tools, CRMs, communication channels, and reporting formats to keep onboarding smooth.",
+    },
+    {
+      id: "9",
+      category: "billing",
+      question: "Do you provide invoices and official receipts?",
+      answer:
+        "Yes, we provide invoice documentation for every billing cycle. If you need a custom format for finance or procurement, let us know in your message.",
+    },
+    {
+      id: "10",
+      category: "services",
+      question: "How soon can a team start after approval?",
+      answer:
+        "Start dates depend on scope and role requirements, but most projects can begin shortly after alignment on scope, schedule, and onboarding details.",
+    },
   ];
+
+  const faqCategories = useMemo(() => {
+    const unique = Array.from(new Set(faqs.map((faq) => faq.category)));
+    return ["all", ...unique];
+  }, [faqs]);
 
   const filteredFAQs = useMemo(() => {
     return faqs.filter((faq) =>
-      faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
+      (selectedCategory === "all" || faq.category === selectedCategory) &&
+      (faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        faq.answer.toLowerCase().includes(searchQuery.toLowerCase()))
     );
-  }, [searchQuery]);
+  }, [searchQuery, selectedCategory]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -167,18 +202,18 @@ function HelpCenterContent() {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid max-w-7xl grid-cols-1 gap-8 px-4 sm:px-6 lg:grid-cols-3 lg:gap-12 lg:px-8">
+        <div className="grid max-w-7xl grid-cols-1 gap-8 px-4 sm:px-6 xl:grid-cols-12 xl:gap-10 lg:px-8">
           {/* Contact Form - Left Column */}
-          <div className="lg:col-span-1">
+          <div className="xl:col-span-5">
             <div className="xl:sticky xl:top-24">
-              <div className="rounded-2xl border border-slate-800/50 bg-slate-900/40 p-5 backdrop-blur-md sm:p-8">
+              <div className="rounded-2xl border border-slate-800/50 bg-slate-900/40 p-6 backdrop-blur-md sm:p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">
                   {t.helpCenter?.contactFormTitle || "Send us a Message"}
                 </h2>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   {/* Name */}
-                  <div>
+                  <div className="sm:col-span-1">
                     <label className="block text-sm font-medium text-slate-300 mb-2">
                       {t.helpCenter?.formName || "Full Name"}
                     </label>
@@ -196,7 +231,7 @@ function HelpCenterContent() {
                   </div>
 
                   {/* Email */}
-                  <div>
+                  <div className="sm:col-span-1">
                     <label className="block text-sm font-medium text-slate-300 mb-2">
                       {t.helpCenter?.formEmail || "Email Address"}
                     </label>
@@ -214,7 +249,7 @@ function HelpCenterContent() {
                   </div>
 
                   {/* Inquiry Type */}
-                  <div>
+                  <div className="sm:col-span-2">
                     <label className="block text-sm font-medium text-slate-300 mb-2">
                       {t.helpCenter?.formInquiryType || "Inquiry Type"}
                     </label>
@@ -238,7 +273,7 @@ function HelpCenterContent() {
                   </div>
 
                   {/* Subject */}
-                  <div>
+                  <div className="sm:col-span-2">
                     <label className="block text-sm font-medium text-slate-300 mb-2">
                       {t.helpCenter?.formSubject || "Subject"}
                     </label>
@@ -256,7 +291,7 @@ function HelpCenterContent() {
                   </div>
 
                   {/* Message */}
-                  <div>
+                  <div className="sm:col-span-2">
                     <label className="block text-sm font-medium text-slate-300 mb-2">
                       {t.helpCenter?.formMessage || "Message"}
                     </label>
@@ -274,7 +309,7 @@ function HelpCenterContent() {
                   </div>
 
                   {/* Optional Photo */}
-                  <div>
+                  <div className="sm:col-span-2">
                     <label className="block text-sm font-medium text-slate-300 mb-2">
                       {t.helpCenter?.formPhoto || "Attach Photo (Optional)"}
                     </label>
@@ -290,7 +325,7 @@ function HelpCenterContent() {
                     </p>
                   </div>
 
-                  <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4">
+                  <div className="sm:col-span-2 rounded-lg border border-slate-700 bg-slate-800/40 p-4">
                     <label className="flex items-start gap-3 text-sm text-slate-200">
                       <input
                         type="checkbox"
@@ -311,7 +346,7 @@ function HelpCenterContent() {
                   <button
                     type="submit"
                     disabled={submitStatus === "loading"}
-                    className="w-full rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 px-6 py-3 font-bold text-white transition-all duration-300 hover:from-indigo-500 hover:to-purple-500 disabled:cursor-not-allowed disabled:opacity-50 sm:hover:scale-[1.02]"
+                    className="sm:col-span-2 w-full rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 px-6 py-3 font-bold text-white transition-all duration-300 hover:from-indigo-500 hover:to-purple-500 disabled:cursor-not-allowed disabled:opacity-50 sm:hover:scale-[1.02]"
                   >
                     {submitStatus === "loading"
                       ? t.helpCenter?.formSending || "Sending..."
@@ -320,7 +355,7 @@ function HelpCenterContent() {
 
                   {/* Success Message */}
                   {submitStatus === "success" && (
-                    <div className="bg-green-900/30 border border-green-700 rounded-lg p-4">
+                    <div className="sm:col-span-2 bg-green-900/30 border border-green-700 rounded-lg p-4">
                       <p className="text-green-400 text-sm font-medium">
                         {t.helpCenter?.formSuccess ||
                           "✓ Message sent successfully! We'll be in touch soon."}
@@ -329,7 +364,7 @@ function HelpCenterContent() {
                   )}
 
                   {submitStatus === "error" && (
-                    <div className="bg-red-900/30 border border-red-700 rounded-lg p-4">
+                    <div className="sm:col-span-2 bg-red-900/30 border border-red-700 rounded-lg p-4">
                       <p className="text-red-400 text-sm font-medium">
                         {submitErrorMessage ||
                           t.helpCenter?.formError ||
@@ -343,9 +378,17 @@ function HelpCenterContent() {
           </div>
 
           {/* FAQs and Search - Right Column */}
-          <div className="lg:col-span-2">
-            {/* Search Bar */}
-            <div className="mb-8">
+          <div className="xl:col-span-7 xl:pl-2 2xl:pl-4">
+            <div className="mb-6 rounded-2xl border border-slate-800/50 bg-slate-900/40 p-5 backdrop-blur-md sm:p-6">
+              <div className="mb-4 flex items-center justify-between gap-3">
+                <h2 className="text-lg font-semibold text-white sm:text-xl">
+                  Search for help
+                </h2>
+                <span className="rounded-full bg-indigo-500/20 px-3 py-1 text-xs font-semibold text-indigo-200">
+                  {filteredFAQs.length} {filteredFAQs.length === 1 ? "result" : "results"}
+                </span>
+              </div>
+
               <div className="relative">
                 <svg
                   className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400"
@@ -368,10 +411,30 @@ function HelpCenterContent() {
                   className="w-full pl-12 pr-6 py-4 bg-slate-800/50 border border-slate-700 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-slate-400 transition-all duration-300"
                 />
               </div>
+
+              <div className="mt-4 flex flex-wrap gap-2">
+                {faqCategories.map((category) => {
+                  const isActive = selectedCategory === category;
+                  return (
+                    <button
+                      key={category}
+                      type="button"
+                      onClick={() => setSelectedCategory(category)}
+                      className={`rounded-full border px-3 py-1.5 text-xs font-semibold uppercase tracking-wide transition-all duration-300 ${
+                        isActive
+                          ? "border-indigo-400 bg-indigo-500/20 text-indigo-200"
+                          : "border-slate-700 bg-slate-800/40 text-slate-300 hover:border-indigo-500/40 hover:text-white"
+                      }`}
+                    >
+                      {category}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
             {/* FAQs */}
-            <div>
+            <div className="rounded-2xl border border-slate-800/50 bg-slate-900/40 p-5 backdrop-blur-md sm:p-6">
               <h2 className="mb-6 text-2xl font-bold text-white sm:mb-8 sm:text-3xl">
                 {t.helpCenter?.faqTitle || "Frequently Asked Questions"}
               </h2>
@@ -391,9 +454,14 @@ function HelpCenterContent() {
                         }
                         className="flex w-full items-start justify-between gap-4 px-4 py-4 text-left transition-colors hover:bg-slate-800/30 sm:px-6"
                       >
-                        <p className="text-left text-sm font-semibold text-white sm:text-base">
-                          {faq.question}
-                        </p>
+                        <div className="min-w-0">
+                          <span className="mb-2 inline-flex rounded-full bg-slate-800 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-indigo-300">
+                            {faq.category}
+                          </span>
+                          <p className="text-left text-sm font-semibold text-white sm:text-base">
+                            {faq.question}
+                          </p>
+                        </div>
                         <svg
                           className={`w-5 h-5 text-indigo-400 transition-transform duration-300 ${
                             expandedFAQ === faq.id ? "rotate-180" : ""
@@ -412,7 +480,7 @@ function HelpCenterContent() {
                       </button>
 
                       {expandedFAQ === faq.id && (
-                        <div className="border-t border-slate-700/50 px-4 pb-4 sm:px-6">
+                        <div className="border-t border-slate-700/50 px-4 pb-4 pt-3 sm:px-6">
                           <p className="text-slate-400 leading-relaxed">
                             {faq.answer}
                           </p>
@@ -428,69 +496,6 @@ function HelpCenterContent() {
                     </p>
                   </div>
                 )}
-              </div>
-            </div>
-
-            {/* Additional Support */}
-            <div className="mt-12 overflow-hidden rounded-3xl border border-indigo-800/30 bg-gradient-to-br from-indigo-950/70 via-slate-900/70 to-purple-950/70 p-5 shadow-2xl shadow-indigo-950/30 sm:mt-16 sm:p-8">
-              <div className="mb-6 flex items-start justify-between gap-4">
-                <div>
-                  <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-300">Priority Support</p>
-                  <h3 className="text-2xl font-bold text-white">
-                    Book a Consultation or Contact Sales
-                  </h3>
-                  <p className="mt-2 max-w-2xl text-slate-300">
-                    Connect with our team for a guided consultation or a tailored sales discussion.
-                  </p>
-                </div>
-                <div className="hidden h-12 w-12 items-center justify-center rounded-xl border border-indigo-500/40 bg-indigo-500/10 text-indigo-200 sm:flex">
-                  <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-4 4v-4z" />
-                  </svg>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <a
-                  href="/contact?type=consultation"
-                  className="group rounded-2xl border border-indigo-500/40 bg-indigo-500/15 p-5 transition-all duration-300 hover:border-indigo-400 hover:bg-indigo-500/25"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="mt-1 rounded-lg bg-indigo-500/30 p-2 text-indigo-100">
-                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                      </svg>
-                    </div>
-                    <div className="text-left">
-                      <p className="font-semibold text-white">Book a Consultation</p>
-                      <p className="mt-1 text-sm text-slate-300">Discuss goals, process, and team setup with our specialists.</p>
-                      <p className="mt-3 inline-flex items-center text-sm font-semibold text-indigo-200 transition-transform duration-300 group-hover:translate-x-1">
-                        Start Consultation
-                        <span className="ml-2">→</span>
-                      </p>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="/contact?type=sales"
-                  className="group rounded-2xl border border-purple-500/40 bg-purple-500/15 p-5 transition-all duration-300 hover:border-purple-400 hover:bg-purple-500/25"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="mt-1 rounded-lg bg-purple-500/30 p-2 text-purple-100">
-                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
-                      </svg>
-                    </div>
-                    <div className="text-left">
-                      <p className="font-semibold text-white">Contact Sales</p>
-                      <p className="mt-1 text-sm text-slate-300">Get package options, scope guidance, and pricing support.</p>
-                      <p className="mt-3 inline-flex items-center text-sm font-semibold text-purple-200 transition-transform duration-300 group-hover:translate-x-1">
-                        Talk to Sales
-                        <span className="ml-2">→</span>
-                      </p>
-                    </div>
-                  </div>
-                </a>
               </div>
             </div>
           </div>

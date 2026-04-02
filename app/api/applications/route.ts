@@ -30,6 +30,18 @@ const toText = (value: FormDataEntryValue | null) => (typeof value === "string" 
 
 const optional = (value: string) => (value ? value : "Not provided");
 
+const getPositionName = (positionValue: string) => {
+  const positionMap: { [key: string]: string } = {
+    "information-technology-technical-support": "Virtual Assistant - Information Technology & Technical Support",
+    "social-media-digital-marketing-content-strategy": "Sales & Marketing Specialist - Social Media & Digital Marketing",
+    "graphic-design-visual-media-creative-services": "Graphic Designer - Visual Media & Creative Services",
+    "video-editing-multimedia-production-content-creation": "Web Developer - Video Editing & Multimedia Production",
+    "customer-support-technical-support-sales-client-services": "Customer Service Representative - Customer Support & Sales",
+    "virtual-assistant-administrative-support": "Virtual Assistant - Administrative Support",
+  };
+  return positionMap[positionValue] || positionValue;
+};
+
 const buildEmailText = (submission: SubmissionRecord) => {
   return [
     "Accessively Application Submission",
@@ -88,7 +100,7 @@ const sendSubmissionEmail = async (submission: SubmissionRecord) => {
   await transporter.sendMail({
     from: sender,
     to: recipient,
-    subject: `Application Submission - ${optional(submission.position)} - ${submission.firstName} ${submission.lastName}`.trim(),
+    subject: `Application for Employment - ${getPositionName(submission.position)} - ${submission.firstName} ${submission.lastName}`.trim(),
     text: buildEmailText(submission),
     attachments,
   });

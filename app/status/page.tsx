@@ -48,6 +48,17 @@ export default function StatusPage() {
   const liveMessage = t.liveMessage;
   const updates: StatusUpdate[] = [
     {
+      id: "2",
+      title: t.updateTitleLatest || "Website Updated and Modified",
+      description:
+        t.updateDescriptionLatest ||
+        "On April 2, 2026, the website was changed and modified.",
+      details:
+        t.updateDetailsLatest ||
+        "On April 2, 2026 website was changed and modified:\n\n- A more secure database\n- A better UI for a better navigation\n- Contact us was changed and more options can be seen",
+      dateTime: t.updateDateLatest || "April 2, 2026",
+    },
+    {
       id: "1",
       title: t.updateTitle,
       description: t.updateDescription,

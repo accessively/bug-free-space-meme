@@ -37,15 +37,25 @@ const searchUi = {
     contactQuestion: 'How can I contact Accessively?',
     contactAnswer: 'You can contact Accessively via https://solutions.accessivelybpo.com and Viber/WhatsApp at (+63) 993-679-0350.',
     socialQuestion: 'What are your social media links?',
-    socialAnswer: 'Official platforms: TikTok https://www.tiktok.com/@accessively.ph, Instagram https://www.instagram.com/accessivelyofficial/, Threads https://www.threads.com/@accessivelyofficial, X/Twitter https://x.com/AOffical73700, and Facebook https://facebook.com/Accessivelyofficial.',
+    socialAnswer: 'Official platforms: TikTok https://www.tiktok.com/@accessively.com, Instagram https://www.instagram.com/accessivelyofficial/, Threads https://www.threads.com/@accessivelyofficial, X/Twitter https://x.com/AOffical73700, and Facebook https://facebook.com/Accessivelyofficial.',
     certificationsQuestion: 'How many certifications do you show?',
-    certificationsAnswer: 'The page shows 7 certifications in the Certifications and Expertise section.',
+    certificationsAnswer: 'The page shows 5 certifications in the Certifications and Expertise section.',
     supportQuestion: 'What are your support hours?',
     supportAnswer: 'Our team is available 24/7 for support.',
     officesQuestion: 'Where are your offices located?',
     officesAnswer: 'Our offices are in Cagayan de Oro, La Union, and Muntinlupa, Philippines.',
     cookiesQuestion: 'Do you use cookies?',
     cookiesAnswer: 'We use cookies to remember preferences, measure performance, and improve the website. Visitors can accept or decline them from the cookie banner.',
+    outsourcingQuestion: 'How do I ask about outsourcing?',
+    outsourcingAnswer: 'Use the Interested in Outsourcing form to share your company details, outsourcing needs, timeline, and budget so the team can prepare tailored options.',
+    expertQuestion: 'How do I talk to an expert?',
+    expertAnswer: 'Use the Talk to an Expert form for strategy, scope, scheduling, and deeper consultation requests. You can include company information and preferred appointment time.',
+    employmentQuestion: 'How do I apply for a job?',
+    employmentAnswer: 'Go to Application for Employment to submit your resume, role selection, experience, skills, and other application details.',
+    privacyQuestion: 'Where can I read your privacy policy or terms?',
+    privacyAnswer: 'You can review the Privacy Policy and Terms & Conditions from the policy pages linked in the forms and footer.',
+    suggestedNextStep: 'Suggested next step',
+    smartMatches: 'Smart matches',
     openSection: 'Open section',
   },
   es: {
@@ -65,13 +75,23 @@ const searchUi = {
     socialQuestion: '¿Cuáles son sus redes sociales?',
     socialAnswer: 'Plataformas oficiales: TikTok, Instagram, Threads, X/Twitter y Facebook.',
     certificationsQuestion: '¿Cuántas certificaciones muestran?',
-    certificationsAnswer: 'La página muestra 7 certificaciones en la sección de Certificaciones y Experiencia.',
+    certificationsAnswer: 'La página muestra 5 certificaciones en la sección de Certificaciones y Experiencia.',
     supportQuestion: '¿Cuál es su horario de soporte?',
     supportAnswer: 'Nuestro equipo está disponible 24/7 para soporte.',
     officesQuestion: '¿Dónde están ubicadas sus oficinas?',
     officesAnswer: 'Nuestras oficinas están en Cagayan de Oro, La Union y Muntinlupa, Filipinas.',
     cookiesQuestion: '¿Usan cookies?',
     cookiesAnswer: 'Usamos cookies para recordar preferencias, medir el rendimiento y mejorar el sitio web. Los visitantes pueden aceptarlas o rechazarlas desde el banner de cookies.',
+    outsourcingQuestion: '¿Cómo consulto sobre outsourcing?',
+    outsourcingAnswer: 'Usa el formulario de Interesado en Outsourcing para compartir los datos de tu empresa, necesidades, plazo y presupuesto, y así el equipo podrá preparar opciones adaptadas.',
+    expertQuestion: '¿Cómo hablo con un experto?',
+    expertAnswer: 'Usa el formulario Habla con un Experto para estrategia, alcance, programación y solicitudes de consulta más profundas.',
+    employmentQuestion: '¿Cómo solicito un empleo?',
+    employmentAnswer: 'Ve a Solicitud de Empleo para enviar tu currículum, puesto, experiencia, habilidades y demás datos de candidatura.',
+    privacyQuestion: '¿Dónde leo la política de privacidad o los términos?',
+    privacyAnswer: 'Puedes revisar la Política de Privacidad y los Términos y Condiciones desde las páginas de políticas enlazadas en los formularios y el pie de página.',
+    suggestedNextStep: 'Siguiente paso sugerido',
+    smartMatches: 'Coincidencias inteligentes',
     openSection: 'Abrir sección',
   },
   zh: {
@@ -91,13 +111,23 @@ const searchUi = {
     socialQuestion: '你们的社交媒体链接是什么？',
     socialAnswer: '官方平台：TikTok、Instagram、Threads、X/Twitter 和 Facebook。',
     certificationsQuestion: '页面展示了多少项认证？',
-    certificationsAnswer: '认证与专业能力部分展示了 7 项认证。',
+    certificationsAnswer: '认证与专业能力部分展示了 5 项认证。',
     supportQuestion: '你们的支持时间是什么？',
     supportAnswer: '我们的团队 24/7 提供支持。',
     officesQuestion: '你们的办公室在哪里？',
     officesAnswer: '我们的办公室位于菲律宾的 Cagayan de Oro、La Union 和 Muntinlupa。',
     cookiesQuestion: '你们使用 Cookie 吗？',
     cookiesAnswer: '我们使用 Cookie 来记住偏好、衡量性能并改进网站。访客可以在 Cookie 横幅中接受或拒绝它们。',
+    outsourcingQuestion: '如何咨询外包服务？',
+    outsourcingAnswer: '请使用 Interested in Outsourcing 表单提交公司信息、外包需求、时间安排和预算，团队会据此准备定制方案。',
+    expertQuestion: '如何联系专家？',
+    expertAnswer: '请使用 Talk to an Expert 表单提交战略、范围、预约时间和更深入的咨询需求。',
+    employmentQuestion: '如何申请工作？',
+    employmentAnswer: '前往 Application for Employment 页面提交简历、职位选择、经验、技能和其他申请信息。',
+    privacyQuestion: '在哪里查看隐私政策或条款？',
+    privacyAnswer: '您可以在表单和页脚链接的政策页面查看隐私政策和条款与条件。',
+    suggestedNextStep: '建议的下一步',
+    smartMatches: '智能匹配',
     openSection: '打开版块',
   },
   tl: {
@@ -117,13 +147,23 @@ const searchUi = {
     socialQuestion: 'Ano ang social media links ninyo?',
     socialAnswer: 'Official platforms: TikTok, Instagram, Threads, X/Twitter, at Facebook.',
     certificationsQuestion: 'Ilan ang certifications sa page?',
-    certificationsAnswer: 'May 7 certifications sa Certifications and Expertise section.',
+    certificationsAnswer: 'May 5 certifications sa Certifications and Expertise section.',
     supportQuestion: 'Ano ang support hours ninyo?',
     supportAnswer: 'Available ang aming team 24/7 para sa support.',
     officesQuestion: 'Saan matatagpuan ang inyong mga opisina?',
     officesAnswer: 'Ang aming mga opisina ay nasa Cagayan de Oro, La Union, at Muntinlupa, Philippines.',
     cookiesQuestion: 'Gumagamit ba kayo ng cookies?',
     cookiesAnswer: 'Gumagamit kami ng cookies para tandaan ang preferences, sukatin ang performance, at pagandahin ang website. Maaaring tanggapin o tanggihan ito ng bisita mula sa cookie banner.',
+    outsourcingQuestion: 'Paano ako mag-iinquire tungkol sa outsourcing?',
+    outsourcingAnswer: 'Gamitin ang Interested in Outsourcing form para ibahagi ang detalye ng kumpanya, pangangailangan, timeline, at budget para makapaghanda ang team ng akmang options.',
+    expertQuestion: 'Paano ako makakausap ng expert?',
+    expertAnswer: 'Gamitin ang Talk to an Expert form para sa strategy, scope, scheduling, at mas malalim na consultation requests.',
+    employmentQuestion: 'Paano ako mag-aapply ng trabaho?',
+    employmentAnswer: 'Pumunta sa Application for Employment para magsumite ng resume, role selection, experience, skills, at iba pang application details.',
+    privacyQuestion: 'Saan mababasa ang privacy policy o terms?',
+    privacyAnswer: 'Mababasa mo ang Privacy Policy at Terms & Conditions mula sa mga policy page na naka-link sa mga form at footer.',
+    suggestedNextStep: 'Iminungkahing susunod na hakbang',
+    smartMatches: 'Smart matches',
     openSection: 'Buksan ang seksyon',
   },
   fr: {
@@ -143,13 +183,23 @@ const searchUi = {
     socialQuestion: 'Quels sont vos liens de réseaux sociaux ?',
     socialAnswer: 'Plateformes officielles : TikTok, Instagram, Threads, X/Twitter et Facebook.',
     certificationsQuestion: 'Combien de certifications affichez-vous ?',
-    certificationsAnswer: 'La page affiche 7 certifications dans la section Certifications et Expertise.',
+    certificationsAnswer: 'La page affiche 5 certifications dans la section Certifications et Expertise.',
     supportQuestion: 'Quels sont vos horaires de support ?',
     supportAnswer: 'Notre équipe est disponible 24h/24 et 7j/7.',
     officesQuestion: 'Où sont situés vos bureaux ?',
     officesAnswer: 'Nos bureaux sont situés à Cagayan de Oro, La Union et Muntinlupa, aux Philippines.',
     cookiesQuestion: 'Utilisez-vous des cookies ?',
     cookiesAnswer: 'Nous utilisons des cookies pour mémoriser les préférences, mesurer les performances et améliorer le site. Les visiteurs peuvent les accepter ou les refuser depuis la bannière cookies.',
+    outsourcingQuestion: 'Comment demander des informations sur l’externalisation ?',
+    outsourcingAnswer: 'Utilisez le formulaire Intéressé par l’Externalisation pour partager les détails de votre entreprise, vos besoins, votre calendrier et votre budget afin que l’équipe prépare des options adaptées.',
+    expertQuestion: 'Comment parler à un expert ?',
+    expertAnswer: 'Utilisez le formulaire Parler à un Expert pour les demandes de stratégie, de périmètre, de planification et de consultation approfondie.',
+    employmentQuestion: 'Comment postuler à un emploi ?',
+    employmentAnswer: 'Accédez à la page Candidature Emploi pour envoyer votre CV, le poste choisi, votre expérience, vos compétences et d’autres informations.',
+    privacyQuestion: 'Où puis-je lire votre politique de confidentialité ou vos conditions ?',
+    privacyAnswer: 'Vous pouvez consulter la Politique de Confidentialité et les Conditions Générales depuis les pages de politique liées dans les formulaires et le pied de page.',
+    suggestedNextStep: 'Prochaine étape suggérée',
+    smartMatches: 'Correspondances intelligentes',
     openSection: 'Ouvrir la section',
   },
 } as const;
@@ -159,6 +209,32 @@ type SearchUiLang = keyof typeof searchUi;
 const stopWords = new Set([
   'a', 'an', 'and', 'are', 'at', 'can', 'do', 'for', 'how', 'i', 'is', 'me', 'my', 'of', 'the', 'to', 'we', 'what', 'where', 'who', 'whos', 'with', 'you', 'your'
 ]);
+
+const synonymGroups = [
+  ['contact', 'reach', 'email', 'message', 'call', 'phone', 'whatsapp', 'viber'],
+  ['services', 'service', 'offer', 'offering', 'solutions'],
+  ['outsourcing', 'outsource', 'bpo', 'team'],
+  ['expert', 'consultation', 'consult', 'strategy', 'appointment', 'meeting'],
+  ['employment', 'job', 'jobs', 'career', 'careers', 'apply', 'application', 'hiring', 'recruitment'],
+  ['privacy', 'policy', 'terms', 'cookies', 'compliance'],
+  ['office', 'offices', 'location', 'locations', 'address'],
+  ['founder', 'founders', 'leadership', 'owner'],
+  ['social', 'socials', 'instagram', 'facebook', 'tiktok', 'threads', 'twitter', 'x'],
+];
+
+const expandTokens = (tokens: string[]) => {
+  const expanded = new Set(tokens);
+
+  for (const token of tokens) {
+    for (const group of synonymGroups) {
+      if (group.includes(token)) {
+        for (const synonym of group) expanded.add(synonym);
+      }
+    }
+  }
+
+  return Array.from(expanded);
+};
 
 const normalizeText = (value: string) =>
   value
@@ -173,22 +249,106 @@ const tokenizeText = (value: string) =>
     .split(' ')
     .filter((token) => token && !stopWords.has(token));
 
+const getHaystackWords = (values: string[]) =>
+  Array.from(new Set(values.flatMap((value) => tokenizeText(value))));
+
+const boundedLevenshtein = (source: string, target: string, maxDistance = 2) => {
+  const a = source;
+  const b = target;
+
+  if (a === b) return 0;
+  if (!a.length) return b.length;
+  if (!b.length) return a.length;
+  if (Math.abs(a.length - b.length) > maxDistance) return maxDistance + 1;
+
+  const dp: number[] = Array.from({ length: b.length + 1 }, (_, i) => i);
+
+  for (let i = 1; i <= a.length; i += 1) {
+    let prevDiagonal = dp[0];
+    dp[0] = i;
+    let rowMin = dp[0];
+
+    for (let j = 1; j <= b.length; j += 1) {
+      const temp = dp[j];
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+
+      dp[j] = Math.min(
+        dp[j] + 1,
+        dp[j - 1] + 1,
+        prevDiagonal + cost
+      );
+
+      prevDiagonal = temp;
+      rowMin = Math.min(rowMin, dp[j]);
+    }
+
+    if (rowMin > maxDistance) return maxDistance + 1;
+  }
+
+  return dp[b.length];
+};
+
+const tokenMatchScore = (token: string, haystackWords: string[], haystackText: string) => {
+  if (!token) return 0;
+
+  if (haystackText.includes(token)) {
+    return 4;
+  }
+
+  let bestScore = 0;
+
+  for (const word of haystackWords) {
+    if (!word) continue;
+
+    if ((word.startsWith(token) || token.startsWith(word)) && Math.min(word.length, token.length) >= 3) {
+      bestScore = Math.max(bestScore, 3);
+      continue;
+    }
+
+    if ((word.includes(token) || token.includes(word)) && Math.min(word.length, token.length) >= 3) {
+      bestScore = Math.max(bestScore, 2);
+      continue;
+    }
+
+    if (token.length >= 4 && word.length >= 4) {
+      const distance = boundedLevenshtein(token, word, token.length >= 6 ? 2 : 1);
+      if (distance <= 1) {
+        bestScore = Math.max(bestScore, 2);
+        continue;
+      }
+      if (distance === 2 && token.length >= 6) {
+        bestScore = Math.max(bestScore, 1);
+      }
+    }
+  }
+
+  return bestScore;
+};
+
 const matchesSearch = (query: string, values: string[]) => {
-  const queryTokens = tokenizeText(query);
+  const baseTokens = tokenizeText(query);
+  const queryTokens = expandTokens(baseTokens);
   const normalizedValues = values.map((value) => normalizeText(value));
   const haystack = normalizedValues.join(' ');
+  const haystackWords = getHaystackWords(values);
 
-  if (queryTokens.length === 0) {
+  if (baseTokens.length === 0) {
     return haystack.includes(normalizeText(query));
   }
 
-  return queryTokens.every((token) => haystack.includes(token));
+  const allBaseTokensMatch = baseTokens.every((token) => tokenMatchScore(token, haystackWords, haystack) > 0);
+  if (allBaseTokensMatch) {
+    return true;
+  }
+
+  return queryTokens.some((token) => tokenMatchScore(token, haystackWords, haystack) > 1);
 };
 
-const scoreSearchMatch = (query: string, values: string[]) => {
-  const queryTokens = tokenizeText(query);
+const scoreSearchMatch = (query: string, values: string[], phraseBoosts: string[] = []) => {
+  const queryTokens = expandTokens(tokenizeText(query));
   const normalizedValues = values.map((value) => normalizeText(value));
   const haystack = normalizedValues.join(' ');
+  const haystackWords = getHaystackWords(values);
   const normalizedQuery = normalizeText(query);
 
   if (!normalizedQuery) {
@@ -201,10 +361,20 @@ const scoreSearchMatch = (query: string, values: string[]) => {
     score += 6;
   }
 
-  for (const token of queryTokens) {
-    if (haystack.includes(token)) {
-      score += 2;
+  for (const phrase of phraseBoosts) {
+    const normalizedPhrase = normalizeText(phrase);
+    if (normalizedQuery.includes(normalizedPhrase) || haystack.includes(normalizedPhrase)) {
+      score += 5;
     }
+  }
+
+  for (const token of queryTokens) {
+    score += tokenMatchScore(token, haystackWords, haystack);
+  }
+
+  if (queryTokens.length > 1) {
+    const matchedTokens = queryTokens.filter((token) => haystack.includes(token)).length;
+    score += matchedTokens;
   }
 
   return score;
@@ -234,7 +404,7 @@ export default function Header() {
   const mobileNavItems = [
     { href: '/#services', label: t.header.services },
     { href: '/help-center', label: t.footer.helpCenter || 'Help Center' },
-    { href: '/apply', label: t.header.joinUs },
+    { href: '/join', label: 'Contact Us' },
   ];
 
   const aboutNavItems = [
@@ -302,6 +472,26 @@ export default function Header() {
       label: t.contact.title,
       description: t.contact.subtitle,
     },
+    {
+      href: '/help-center',
+      label: t.footer.helpCenter || 'Help Center',
+      description: searchText.contactAnswer,
+    },
+    {
+      href: '/contact',
+      label: searchText.expertQuestion,
+      description: searchText.expertAnswer,
+    },
+    {
+      href: '/outsourcing',
+      label: searchText.outsourcingQuestion,
+      description: searchText.outsourcingAnswer,
+    },
+    {
+      href: '/apply',
+      label: searchText.employmentQuestion,
+      description: searchText.employmentAnswer,
+    },
   ];
 
   const quickAnswers = [
@@ -331,7 +521,7 @@ export default function Header() {
       title: searchText.socialQuestion,
       answer: searchText.socialAnswer,
       href: '/#contact',
-      keywords: ['social', 'social media', 'tiktok', 'instagram', 'threads', 'x', 'twitter', 'facebook', 'links', '@accessively.ph', '@accessivelyofficial'],
+      keywords: ['social', 'social media', 'tiktok', 'instagram', 'threads', 'x', 'twitter', 'facebook', 'links', '@accessively.com', '@accessivelyofficial'],
     },
     {
       id: 'certifications-answer',
@@ -361,6 +551,38 @@ export default function Header() {
       href: '/privacy-policy',
       keywords: ['cookie', 'cookies', 'privacy', 'tracking', 'consent', 'policy'],
     },
+    {
+      id: 'outsourcing-answer',
+      title: searchText.outsourcingQuestion,
+      answer: searchText.outsourcingAnswer,
+      href: '/outsourcing',
+      keywords: ['outsourcing', 'outsource', 'bpo', 'client support', 'business needs', 'operations'],
+      phrases: ['interested in outsourcing', 'outsourcing form', 'bpo partner'],
+    },
+    {
+      id: 'expert-answer',
+      title: searchText.expertQuestion,
+      answer: searchText.expertAnswer,
+      href: '/contact',
+      keywords: ['expert', 'consultation', 'strategy', 'scope', 'schedule', 'appointment', 'meeting'],
+      phrases: ['talk to an expert', 'book consultation', 'speak with team'],
+    },
+    {
+      id: 'employment-answer',
+      title: searchText.employmentQuestion,
+      answer: searchText.employmentAnswer,
+      href: '/apply',
+      keywords: ['employment', 'job', 'jobs', 'career', 'apply', 'application', 'resume', 'hiring'],
+      phrases: ['application for employment', 'apply for job', 'join team'],
+    },
+    {
+      id: 'privacy-answer',
+      title: searchText.privacyQuestion,
+      answer: searchText.privacyAnswer,
+      href: '/privacy-policy',
+      keywords: ['privacy', 'policy', 'terms', 'conditions', 'legal', 'cookies'],
+      phrases: ['privacy policy', 'terms and conditions'],
+    },
   ];
 
   const normalizedSearch = searchQuery.trim().toLowerCase();
@@ -368,7 +590,7 @@ export default function Header() {
     ? quickAnswers
         .map((answer) => ({
           ...answer,
-          score: scoreSearchMatch(searchQuery, [answer.title, answer.answer, ...answer.keywords]),
+          score: scoreSearchMatch(searchQuery, [answer.title, answer.answer, ...answer.keywords], (answer as any).phrases || []),
         }))
         .filter((answer) => answer.score > 0)
         .sort((a, b) => b.score - a.score)
@@ -478,8 +700,8 @@ export default function Header() {
               <Link href="/help-center" className="border-transparent text-white hover:text-indigo-200 hover:border-indigo-300 inline-flex h-16 items-center px-1 border-b-2 text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25">
                 {t.footer.helpCenter || "Help Center"}
               </Link>
-              <Link href="/apply" className="border-transparent text-white hover:text-indigo-200 hover:border-indigo-300 inline-flex h-16 items-center px-1 border-b-2 text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25">
-                {t.header.joinUs}
+              <Link href="/join" className="border-transparent text-white hover:text-indigo-200 hover:border-indigo-300 inline-flex h-16 items-center px-1 border-b-2 text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25">
+                Contact Us
               </Link>
             </div>
           </div>
@@ -612,7 +834,7 @@ export default function Header() {
                           }}
                           className="mt-3 inline-flex text-xs font-semibold text-indigo-300 hover:text-indigo-200"
                         >
-                          {searchText.openSection}
+                          {searchText.suggestedNextStep}: {searchText.openSection}
                         </Link>
                       </>
                     ) : (

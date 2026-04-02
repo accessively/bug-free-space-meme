@@ -1,336 +1,199 @@
 "use client";
 
-import { useState } from "react";
+import React from "react";
 import { useLanguage } from "@/app/contexts/LanguageContext";
+import Link from "next/link";
 
-const joinTexts = {
+const contactTexts = {
   en: {
-    joinNetwork: "Join Our Network",
-    partnerDesc: "Partner with us to expand your business opportunities through our outsourcing platform.",
-    meetFounders: "Meet Our Founders",
-    meetFoundersDesc: "Get to know the visionaries behind our success.",
-    imageSoon: "Image soon",
-    autoPlaying: "Auto-playing",
-    paused: "Paused",
-    companyName: "Company Name",
-    contactName: "Contact Name",
-    email: "Email",
-    servicesOffered: "Services Offered",
-    servicesPlaceholder: "Describe the services your company provides...",
-    submit: "Join Our Network",
-    policyPrefix: "By submitting this form, you agree to our",
-    privacyPolicy: "Privacy Policy",
-    prevFounder: "Previous founder",
-    nextFounder: "Next founder",
-    showPrefix: "Show",
+    contactUs: "Contact Us",
+    chooseOption: "How can we help you?",
+    chooseDesc: "Select the option that best describes your inquiry",
+    generalInquiry: "General Inquiry",
+    generalDesc: "Have questions about our services or company? Get in touch with us.",
+    employment: "Application for Employment",
+    employmentDesc: "Interested in joining our team? Apply for an available position.",
+    outsourcing: "Interested in Outsourcing",
+    outsourcingDesc: "Looking for a BPO partner? Let's discuss your business needs.",
+    expert: "Talk to an Expert",
+    expertDesc: "Need direct guidance on strategy, scope, or next steps? Speak with our team.",
+    contactNow: "Contact Now",
+    applyNow: "Apply Now",
+    learnMore: "Learn More",
+    talkNow: "Talk Now",
+    stillUnsure: "Still not sure which option?",
+    stillUnsureDesc: "No problem. Send a general inquiry and we will route you to the right team quickly.",
+    contactTeam: "Contact Our Team",
   },
   es: {
-    joinNetwork: "Únete a Nuestra Red",
-    partnerDesc: "Asóciate con nosotros para ampliar tus oportunidades de negocio a través de nuestra plataforma.",
-    meetFounders: "Conoce a Nuestros Fundadores",
-    meetFoundersDesc: "Conoce a los visionarios detrás de nuestro éxito.",
-    imageSoon: "Imagen pronto",
-    autoPlaying: "Reproducción automática",
-    paused: "Pausado",
-    companyName: "Nombre de la Empresa",
-    contactName: "Nombre de Contacto",
-    email: "Correo electrónico",
-    servicesOffered: "Servicios Ofrecidos",
-    servicesPlaceholder: "Describe los servicios que ofrece tu empresa...",
-    submit: "Únete a Nuestra Red",
-    policyPrefix: "Al enviar este formulario, aceptas nuestra",
-    privacyPolicy: "Política de Privacidad",
-    prevFounder: "Fundador anterior",
-    nextFounder: "Siguiente fundador",
-    showPrefix: "Mostrar",
+    contactUs: "Contáctanos",
+    chooseOption: "¿Cómo podemos ayudarte?",
+    chooseDesc: "Selecciona la opción que mejor describe tu consulta",
+    generalInquiry: "Consulta General",
+    generalDesc: "¿Tienes preguntas sobre nuestros servicios? Ponte en contacto con nosotros.",
+    employment: "Solicitud de Empleo",
+    employmentDesc: "¿Interesado en unirte a nuestro equipo? Solicita una posición disponible.",
+    outsourcing: "Interesado en Outsourcing",
+    outsourcingDesc: "¿Buscas un partner BPO? Discutamos tus necesidades empresariales.",
+    expert: "Habla con un Experto",
+    expertDesc: "¿Necesitas orientación directa sobre estrategia, alcance o próximos pasos? Habla con nuestro equipo.",
+    contactNow: "Contactar Ahora",
+    applyNow: "Solicitar Ahora",
+    learnMore: "Saber Más",
+    talkNow: "Hablar Ahora",
+    stillUnsure: "¿Aún no sabes qué opción elegir?",
+    stillUnsureDesc: "No hay problema. Envía una consulta general y te dirigiremos al equipo adecuado rápidamente.",
+    contactTeam: "Contactar a Nuestro Equipo",
   },
   zh: {
-    joinNetwork: "加入我们的网络",
-    partnerDesc: "与我们合作，通过外包平台拓展您的业务机会。",
-    meetFounders: "认识我们的创始人",
-    meetFoundersDesc: "了解推动我们成功的愿景者。",
-    imageSoon: "图片即将提供",
-    autoPlaying: "自动播放中",
-    paused: "已暂停",
-    companyName: "公司名称",
-    contactName: "联系人姓名",
-    email: "电子邮箱",
-    servicesOffered: "提供的服务",
-    servicesPlaceholder: "请描述贵公司提供的服务...",
-    submit: "加入我们的网络",
-    policyPrefix: "提交此表单即表示您同意我们的",
-    privacyPolicy: "隐私政策",
-    prevFounder: "上一位创始人",
-    nextFounder: "下一位创始人",
-    showPrefix: "显示",
+    contactUs: "联系我们",
+    chooseOption: "我们如何帮助您？",
+    chooseDesc: "选择最符合您咨询的选项",
+    generalInquiry: "一般查询",
+    generalDesc: "对我们的服务有疑问？与我们联系。",
+    employment: "就业申请",
+    employmentDesc: "有兴趣加入我们的团队？申请可用职位。",
+    outsourcing: "对外包感兴趣",
+    outsourcingDesc: "寻找BPO合作伙伴？让我们讨论您的业务需求。",
+    expert: "咨询专家",
+    expertDesc: "需要关于策略、范围或下一步的直接建议？请联系我们的团队。",
+    contactNow: "立即联系",
+    applyNow: "立即申请",
+    learnMore: "了解更多",
+    talkNow: "立即咨询",
+    stillUnsure: "还不确定该选择哪一项？",
+    stillUnsureDesc: "没关系。发送一般咨询，我们会快速将您转给合适的团队。",
+    contactTeam: "联系我们的团队",
   },
   tl: {
-    joinNetwork: "Sumali sa Aming Network",
-    partnerDesc: "Makipag-partner sa amin upang mapalawak ang iyong opportunities sa negosyo.",
-    meetFounders: "Kilalanin ang Aming Mga Founder",
-    meetFoundersDesc: "Kilalanin ang mga visionaries sa likod ng aming tagumpay.",
-    imageSoon: "Larawan paparating",
-    autoPlaying: "Awtomatikong tumatakbo",
-    paused: "Nakahinto",
-    companyName: "Pangalan ng Kumpanya",
-    contactName: "Pangalan ng Contact",
-    email: "Email",
-    servicesOffered: "Mga Serbisyong Inaalok",
-    servicesPlaceholder: "Ilarawan ang mga serbisyong inaalok ng iyong kumpanya...",
-    submit: "Sumali sa Aming Network",
-    policyPrefix: "Sa pagsusumite ng form na ito, sumasang-ayon ka sa aming",
-    privacyPolicy: "Patakaran sa Privacy",
-    prevFounder: "Nakaraang founder",
-    nextFounder: "Susunod na founder",
-    showPrefix: "Ipakita",
+    contactUs: "Makipag-ugnayan sa Amin",
+    chooseOption: "Paano namin kayo matutulungan?",
+    chooseDesc: "Piliin ang opsyon na best describes ang iyong inquiry",
+    generalInquiry: "General Inquiry",
+    generalDesc: "May mga tanong tungkol sa aming services? Makipag-ugnayan sa amin.",
+    employment: "Application for Employment",
+    employmentDesc: "Interested na sumali sa aming team? Apply para sa available position.",
+    outsourcing: "Interested sa Outsourcing",
+    outsourcingDesc: "Naghahanap ng BPO partner? Discuss natin ang iyong business needs.",
+    expert: "Talk to an Expert",
+    expertDesc: "Kailangan ng direct guidance sa strategy, scope, o next steps? Makipag-usap sa aming team.",
+    contactNow: "Makipag-ugnayan Ngayon",
+    applyNow: "Mag-Apply Ngayon",
+    learnMore: "Alamin Pa",
+    talkNow: "Makipag-usap Ngayon",
+    stillUnsure: "Hindi pa sigurado kung alin ang pipiliin?",
+    stillUnsureDesc: "Walang problema. Magpadala ng general inquiry at agad ka naming ituturo sa tamang team.",
+    contactTeam: "Kontakin ang Aming Team",
   },
   fr: {
-    joinNetwork: "Rejoignez Notre Réseau",
-    partnerDesc: "Partenariat avec nous pour développer vos opportunités via notre plateforme d'externalisation.",
-    meetFounders: "Rencontrez Nos Fondateurs",
-    meetFoundersDesc: "Découvrez les visionnaires derrière notre succès.",
-    imageSoon: "Image bientôt",
-    autoPlaying: "Lecture automatique",
-    paused: "En pause",
-    companyName: "Nom de l'Entreprise",
-    contactName: "Nom du Contact",
-    email: "E-mail",
-    servicesOffered: "Services Proposés",
-    servicesPlaceholder: "Décrivez les services que votre entreprise propose...",
-    submit: "Rejoignez Notre Réseau",
-    policyPrefix: "En soumettant ce formulaire, vous acceptez notre",
-    privacyPolicy: "Politique de confidentialité",
-    prevFounder: "Fondateur précédent",
-    nextFounder: "Fondateur suivant",
-    showPrefix: "Afficher",
+    contactUs: "Nous Contacter",
+    chooseOption: "Comment pouvons-nous vous aider ?",
+    chooseDesc: "Sélectionnez l'option qui décrit le mieux votre demande",
+    generalInquiry: "Demande Générale",
+    generalDesc: "Vous avez des questions sur nos services ? Contactez-nous.",
+    employment: "Candidature Emploi",
+    employmentDesc: "Intéressé par notre équipe ? Postulez pour une position disponible.",
+    outsourcing: "Intéressé par l'Externalisation",
+    outsourcingDesc: "Vous cherchez un partenaire BPO ? Discutons de vos besoins.",
+    expert: "Parler à un Expert",
+    expertDesc: "Besoin de conseils directs sur la stratégie, le périmètre ou les prochaines étapes ? Parlez à notre équipe.",
+    contactNow: "Nous Contacter",
+    applyNow: "Postuler Maintenant",
+    learnMore: "En Savoir Plus",
+    talkNow: "Parler Maintenant",
+    stillUnsure: "Vous ne savez toujours pas quelle option choisir ?",
+    stillUnsureDesc: "Aucun problème. Envoyez une demande générale et nous vous orienterons rapidement vers la bonne équipe.",
+    contactTeam: "Contacter Notre Équipe",
   },
 } as const;
 
-type JoinLang = keyof typeof joinTexts;
+type ContactLang = keyof typeof contactTexts;
 
-type Leader = {
-  role: string;
-  name: string;
-  statement: string;
-  imageAlt: string;
-};
-
-const leaders: Leader[] = [
-  {
-    role: "Founder",
-    name: "Jake Manila",
-    statement:
-      "I founded this agency to bring Filipino talent to the world, with a focus on trust, quality, and long-term client success.",
-    imageAlt: "Jake Manila - Founder",
-  },
-  {
-    role: "Co-Founder",
-    name: "Joshua Dela Torre",
-    statement:
-      "As co-founder, I shape our service excellence and process efficiency so every project becomes a strategic win.",
-    imageAlt: "Joshua Dela Torre - Co-Founder",
-  },
-  {
-    role: "Co-Founder",
-    name: "Denver De Guzman",
-    statement:
-      "I lead team and operations to ensure we deliver fast, reliable results while keeping strong communication with clients.",
-    imageAlt: "Denver De Guzman - Co-Founder",
-  },
-];
-
-export default function Join() {
+export default function Contact() {
   const { language } = useLanguage();
-  const t = joinTexts[(language as JoinLang) || "en"] || joinTexts.en;
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [touchStart, setTouchStart] = useState<number | null>(null);
-  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const t = contactTexts[(language as ContactLang) || "en"] || contactTexts.en;
 
-  const previous = () => setActiveIndex((prev) => (prev - 1 + leaders.length) % leaders.length);
-  const next = () => setActiveIndex((prev) => (prev + 1) % leaders.length);
-  const goToSlide = (index: number) => setActiveIndex(index);
-
-  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-    setTouchEnd(null);
-    setTouchStart(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    if (touchStart === null || touchEnd === null) return;
-
-    const distance = touchStart - touchEnd;
-    if (distance > 50) next();
-    else if (distance < -50) previous();
-  };
+  const options = [
+    {
+      title: t.generalInquiry,
+      description: t.generalDesc,
+      action: t.contactNow,
+      href: "/help-center",
+    },
+    {
+      title: t.employment,
+      description: t.employmentDesc,
+      action: t.applyNow,
+      href: "/apply",
+    },
+    {
+      title: t.outsourcing,
+      description: t.outsourcingDesc,
+      action: t.learnMore,
+      href: "/outsourcing",
+    },
+    {
+      title: t.expert,
+      description: t.expertDesc,
+      action: t.talkNow,
+      href: "/contact",
+    },
+  ];
 
   return (
-    <div className="flex flex-col flex-1">
-      <main className="flex-1">
-        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-lg mx-auto md:max-w-none md:grid md:grid-cols-2 md:gap-8">
-            <div>
-              <div className="mb-6">
-                <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">{t.joinNetwork}</h2>
-              </div>
-              <p className="mt-3 text-lg text-gray-500">
-                {t.partnerDesc}
+    <main className="min-h-screen overflow-x-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 pt-20 sm:pt-24">
+      <div className="absolute inset-0 opacity-40 pointer-events-none">
+        <div className="absolute right-0 top-24 h-48 w-48 rounded-full bg-indigo-500 opacity-20 blur-3xl sm:right-10 sm:top-40 sm:h-72 sm:w-72 lg:right-20 lg:h-96 lg:w-96"></div>
+        <div className="absolute bottom-20 left-0 h-40 w-40 rounded-full bg-purple-500 opacity-15 blur-3xl sm:bottom-32 sm:left-10 sm:h-56 sm:w-56 lg:bottom-40 lg:left-20 lg:h-72 lg:w-72"></div>
+      </div>
+
+      <div className="relative z-10">
+        <section className="mb-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:mb-16">
+          <div className="text-center">
+            <h1 className="mb-4 text-4xl font-bold text-white sm:text-5xl md:text-6xl">
+              {t.contactUs}
+            </h1>
+            <p className="mx-auto max-w-2xl text-base text-slate-300 sm:text-lg md:text-xl">
+              {t.chooseDesc}
+            </p>
+          </div>
+        </section>
+
+        <section className="max-w-7xl mx-auto px-4 pb-12 sm:px-6 lg:px-8 lg:pb-16">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4 xl:gap-8">
+            {options.map((option, index) => (
+              <Link key={index} href={option.href}>
+                <div className="group h-full rounded-2xl border border-slate-800/50 bg-slate-900/40 p-5 backdrop-blur-md transition-all duration-300 hover:border-indigo-500/50 sm:p-7">
+                  <h3 className="mb-4 text-xl font-bold text-white sm:text-2xl">{option.title}</h3>
+
+                  <p className="mb-6 text-slate-300 leading-relaxed">{option.description}</p>
+
+                  <div className="text-sm font-semibold text-indigo-300 transition-colors group-hover:text-indigo-200 sm:text-base">
+                    {option.action}
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section className="pb-20">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="rounded-2xl border border-slate-800/50 bg-slate-900/40 p-6 text-center backdrop-blur-md sm:p-8">
+              <h2 className="mb-4 text-2xl font-bold text-white sm:text-3xl">{t.stillUnsure}</h2>
+              <p className="mb-6 text-slate-300 sm:text-lg">
+                {t.stillUnsureDesc}
               </p>
-            </div>
-
-            <div className="sm:col-span-2 mt-10">
-              <div className="mt-6 relative">
-                <div
-                  className="relative overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm"
-                  onTouchStart={handleTouchStart}
-                  onTouchMove={handleTouchMove}
-                  onTouchEnd={handleTouchEnd}
-                >
-                  <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
-                    {leaders.map((leader, index) => (
-                      <div key={index} className="w-full flex-shrink-0 min-h-[300px] p-8 flex flex-col items-center justify-center text-center">
-                        <div className="h-32 w-32 rounded-full bg-gradient-to-br from-blue-100 to-indigo-200 flex items-center justify-center text-gray-400 text-sm font-medium border-4 border-white shadow-lg">
-                          {t.imageSoon}
-                        </div>
-                        <p className="mt-6 text-sm font-semibold text-indigo-700 uppercase tracking-wide">{leader.role}</p>
-                        <h4 className="mt-2 text-3xl font-bold text-gray-900">{leader.name}</h4>
-                        <p className="mt-4 text-base text-gray-600 max-w-2xl leading-relaxed">{leader.statement}</p>
-                      </div>
-                    ))}
-                  </div>
-
-                  <button
-                    type="button"
-                    onClick={previous}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 shadow-lg flex items-center justify-center text-gray-700 hover:bg-white hover:text-gray-900 transition-all duration-200 border border-gray-200"
-                    aria-label={t.prevFounder}
-                  >
-                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={next}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 shadow-lg flex items-center justify-center text-gray-700 hover:bg-white hover:text-gray-900 transition-all duration-200 border border-gray-200"
-                    aria-label={t.nextFounder}
-                  >
-                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </button>
-                </div>
-
-                <div className="mt-6 flex justify-center gap-3">
-                  {leaders.map((_, idx) => (
-                    <button
-                      key={idx}
-                      type="button"
-                      onClick={() => goToSlide(idx)}
-                      className={`h-3 w-3 rounded-full transition-all duration-300 ${
-                        idx === activeIndex ? "bg-blue-600 scale-125 shadow-lg" : "bg-gray-300 hover:bg-gray-400"
-                      }`}
-                      aria-label={`${t.showPrefix} ${leaders[idx].name}`}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-12 sm:mt-16 md:mt-0">
-              <form action="mailto:solutions@accessivelybpo.com" method="POST" encType="text/plain" className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
-                <div>
-                  <label htmlFor="company-name" className="block text-sm font-medium text-gray-700">
-                    {t.companyName}
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      type="text"
-                      name="company-name"
-                      id="company-name"
-                      className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="contact-name" className="block text-sm font-medium text-gray-700">
-                    {t.contactName}
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      type="text"
-                      name="contact-name"
-                      id="contact-name"
-                      className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                    />
-                  </div>
-                </div>
-                <div className="sm:col-span-2">
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                    {t.email}
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      autoComplete="email"
-                      className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                    />
-                  </div>
-                </div>
-                <div className="sm:col-span-2">
-                  <label htmlFor="services" className="block text-sm font-medium text-gray-700">
-                    {t.servicesOffered}
-                  </label>
-                  <div className="mt-1">
-                    <textarea
-                      id="services"
-                      name="services"
-                      rows={4}
-                      className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
-                      placeholder={t.servicesPlaceholder}
-                    />
-                  </div>
-                </div>
-                <div className="sm:col-span-2">
-                  <label className="flex items-start gap-3 rounded-md border border-gray-300 bg-gray-50 p-4 text-sm text-gray-700">
-                    <input
-                      type="checkbox"
-                      name="privacyConsent"
-                      required
-                      className="mt-1 h-4 w-4"
-                    />
-                    <span>
-                      I understand that my information will be used in accordance with applicable data privacy law and Accessively's Data Privacy Policy. Please review our <a href="/privacy-policy" className="text-blue-600 hover:text-blue-800 underline">Privacy Policy</a> for additional information.
-                    </span>
-                  </label>
-                </div>
-                <div className="sm:col-span-2">
-                  <button
-                    type="submit"
-                    className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                  >
-                    {t.submit}
-                  </button>
-                </div>
-                <div className="sm:col-span-2 text-center">
-                  <p className="text-sm text-gray-500">
-                    {t.policyPrefix}{' '}
-                    <a href="/privacy-policy" className="text-blue-600 hover:text-blue-800 underline">
-                      {t.privacyPolicy}
-                    </a>
-                  </p>
-                </div>
-              </form>
+              <Link
+                href="/help-center"
+                className="inline-flex rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:from-indigo-500 hover:to-purple-500 sm:px-8 sm:py-4 sm:text-base"
+              >
+                {t.contactTeam}
+              </Link>
             </div>
           </div>
-        </div>
-      </main>
-    </div>
+        </section>
+      </div>
+    </main>
   );
 }
